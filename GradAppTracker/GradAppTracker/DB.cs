@@ -15,9 +15,11 @@ namespace GradAppTracker
             SqlConnectionStringBuilder connString = new SqlConnectionStringBuilder();
 
             connString["Data Source"] = "TRENTDESKTOP\\CAPSTONE";
+            //connString["Data Source"] = "74.117.171.101\\MSCORE";
             connString["Initial Catalog"]= "TGA_Project";
             connString["User ID"] = "TGACAPSTONE";
             connString["Password"] = "Lockthedoors123";
+            //connString["Password"] = "TGA123";
 
             SqlConnection conn = new SqlConnection(connString.ToString());
 
@@ -72,17 +74,16 @@ namespace GradAppTracker
             }
             return table;
         }
-        public static string CreateNewUser()
+        public static bool CreateNewUser(User user)
         {
+            //For Admin Use - Create a New Faculty User (for application login)
             StringBuilder query = new StringBuilder();
-
-            User user = new User();
 
             string resultString = "!";
 
-            query.Append("FROM [TGA_Project].[dbo].[USERS] ");
-            query.Append("[USER_ID],[FIRST_NAME],[LAST_NAME],[EMAIL],[PASSWORD],[POSITION_ID] ");
-            query.Append(String.Format("VAUES ({0}, '{1}', '{2}', '{3}', '{4}', '{5}', {6}", user.UserID, user.FirstName, user.LastName, user.Email, user.Password, user.PositionID));
+            query.Append("INSERT INTO [TGA_Project].[dbo].[USERS] ");
+            query.Append("([USER_ID],[FIRST_NAME],[LAST_NAME],[EMAIL],[PASSWORD],[POSITION_ID]) ");
+            query.Append(String.Format("VALUES ({0}, '{1}', '{2}', '{3}', '{4}', {5})", user.UserID, user.FirstName, user.LastName, user.Email, user.Password, user.PositionID));
 
             using (SqlConnection conn = GetConnection())
             {
@@ -91,14 +92,15 @@ namespace GradAppTracker
                     try
                     {
                         int result = command.ExecuteNonQuery();
+
                         if(result == 1)
-                        {
-                            resultString = "User" + user.FirstName + " " + user.LastName + " Created!";
-                        }
+                        {return true;}
                         else
-                        {
-                            resultString = "Error Creating User!";
-                        }
+                        {return false;}
+                    }
+                    catch(Exception e)
+                    {
+                        return false;
                     }
                     finally
                     {
@@ -106,8 +108,6 @@ namespace GradAppTracker
                     }
                 }
             }
-
-            return resultString;
         }
         public static DataTable GetCurrentApplications()
         {
@@ -115,7 +115,7 @@ namespace GradAppTracker
 
             query.Append("SELECT * ");
             query.Append("FROM [TGA_Project].[dbo].[GRAD_APP] ");
-            //query.Append(String.Format("WHERE ACTIVE = {0}", 1));
+            query.Append(String.Format("WHERE ACTIVE = {0}", 1));
 
             DataTable table = new DataTable();
 

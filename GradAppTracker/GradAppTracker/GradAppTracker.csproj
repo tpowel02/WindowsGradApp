@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateNewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewUserForm.Designer.cs">
+      <DependentUpon>CreateNewUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="GradApp.cs" />
     <Compile Include="LoginForm.cs">
@@ -86,6 +92,9 @@
     <Compile Include="VerificationForm.Designer.cs">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateNewUserForm.resx">
+      <DependentUpon>CreateNewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.af.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

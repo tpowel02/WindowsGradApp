@@ -18,12 +18,24 @@ namespace GradAppTracker
         {
             InitializeComponent();
         }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             SqlConnection conn = DB.GetConnection();
-            dt = DB.GetCurrentApplications();
-            dgvCurrent.DataSource = dt;
+
+            //Instantiate both Current and History 
+            //Grad App DataGridView DataSources
+
+            dt = DB.GetCurrentApplications();                                                                     
+            dgvCurrent.DataSource = dt;                   
+
+            dt = DB.GetPastApplications();
+            dgvPast.DataSource = dt;
+
+
+            //TODO: IF user is admin, load users DGV, need to get user.PositionID of currently logged in user, and check to see that it is corresponding value  (1 = admin?)
+            dt = DB.GetUsers();
+            dgvUsers.DataSource = dt;
+
         }
 
         private void tbSearchByName_TextChanged(object sender, EventArgs e)
@@ -60,6 +72,39 @@ namespace GradAppTracker
             {
                 //(dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("Student ID = '{0}'", tbSearchByStudentIdNumber.Text);
             }
+        }
+
+        private void btnCreateNewLogin_Click(object sender, EventArgs e)
+        {
+            CreateNewUserForm create = new CreateNewUserForm();
+            create.ShowDialog();
+
+            dt = DB.GetUsers();
+            dgvUsers.DataSource = dt;
+        }
+
+        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnUpdateExistingLogin_Click(object sender, EventArgs e)
+        {
+            //show update form, 
+            //pass a selected datarow to update method
+            //try to update DB on accept button
+            //return updated data row and update dgv source from DB
+        }
+
+        private void btnCreateGradApp_Click(object sender, EventArgs e)
+        {
+            //ShowDialog() create app form
+            //create new grad app class
+            //fill with data from user input
+            //check for errors
+            //try to insert into DB
+            //if successful update DGV
+            // if not, tell user to try again (and why if possible)
         }
     }
 }

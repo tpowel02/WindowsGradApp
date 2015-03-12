@@ -16,6 +16,7 @@ namespace GradAppTracker
         {
             InitializeComponent();
         }
+        [STAThread]
         static void Main(String[]args)
         {
             Application.Run(new LoginForm());
@@ -27,12 +28,9 @@ namespace GradAppTracker
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            int result = 2;
+            int result = 1;
 
-            //if(tbEmail.Text.Length > 6 && tbEmail.Text.Length < 30 && tbPassword.Text.Length > 0)
-            //{
-                result = DB.Login(tbEmail.Text, tbPassword.Text);
-            //}
+            //result = DB.Login(tbEmail.Text, tbPassword.Text);
 
             if (result == 0)
             {
