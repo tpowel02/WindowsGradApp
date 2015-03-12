@@ -90,14 +90,16 @@ namespace GradAppTracker
 
         private void btnUpdateExistingLogin_Click(object sender, EventArgs e)
         {
+            // TODO:
             //show update form, 
-            //pass a selected datarow to update method
+            //pass a selected datarow from dgvUsers to update method (need to create this still)
             //try to update DB on accept button
             //return updated data row and update dgv source from DB
         }
 
         private void btnCreateGradApp_Click(object sender, EventArgs e)
         {
+            // TODO:
             //ShowDialog() create app form
             //create new grad app class
             //fill with data from user input
