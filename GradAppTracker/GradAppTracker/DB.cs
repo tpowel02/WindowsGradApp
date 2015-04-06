@@ -17,13 +17,6 @@ namespace GradAppTracker
             connString["Data Source"] = "74.117.171.101,1433";
             connString["User ID"] = "TGACAPSTONE";
             connString["Password"] = "TGA123";
-            //connString["Data Source"] = "TRENTDESKTOP\\CAPSTONE";
-            //connString["Initial Catalog"]= "TGA_Project";
-            //connString["Password"] = "Lockthedoors123";
-
-            //katie
-            //connString["Data Source"] = "WIN-DTL709JSH7A\\CAPSTONE";
-            //connString["User ID"] = "WIN-DTL709JSH7A\\Katie";
 
             SqlConnection conn = new SqlConnection(connString.ToString());
 
@@ -86,8 +79,8 @@ namespace GradAppTracker
             string resultString = "!";
 
             query.Append("INSERT INTO [TGA_Project].[dbo].[USERS] ");
-            query.Append("([USER_ID],[FIRST_NAME],[LAST_NAME],[EMAIL],[PASSWORD],[POSITION_ID]) ");
-            query.Append(String.Format("VALUES ({0}, '{1}', '{2}', '{3}', '{4}', {5})", user.UserID, user.FirstName, user.LastName, user.Email, user.Password, user.PositionID));
+            query.Append("([FIRST_NAME],[LAST_NAME],[EMAIL],[PASSWORD],[POSITION_ID]) ");
+            query.Append(String.Format("VALUES ('{0}', '{1}', '{2}', '{3}', {4})", user.FirstName, user.LastName, user.Email, user.Password, user.PositionID));
 
             using (SqlConnection conn = GetConnection())
             {
@@ -117,17 +110,18 @@ namespace GradAppTracker
         {
             StringBuilder query = new StringBuilder();
 
-            query.Append("SELECT grad_app.app_id, grad_app.student_id, "
-                        +"(student.first_name+' '+student.last_name) AS Student_Name, "
-                        +"(users.first_name+' '+users.last_name) AS Advisor_Name, "
-                        +"grad_app.dept_chair_id, (major.major_name) AS Major_Name, "
-                        +"grad_app.date_submitted, grad_app.status, "
-                        +"grad_app.advisor_approval, grad_app.dept_chair_approval, grad_app.dean_approval, grad_app.records_approval ");
-            query.Append("FROM [TGA_Project].[dbo].[GRAD_APP]");
-            query.Append("JOIN [TGA_Project].[dbo].[student] ON [student].[db_student_id] = [GRAD_APP].[STUDENT_ID]");
-            query.Append("JOIN [TGA_Project].[dbo].[users] on [users].[user_id] = [grad_app].[advisor_id]");
-            query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [grad_app].[major_id]");
-            query.Append(String.Format("WHERE GRAD_APP.ACTIVE = {0}", 1));
+            query.Append("SELECT grad_app.date_submitted AS [Date Submitted], student.student_id AS [Student ID], "
+                        + "(student.first_name+' '+ student.last_name) AS [Student Name], "
+                        + "(users.first_name+' '+ users.last_name) AS [Advisor Name], "
+                //+ "(faculty.first_name +' ' + faculty.last_name) AS [Dean Name], "
+                        + "(major.major_name) AS [Major Name], student.grad_year AS [Graduation Year], student.grad_semester AS [Graduation Semester], "
+                        + "grad_app.status AS [Status], "
+                        + "grad_app.advisor_approval AS [Advisor Approval], grad_app.dept_chair_approval AS [Dept. Chair Approval], grad_app.dean_approval AS [Dean Approval], grad_app.records_approval AS [Records Approval] ");
+            query.Append("FROM [TGA_Project].[dbo].[GRAD_APP] ");
+            query.Append("JOIN [TGA_Project].[dbo].[student] ON [student].[db_student_id] = [GRAD_APP].[STUDENT_ID] ");
+            query.Append("JOIN [TGA_Project].[dbo].[users] on [users].[user_id] = [grad_app].[advisor_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [grad_app].[major_id] ");
+            query.Append(String.Format("WHERE GRAD_APP.ACTIVE = {0} ", 1));
 
             // join student, advisor, dept_chair, major ID's to display names
 
@@ -150,17 +144,20 @@ namespace GradAppTracker
         {
             StringBuilder query = new StringBuilder();
 
-            query.Append("SELECT grad_app.app_id, grad_app.student_id, "
-                        + "(student.first_name+' '+student.last_name) AS Student_Name, "
-                        + "(users.first_name+' '+users.last_name) AS Advisor_Name, "
-                        + "grad_app.dept_chair_id, (major.major_name) AS Major_Name, "
-                        + "grad_app.date_submitted, grad_app.status, "
-                        + "grad_app.advisor_approval, grad_app.dept_chair_approval, grad_app.dean_approval, grad_app.records_approval ");
-            query.Append("FROM [TGA_Project].[dbo].[GRAD_APP]");
-            query.Append("JOIN [TGA_Project].[dbo].[student] ON [student].[db_student_id] = [GRAD_APP].[STUDENT_ID]");
-            query.Append("JOIN [TGA_Project].[dbo].[users] on [users].[user_id] = [grad_app].[advisor_id]");
-            query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [grad_app].[major_id]");
-            query.Append(String.Format("WHERE GRAD_APP.ACTIVE = {0}", 0));
+
+            query.Append("SELECT grad_app.date_submitted AS [Date Submitted], student.student_id AS [Student ID], "
+                        + "(student.first_name+' '+ student.last_name) AS [Student Name], "
+                        + "(users.first_name+' '+ users.last_name) AS [Advisor Name], "
+                //+ "(faculty.first_name +' ' + faculty.last_name) AS [Dean Name], "
+                        + "(major.major_name) AS [Major Name], student.grad_year AS [Graduation Year], student.grad_semester AS [Graduation Semester], "
+                        + "grad_app.status AS [Status], "
+                        + "grad_app.advisor_approval AS [Advisor Approval], grad_app.dept_chair_approval AS [Dept. Chair Approval], grad_app.dean_approval AS [Dean Approval], grad_app.records_approval AS [Records Approval] ");
+            query.Append("FROM [TGA_Project].[dbo].[GRAD_APP] ");
+            query.Append("JOIN [TGA_Project].[dbo].[student] ON [student].[db_student_id] = [GRAD_APP].[STUDENT_ID] ");
+            query.Append("JOIN [TGA_Project].[dbo].[users] on [users].[user_id] = [grad_app].[advisor_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [grad_app].[major_id] ");
+            query.Append(String.Format("WHERE GRAD_APP.ACTIVE = {0} ", 0));
+
 
             DataTable table = new DataTable();
 

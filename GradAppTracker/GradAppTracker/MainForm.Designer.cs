@@ -46,16 +46,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCreateGradApp = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tbSearchByStudentIdNumber = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.clbFilterBySemester = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSearchByName = new System.Windows.Forms.Label();
             this.tbSearchByName = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.btnCreateGradApp = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbYearFilter = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbFilterBySemester = new System.Windows.Forms.ComboBox();
+            this.cbFilterByStatus = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.Pending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
@@ -113,7 +115,7 @@
             this.Completed.Padding = new System.Windows.Forms.Padding(3);
             this.Completed.Size = new System.Drawing.Size(1173, 570);
             this.Completed.TabIndex = 1;
-            this.Completed.Text = "Completed Applications";
+            this.Completed.Text = "Past Applications";
             this.Completed.UseVisualStyleBackColor = true;
             // 
             // dgvPast
@@ -136,7 +138,7 @@
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(1173, 570);
             this.Admin.TabIndex = 2;
-            this.Admin.Text = "Administration";
+            this.Admin.Text = "Advisor Tools";
             this.Admin.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
@@ -207,7 +209,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(384, 357);
+            this.panel2.Location = new System.Drawing.Point(6, 275);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(183, 100);
             this.panel2.TabIndex = 3;
@@ -241,12 +243,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbFilterByStatus);
+            this.groupBox1.Controls.Add(this.cbFilterBySemester);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbYearFilter);
             this.groupBox1.Controls.Add(this.btnCreateGradApp);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tbSearchByStudentIdNumber);
-            this.groupBox1.Controls.Add(this.checkedListBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.clbFilterBySemester);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblSearchByName);
             this.groupBox1.Controls.Add(this.tbSearchByName);
@@ -255,6 +259,16 @@
             this.groupBox1.Size = new System.Drawing.Size(168, 523);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btnCreateGradApp
+            // 
+            this.btnCreateGradApp.Location = new System.Drawing.Point(6, 463);
+            this.btnCreateGradApp.Name = "btnCreateGradApp";
+            this.btnCreateGradApp.Size = new System.Drawing.Size(156, 53);
+            this.btnCreateGradApp.TabIndex = 13;
+            this.btnCreateGradApp.Text = "Create New Graduation Application";
+            this.btnCreateGradApp.UseVisualStyleBackColor = true;
+            this.btnCreateGradApp.Click += new System.EventHandler(this.btnCreateGradApp_Click);
             // 
             // label3
             // 
@@ -272,39 +286,6 @@
             this.tbSearchByStudentIdNumber.Size = new System.Drawing.Size(156, 20);
             this.tbSearchByStudentIdNumber.TabIndex = 11;
             this.tbSearchByStudentIdNumber.TextChanged += new System.EventHandler(this.tbSearchByStudentIdNumber_TextChanged);
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Pending",
-            "Completed"});
-            this.checkedListBox1.Location = new System.Drawing.Point(6, 208);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(156, 34);
-            this.checkedListBox1.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Filter By Status:";
-            // 
-            // clbFilterBySemester
-            // 
-            this.clbFilterBySemester.FormattingEnabled = true;
-            this.clbFilterBySemester.Items.AddRange(new object[] {
-            "Fall Graduation",
-            "Spring Graduation",
-            "Summer Graduation"});
-            this.clbFilterBySemester.Location = new System.Drawing.Point(6, 127);
-            this.clbFilterBySemester.Name = "clbFilterBySemester";
-            this.clbFilterBySemester.Size = new System.Drawing.Size(156, 49);
-            this.clbFilterBySemester.TabIndex = 9;
-            this.clbFilterBySemester.SelectedIndexChanged += new System.EventHandler(this.clbFilterBySemester_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -342,21 +323,62 @@
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
-            // btnCreateGradApp
+            // label2
             // 
-            this.btnCreateGradApp.Location = new System.Drawing.Point(6, 463);
-            this.btnCreateGradApp.Name = "btnCreateGradApp";
-            this.btnCreateGradApp.Size = new System.Drawing.Size(156, 53);
-            this.btnCreateGradApp.TabIndex = 13;
-            this.btnCreateGradApp.Text = "Create New Graduation Application";
-            this.btnCreateGradApp.UseVisualStyleBackColor = true;
-            this.btnCreateGradApp.Click += new System.EventHandler(this.btnCreateGradApp_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 161);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Filter By Grad Year:";
+            // 
+            // tbYearFilter
+            // 
+            this.tbYearFilter.Location = new System.Drawing.Point(7, 177);
+            this.tbYearFilter.Name = "tbYearFilter";
+            this.tbYearFilter.Size = new System.Drawing.Size(156, 20);
+            this.tbYearFilter.TabIndex = 14;
+            this.tbYearFilter.TextChanged += new System.EventHandler(this.tbYearFilter_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 209);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Filter By Status:";
+            // 
+            // cbFilterBySemester
+            // 
+            this.cbFilterBySemester.FormattingEnabled = true;
+            this.cbFilterBySemester.Items.AddRange(new object[] {
+            "Fall",
+            "Spring",
+            "Summer"});
+            this.cbFilterBySemester.Location = new System.Drawing.Point(10, 128);
+            this.cbFilterBySemester.Name = "cbFilterBySemester";
+            this.cbFilterBySemester.Size = new System.Drawing.Size(150, 21);
+            this.cbFilterBySemester.TabIndex = 18;
+            this.cbFilterBySemester.SelectedIndexChanged += new System.EventHandler(this.cbFilterBySemester_SelectedIndexChanged);
+            // 
+            // cbFilterByStatus
+            // 
+            this.cbFilterByStatus.FormattingEnabled = true;
+            this.cbFilterByStatus.Items.AddRange(new object[] {
+            "PENDING",
+            "COMPLETED"});
+            this.cbFilterByStatus.Location = new System.Drawing.Point(7, 225);
+            this.cbFilterByStatus.Name = "cbFilterByStatus";
+            this.cbFilterByStatus.Size = new System.Drawing.Size(150, 21);
+            this.cbFilterByStatus.TabIndex = 19;
+            this.cbFilterByStatus.SelectedIndexChanged += new System.EventHandler(this.cbFilterByStatus_SelectedIndexChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1372, 620);
+            this.ClientSize = new System.Drawing.Size(1362, 620);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
@@ -397,9 +419,6 @@
         private System.Windows.Forms.DataGridView dgvCurrent;
         private System.Windows.Forms.DataGridView dgvPast;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox clbFilterBySemester;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbSearchByStudentIdNumber;
         private System.Windows.Forms.Panel panel1;
@@ -413,6 +432,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Button btnCreateGradApp;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbYearFilter;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbFilterBySemester;
+        private System.Windows.Forms.ComboBox cbFilterByStatus;
     }
 }
 

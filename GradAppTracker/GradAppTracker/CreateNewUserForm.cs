@@ -34,30 +34,16 @@ namespace GradAppTracker
         {
             User user = new User();
 
-            user.UserID = 20; //need to figure out autogenerate in DB?
+            user.PositionID = 1;
             user.Email = tbEmail.Text;
             user.FirstName = tbFirstName.Text;
             user.LastName = tbLastName.Text;
             user.Password = tbPassword.Text;
 
-            string userTypeString = cbUserType.Text;
             string confirmPasswordString = tbConfirmPassword.Text;
 
             if (tbPassword.Text == tbConfirmPassword.Text)
             {
-                switch (userTypeString)
-                {
-                    /*  Key: 
-                     *      Admin   = 1
-                     *    Faculty = 2
-                     */
-                    case "Faculty":
-                        user.PositionID = 2;
-                        break;
-                    case "Faculty Admin":
-                        user.PositionID = 1;
-                        break;
-                }
 
                 if (IsUserValid(user))
                 {

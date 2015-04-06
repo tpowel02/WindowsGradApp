@@ -50,17 +50,10 @@ namespace GradAppTracker
             }
             else
             {
-                (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("APP_ID = '{0}'", tbSearchByName.Text);
-                //(dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("Name = '{0}'", tbSearchByName.Text);
+                (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
             }
         }
 
-        private void clbFilterBySemester_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            //(dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("Semester LIKE '%{0}%'", clbFilterBySemester.SelectedValue);
-
-        }
 
         private void tbSearchByStudentIdNumber_TextChanged(object sender, EventArgs e)
         {
@@ -70,7 +63,7 @@ namespace GradAppTracker
             }
             else
             {
-                //(dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("Student ID = '{0}'", tbSearchByStudentIdNumber.Text);
+                (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
             }
         }
 
@@ -107,6 +100,30 @@ namespace GradAppTracker
             //try to insert into DB
             //if successful update DGV
             // if not, tell user to try again (and why if possible)
+        }
+
+        private void tbYearFilter_TextChanged(object sender, EventArgs e)
+        {
+            if (tbYearFilter.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Year] = '{0}'", tbYearFilter.Text);
+            }
+        }
+
+        private void cbFilterBySemester_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Semester] LIKE '{0}%'", cbFilterBySemester.SelectedItem);
+
+        }
+
+        private void cbFilterByStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Status] LIKE '{0}%'", cbFilterByStatus.SelectedItem);
+
         }
     }
 }
