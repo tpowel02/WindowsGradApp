@@ -14,11 +14,16 @@ namespace GradAppTracker
         {
             SqlConnectionStringBuilder connString = new SqlConnectionStringBuilder();
 
-            connString["Data Source"] = "74.117.171.101,1433";
+            //connString["Data Source"] = "TRENTDESKTOP\\CAPSTONE";
+            //connString["Data Source"] = "74.117.171.101\\MSCORE";
             connString["Initial Catalog"]= "TGA_Project";
-            connString["User ID"] = "TGACAPSTONE";
-            connString["Password"] = "TGA123";
+           // connString["User ID"] = "TGACAPSTONE";
+            //connString["Password"] = "Lockthedoors123";
+            //connString["Password"] = "TGA123";
 
+            //katie
+            connString["Data Source"] = "WIN-DTL709JSH7A\\CAPSTONE";
+            connString["User ID"] = "WIN-DTL709JSH7A\\Katie";
 
             SqlConnection conn = new SqlConnection(connString.ToString());
 
