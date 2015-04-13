@@ -12,7 +12,7 @@ namespace GradAppTracker
 {
     public partial class CreateNewGradAppForm : Form
     {
-        bool duelDegree = true;
+        bool duelDegree = false;
         bool doubleMajor = false;
         
        
@@ -199,6 +199,29 @@ namespace GradAppTracker
             panelPage2.Show();
             panelDoubleMajor.Enabled = false;
             panelPage2.Enabled = true;
+        }
+
+        private void rbCeremonyYes_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbStudentID_TextChanged(object sender, EventArgs e)
+        {
+
+            DataTable dt = new DataTable();
+            GradApp gradApp = new GradApp();
+
+            int txtStudentID = Convert.ToInt32(tbStudentID.Text);
+            dt = DB.GetStudentInfo(txtStudentID);
+
+            foreach (DataRow row in dt.Rows)
+            {
+
+                gradApp.StudentName = row[0].ToString();
+
+                //etc.....
+            }
         }
 
       
