@@ -92,6 +92,8 @@ namespace GradAppTracker
 
         private void btnCreateGradApp_Click(object sender, EventArgs e)
         {
+            CreateNewGradAppForm create = new CreateNewGradAppForm();
+            create.ShowDialog();
             // TODO:
             //ShowDialog() create app form
             //create new grad app class

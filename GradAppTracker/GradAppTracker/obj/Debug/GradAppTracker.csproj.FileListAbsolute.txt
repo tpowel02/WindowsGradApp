@@ -57,3 +57,4 @@ C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj
 C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
 C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
 C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
+C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewGradAppForm.resources
