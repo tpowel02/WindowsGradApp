@@ -49,7 +49,7 @@
             this.lblStudentName = new System.Windows.Forms.Label();
             this.panelPage3 = new System.Windows.Forms.Panel();
             this.Page3NextButton = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Page3PreviousButton = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.tbSubCourse6 = new System.Windows.Forms.TextBox();
             this.tbCourse6 = new System.Windows.Forms.TextBox();
@@ -75,21 +75,21 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbSecondMajorHours = new System.Windows.Forms.TextBox();
             this.DoubleMajorNextButton = new System.Windows.Forms.Button();
-            this.cancelButton2 = new System.Windows.Forms.Button();
+            this.DuelDegreePreviousButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panelDuelDegree = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.DuelDegreeNextButton = new System.Windows.Forms.Button();
-            this.cancelButton3 = new System.Windows.Forms.Button();
+            this.DoubleMajorPreviousButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panelPage2 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rbTransferYes = new System.Windows.Forms.RadioButton();
             this.rbTransferNo = new System.Windows.Forms.RadioButton();
             this.Page2NextButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Page2PreviousButton = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbElectivesYes = new System.Windows.Forms.RadioButton();
@@ -104,12 +104,40 @@
             this.label23 = new System.Windows.Forms.Label();
             this.tbResidenceCreditHours = new System.Windows.Forms.TextBox();
             this.ResidenceNextButton = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.ResidencePreviousButton = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.panelPage4 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.Page4NextButton = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.Page4PreviousButton = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelPage1.SuspendLayout();
@@ -126,7 +154,7 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(69, 270);
+            this.NextButton.Location = new System.Drawing.Point(68, 332);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(126, 33);
             this.NextButton.TabIndex = 8;
@@ -137,7 +165,7 @@
             // CancelButton
             // 
             this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelButton.Location = new System.Drawing.Point(6, 270);
+            this.CancelButton.Location = new System.Drawing.Point(5, 332);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(58, 33);
             this.CancelButton.TabIndex = 9;
@@ -200,7 +228,7 @@
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(6, 265);
+            this.label4.Location = new System.Drawing.Point(5, 327);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 2);
             this.label4.TabIndex = 0;
@@ -286,7 +314,7 @@
             this.panelPage1.Controls.Add(this.tbMiddleName);
             this.panelPage1.Controls.Add(this.label3);
             this.panelPage1.Controls.Add(this.label4);
-            this.panelPage1.Location = new System.Drawing.Point(6, 3);
+            this.panelPage1.Location = new System.Drawing.Point(1, 3);
             this.panelPage1.Name = "panelPage1";
             this.panelPage1.Size = new System.Drawing.Size(200, 370);
             this.panelPage1.TabIndex = 2;
@@ -303,7 +331,7 @@
             // panelPage3
             // 
             this.panelPage3.Controls.Add(this.Page3NextButton);
-            this.panelPage3.Controls.Add(this.button6);
+            this.panelPage3.Controls.Add(this.Page3PreviousButton);
             this.panelPage3.Controls.Add(this.label20);
             this.panelPage3.Controls.Add(this.tbSubCourse6);
             this.panelPage3.Controls.Add(this.tbCourse6);
@@ -322,7 +350,7 @@
             this.panelPage3.Controls.Add(this.label18);
             this.panelPage3.Controls.Add(this.label17);
             this.panelPage3.Enabled = false;
-            this.panelPage3.Location = new System.Drawing.Point(1036, 3);
+            this.panelPage3.Location = new System.Drawing.Point(1, 3);
             this.panelPage3.Name = "panelPage3";
             this.panelPage3.Size = new System.Drawing.Size(200, 370);
             this.panelPage3.TabIndex = 10;
@@ -336,16 +364,17 @@
             this.Page3NextButton.TabIndex = 24;
             this.Page3NextButton.Text = "Next";
             this.Page3NextButton.UseVisualStyleBackColor = true;
+            this.Page3NextButton.Click += new System.EventHandler(this.Page3NextButton_Click);
             // 
-            // button6
+            // Page3PreviousButton
             // 
-            this.button6.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button6.Location = new System.Drawing.Point(6, 332);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(58, 33);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "Cancel";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Page3PreviousButton.Location = new System.Drawing.Point(6, 332);
+            this.Page3PreviousButton.Name = "Page3PreviousButton";
+            this.Page3PreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.Page3PreviousButton.TabIndex = 25;
+            this.Page3PreviousButton.Text = "Previous";
+            this.Page3PreviousButton.UseVisualStyleBackColor = true;
+            this.Page3PreviousButton.Click += new System.EventHandler(this.Page3PreviousButton_Click);
             // 
             // label20
             // 
@@ -513,10 +542,10 @@
             this.panelDoubleMajor.Controls.Add(this.label9);
             this.panelDoubleMajor.Controls.Add(this.tbSecondMajorHours);
             this.panelDoubleMajor.Controls.Add(this.DoubleMajorNextButton);
-            this.panelDoubleMajor.Controls.Add(this.cancelButton2);
+            this.panelDoubleMajor.Controls.Add(this.DuelDegreePreviousButton);
             this.panelDoubleMajor.Controls.Add(this.label6);
             this.panelDoubleMajor.Enabled = false;
-            this.panelDoubleMajor.Location = new System.Drawing.Point(212, 3);
+            this.panelDoubleMajor.Location = new System.Drawing.Point(1, 3);
             this.panelDoubleMajor.Name = "panelDoubleMajor";
             this.panelDoubleMajor.Size = new System.Drawing.Size(200, 370);
             this.panelDoubleMajor.TabIndex = 0;
@@ -556,17 +585,17 @@
             this.DoubleMajorNextButton.TabIndex = 11;
             this.DoubleMajorNextButton.Text = "Next";
             this.DoubleMajorNextButton.UseVisualStyleBackColor = true;
+            this.DoubleMajorNextButton.Click += new System.EventHandler(this.DoubleMajorNextButton_Click);
             // 
-            // cancelButton2
+            // DuelDegreePreviousButton
             // 
-            this.cancelButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton2.Location = new System.Drawing.Point(6, 332);
-            this.cancelButton2.Name = "cancelButton2";
-            this.cancelButton2.Size = new System.Drawing.Size(58, 33);
-            this.cancelButton2.TabIndex = 12;
-            this.cancelButton2.Text = "Cancel";
-            this.cancelButton2.UseVisualStyleBackColor = true;
-            this.cancelButton2.Click += new System.EventHandler(this.cancelButton2_Click);
+            this.DuelDegreePreviousButton.Location = new System.Drawing.Point(6, 332);
+            this.DuelDegreePreviousButton.Name = "DuelDegreePreviousButton";
+            this.DuelDegreePreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.DuelDegreePreviousButton.TabIndex = 12;
+            this.DuelDegreePreviousButton.Text = "Previous";
+            this.DuelDegreePreviousButton.UseVisualStyleBackColor = true;
+            this.DuelDegreePreviousButton.Click += new System.EventHandler(this.DuelDegreePreviousButton_Click);
             // 
             // label6
             // 
@@ -582,10 +611,10 @@
             this.panelDuelDegree.Controls.Add(this.label12);
             this.panelDuelDegree.Controls.Add(this.textBox1);
             this.panelDuelDegree.Controls.Add(this.DuelDegreeNextButton);
-            this.panelDuelDegree.Controls.Add(this.cancelButton3);
+            this.panelDuelDegree.Controls.Add(this.DoubleMajorPreviousButton);
             this.panelDuelDegree.Controls.Add(this.label10);
             this.panelDuelDegree.Enabled = false;
-            this.panelDuelDegree.Location = new System.Drawing.Point(418, 3);
+            this.panelDuelDegree.Location = new System.Drawing.Point(1, 3);
             this.panelDuelDegree.Name = "panelDuelDegree";
             this.panelDuelDegree.Size = new System.Drawing.Size(200, 370);
             this.panelDuelDegree.TabIndex = 0;
@@ -618,28 +647,28 @@
             // 
             // DuelDegreeNextButton
             // 
-            this.DuelDegreeNextButton.Location = new System.Drawing.Point(69, 305);
+            this.DuelDegreeNextButton.Location = new System.Drawing.Point(69, 332);
             this.DuelDegreeNextButton.Name = "DuelDegreeNextButton";
             this.DuelDegreeNextButton.Size = new System.Drawing.Size(126, 33);
             this.DuelDegreeNextButton.TabIndex = 11;
             this.DuelDegreeNextButton.Text = "Next";
             this.DuelDegreeNextButton.UseVisualStyleBackColor = true;
+            this.DuelDegreeNextButton.Click += new System.EventHandler(this.DuelDegreeNextButton_Click);
             // 
-            // cancelButton3
+            // DoubleMajorPreviousButton
             // 
-            this.cancelButton3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton3.Location = new System.Drawing.Point(6, 305);
-            this.cancelButton3.Name = "cancelButton3";
-            this.cancelButton3.Size = new System.Drawing.Size(58, 33);
-            this.cancelButton3.TabIndex = 12;
-            this.cancelButton3.Text = "Cancel";
-            this.cancelButton3.UseVisualStyleBackColor = true;
-            this.cancelButton3.Click += new System.EventHandler(this.cancelButton3_Click);
+            this.DoubleMajorPreviousButton.Location = new System.Drawing.Point(6, 332);
+            this.DoubleMajorPreviousButton.Name = "DoubleMajorPreviousButton";
+            this.DoubleMajorPreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.DoubleMajorPreviousButton.TabIndex = 12;
+            this.DoubleMajorPreviousButton.Text = "Previous";
+            this.DoubleMajorPreviousButton.UseVisualStyleBackColor = true;
+            this.DoubleMajorPreviousButton.Click += new System.EventHandler(this.DoubleMajorPreviousButton_Click);
             // 
             // label10
             // 
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Location = new System.Drawing.Point(6, 300);
+            this.label10.Location = new System.Drawing.Point(6, 327);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(189, 2);
             this.label10.TabIndex = 10;
@@ -648,13 +677,13 @@
             // 
             this.panelPage2.Controls.Add(this.groupBox4);
             this.panelPage2.Controls.Add(this.Page2NextButton);
-            this.panelPage2.Controls.Add(this.button4);
+            this.panelPage2.Controls.Add(this.Page2PreviousButton);
             this.panelPage2.Controls.Add(this.label15);
             this.panelPage2.Controls.Add(this.groupBox2);
             this.panelPage2.Controls.Add(this.label14);
             this.panelPage2.Controls.Add(this.label13);
             this.panelPage2.Enabled = false;
-            this.panelPage2.Location = new System.Drawing.Point(624, 3);
+            this.panelPage2.Location = new System.Drawing.Point(1, 3);
             this.panelPage2.Name = "panelPage2";
             this.panelPage2.Size = new System.Drawing.Size(200, 370);
             this.panelPage2.TabIndex = 0;
@@ -695,7 +724,7 @@
             // 
             // Page2NextButton
             // 
-            this.Page2NextButton.Location = new System.Drawing.Point(69, 286);
+            this.Page2NextButton.Location = new System.Drawing.Point(69, 332);
             this.Page2NextButton.Name = "Page2NextButton";
             this.Page2NextButton.Size = new System.Drawing.Size(126, 33);
             this.Page2NextButton.TabIndex = 14;
@@ -703,20 +732,20 @@
             this.Page2NextButton.UseVisualStyleBackColor = true;
             this.Page2NextButton.Click += new System.EventHandler(this.Page2NextButton_Click);
             // 
-            // button4
+            // Page2PreviousButton
             // 
-            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Location = new System.Drawing.Point(6, 286);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(58, 33);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Cancel";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Page2PreviousButton.Location = new System.Drawing.Point(6, 332);
+            this.Page2PreviousButton.Name = "Page2PreviousButton";
+            this.Page2PreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.Page2PreviousButton.TabIndex = 15;
+            this.Page2PreviousButton.Text = "Previous";
+            this.Page2PreviousButton.UseVisualStyleBackColor = true;
+            this.Page2PreviousButton.Click += new System.EventHandler(this.Page2PreviousButton_Click);
             // 
             // label15
             // 
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Location = new System.Drawing.Point(6, 281);
+            this.label15.Location = new System.Drawing.Point(5, 327);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(189, 2);
             this.label15.TabIndex = 13;
@@ -780,10 +809,10 @@
             this.panelResidence.Controls.Add(this.label23);
             this.panelResidence.Controls.Add(this.tbResidenceCreditHours);
             this.panelResidence.Controls.Add(this.ResidenceNextButton);
-            this.panelResidence.Controls.Add(this.button8);
+            this.panelResidence.Controls.Add(this.ResidencePreviousButton);
             this.panelResidence.Controls.Add(this.label21);
             this.panelResidence.Enabled = false;
-            this.panelResidence.Location = new System.Drawing.Point(830, 3);
+            this.panelResidence.Location = new System.Drawing.Point(1, 3);
             this.panelResidence.Name = "panelResidence";
             this.panelResidence.Size = new System.Drawing.Size(200, 370);
             this.panelResidence.TabIndex = 11;
@@ -791,7 +820,7 @@
             // 
             // label26
             // 
-            this.label26.Location = new System.Drawing.Point(5, 144);
+            this.label26.Location = new System.Drawing.Point(5, 159);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(191, 35);
             this.label26.TabIndex = 24;
@@ -799,7 +828,7 @@
             // 
             // label25
             // 
-            this.label25.Location = new System.Drawing.Point(5, 46);
+            this.label25.Location = new System.Drawing.Point(5, 61);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(191, 35);
             this.label25.TabIndex = 23;
@@ -807,7 +836,7 @@
             // 
             // label24
             // 
-            this.label24.Location = new System.Drawing.Point(5, 90);
+            this.label24.Location = new System.Drawing.Point(5, 105);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(192, 26);
             this.label24.TabIndex = 21;
@@ -815,7 +844,7 @@
             // 
             // tbResidenceLast36
             // 
-            this.tbResidenceLast36.Location = new System.Drawing.Point(95, 118);
+            this.tbResidenceLast36.Location = new System.Drawing.Point(95, 133);
             this.tbResidenceLast36.MaxLength = 3;
             this.tbResidenceLast36.Name = "tbResidenceLast36";
             this.tbResidenceLast36.Size = new System.Drawing.Size(100, 20);
@@ -825,13 +854,13 @@
             // 
             this.label23.Location = new System.Drawing.Point(5, 3);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(192, 18);
+            this.label23.Size = new System.Drawing.Size(192, 33);
             this.label23.TabIndex = 19;
             this.label23.Text = "Credit hours in residence toward major";
             // 
             // tbResidenceCreditHours
             // 
-            this.tbResidenceCreditHours.Location = new System.Drawing.Point(95, 24);
+            this.tbResidenceCreditHours.Location = new System.Drawing.Point(95, 39);
             this.tbResidenceCreditHours.MaxLength = 3;
             this.tbResidenceCreditHours.Name = "tbResidenceCreditHours";
             this.tbResidenceCreditHours.Size = new System.Drawing.Size(100, 20);
@@ -839,76 +868,310 @@
             // 
             // ResidenceNextButton
             // 
-            this.ResidenceNextButton.Location = new System.Drawing.Point(69, 284);
+            this.ResidenceNextButton.Location = new System.Drawing.Point(68, 332);
             this.ResidenceNextButton.Name = "ResidenceNextButton";
             this.ResidenceNextButton.Size = new System.Drawing.Size(126, 33);
             this.ResidenceNextButton.TabIndex = 17;
             this.ResidenceNextButton.Text = "Next";
             this.ResidenceNextButton.UseVisualStyleBackColor = true;
+            this.ResidenceNextButton.Click += new System.EventHandler(this.ResidenceNextButton_Click);
             // 
-            // button8
+            // ResidencePreviousButton
             // 
-            this.button8.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button8.Location = new System.Drawing.Point(6, 284);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(58, 33);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "Cancel";
-            this.button8.UseVisualStyleBackColor = true;
+            this.ResidencePreviousButton.Location = new System.Drawing.Point(5, 332);
+            this.ResidencePreviousButton.Name = "ResidencePreviousButton";
+            this.ResidencePreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.ResidencePreviousButton.TabIndex = 18;
+            this.ResidencePreviousButton.Text = "Previous";
+            this.ResidencePreviousButton.UseVisualStyleBackColor = true;
+            this.ResidencePreviousButton.Click += new System.EventHandler(this.ResidencePreviousButton_Click);
             // 
             // label21
             // 
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.Location = new System.Drawing.Point(6, 279);
+            this.label21.Location = new System.Drawing.Point(5, 327);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(189, 2);
             this.label21.TabIndex = 16;
             // 
             // panelPage4
             // 
+            this.panelPage4.Controls.Add(this.textBox14);
+            this.panelPage4.Controls.Add(this.textBox15);
+            this.panelPage4.Controls.Add(this.textBox16);
+            this.panelPage4.Controls.Add(this.textBox17);
+            this.panelPage4.Controls.Add(this.textBox18);
+            this.panelPage4.Controls.Add(this.textBox19);
+            this.panelPage4.Controls.Add(this.textBox20);
+            this.panelPage4.Controls.Add(this.textBox21);
+            this.panelPage4.Controls.Add(this.textBox22);
+            this.panelPage4.Controls.Add(this.textBox23);
+            this.panelPage4.Controls.Add(this.textBox24);
+            this.panelPage4.Controls.Add(this.textBox25);
+            this.panelPage4.Controls.Add(this.textBox11);
+            this.panelPage4.Controls.Add(this.textBox12);
+            this.panelPage4.Controls.Add(this.textBox13);
+            this.panelPage4.Controls.Add(this.textBox8);
+            this.panelPage4.Controls.Add(this.textBox9);
+            this.panelPage4.Controls.Add(this.textBox10);
+            this.panelPage4.Controls.Add(this.textBox5);
+            this.panelPage4.Controls.Add(this.textBox6);
+            this.panelPage4.Controls.Add(this.textBox7);
+            this.panelPage4.Controls.Add(this.textBox4);
+            this.panelPage4.Controls.Add(this.textBox3);
+            this.panelPage4.Controls.Add(this.textBox2);
+            this.panelPage4.Controls.Add(this.label30);
+            this.panelPage4.Controls.Add(this.label29);
+            this.panelPage4.Controls.Add(this.label28);
+            this.panelPage4.Controls.Add(this.label27);
             this.panelPage4.Controls.Add(this.Page4NextButton);
-            this.panelPage4.Controls.Add(this.button10);
+            this.panelPage4.Controls.Add(this.Page4PreviousButton);
             this.panelPage4.Controls.Add(this.label22);
             this.panelPage4.Enabled = false;
-            this.panelPage4.Location = new System.Drawing.Point(1242, 3);
+            this.panelPage4.Location = new System.Drawing.Point(1, 3);
             this.panelPage4.Name = "panelPage4";
             this.panelPage4.Size = new System.Drawing.Size(200, 370);
             this.panelPage4.TabIndex = 0;
             this.panelPage4.Visible = false;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(136, 110);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(60, 20);
+            this.textBox4.TabIndex = 25;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(70, 110);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(60, 20);
+            this.textBox3.TabIndex = 24;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(4, 110);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(60, 20);
+            this.textBox2.TabIndex = 23;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(13, 82);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(43, 13);
+            this.label30.TabIndex = 22;
+            this.label30.Text = "Subject";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(75, 83);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(50, 13);
+            this.label29.TabIndex = 21;
+            this.label29.Text = "Course #";
+            // 
+            // label28
+            // 
+            this.label28.Location = new System.Drawing.Point(140, 77);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(58, 26);
+            this.label28.TabIndex = 20;
+            this.label28.Text = "Term / Semester";
+            // 
+            // label27
+            // 
+            this.label27.Location = new System.Drawing.Point(3, 3);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(193, 66);
+            this.label27.TabIndex = 19;
+            this.label27.Text = "List remaining courses needed to complete degree and the planned term of completi" +
+    "on. If course Sub/# is not specifically listed, please indicate whether lower- o" +
+    "r upper-level.";
+            // 
             // Page4NextButton
             // 
-            this.Page4NextButton.Location = new System.Drawing.Point(69, 326);
+            this.Page4NextButton.Location = new System.Drawing.Point(69, 332);
             this.Page4NextButton.Name = "Page4NextButton";
             this.Page4NextButton.Size = new System.Drawing.Size(126, 33);
             this.Page4NextButton.TabIndex = 17;
             this.Page4NextButton.Text = "Next";
             this.Page4NextButton.UseVisualStyleBackColor = true;
+            this.Page4NextButton.Click += new System.EventHandler(this.Page4NextButton_Click);
             // 
-            // button10
+            // Page4PreviousButton
             // 
-            this.button10.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button10.Location = new System.Drawing.Point(6, 326);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(58, 33);
-            this.button10.TabIndex = 18;
-            this.button10.Text = "Cancel";
-            this.button10.UseVisualStyleBackColor = true;
+            this.Page4PreviousButton.Location = new System.Drawing.Point(6, 332);
+            this.Page4PreviousButton.Name = "Page4PreviousButton";
+            this.Page4PreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.Page4PreviousButton.TabIndex = 18;
+            this.Page4PreviousButton.Text = "Previous";
+            this.Page4PreviousButton.UseVisualStyleBackColor = true;
+            this.Page4PreviousButton.Click += new System.EventHandler(this.Page4PreviousButton_Click);
             // 
             // label22
             // 
             this.label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label22.Location = new System.Drawing.Point(6, 321);
+            this.label22.Location = new System.Drawing.Point(6, 327);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(189, 2);
             this.label22.TabIndex = 16;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(136, 136);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(60, 20);
+            this.textBox5.TabIndex = 28;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(70, 136);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(60, 20);
+            this.textBox6.TabIndex = 27;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(4, 136);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(60, 20);
+            this.textBox7.TabIndex = 26;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(136, 162);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(60, 20);
+            this.textBox8.TabIndex = 31;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(70, 162);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(60, 20);
+            this.textBox9.TabIndex = 30;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(4, 162);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(60, 20);
+            this.textBox10.TabIndex = 29;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(136, 188);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(60, 20);
+            this.textBox11.TabIndex = 34;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(70, 188);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(60, 20);
+            this.textBox12.TabIndex = 33;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(4, 188);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(60, 20);
+            this.textBox13.TabIndex = 32;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(136, 292);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(60, 20);
+            this.textBox14.TabIndex = 46;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(70, 292);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(60, 20);
+            this.textBox15.TabIndex = 45;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(4, 292);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(60, 20);
+            this.textBox16.TabIndex = 44;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(136, 266);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(60, 20);
+            this.textBox17.TabIndex = 43;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(70, 266);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(60, 20);
+            this.textBox18.TabIndex = 42;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(4, 266);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(60, 20);
+            this.textBox19.TabIndex = 41;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(136, 240);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(60, 20);
+            this.textBox20.TabIndex = 40;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(70, 240);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(60, 20);
+            this.textBox21.TabIndex = 39;
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(4, 240);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(60, 20);
+            this.textBox22.TabIndex = 38;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(136, 214);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(60, 20);
+            this.textBox23.TabIndex = 37;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(70, 214);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(60, 20);
+            this.textBox24.TabIndex = 36;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(4, 214);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(60, 20);
+            this.textBox25.TabIndex = 35;
             // 
             // CreateNewGradAppForm
             // 
             this.AcceptButton = this.NextButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 448);
+            this.ClientSize = new System.Drawing.Size(203, 448);
             this.Controls.Add(this.panelPage4);
             this.Controls.Add(this.panelResidence);
             this.Controls.Add(this.panelDoubleMajor);
@@ -917,9 +1180,11 @@
             this.Controls.Add(this.panelPage3);
             this.Controls.Add(this.panelPage1);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CreateNewGradAppForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Add New Graduation App";
             this.Load += new System.EventHandler(this.CreateNewGradAppForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -943,6 +1208,7 @@
             this.panelResidence.ResumeLayout(false);
             this.panelResidence.PerformLayout();
             this.panelPage4.ResumeLayout(false);
+            this.panelPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -970,11 +1236,11 @@
         private System.Windows.Forms.Panel panelDoubleMajor;
         private System.Windows.Forms.TextBox tbSecondMajorHours;
         private System.Windows.Forms.Button DoubleMajorNextButton;
-        private System.Windows.Forms.Button cancelButton2;
+        private System.Windows.Forms.Button DuelDegreePreviousButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panelDuelDegree;
         private System.Windows.Forms.Button DuelDegreeNextButton;
-        private System.Windows.Forms.Button cancelButton3;
+        private System.Windows.Forms.Button DoubleMajorPreviousButton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelPage2;
         private System.Windows.Forms.Label label9;
@@ -988,7 +1254,7 @@
         private System.Windows.Forms.RadioButton rbElectivesNo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button Page3NextButton;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Page3PreviousButton;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox tbSubCourse6;
         private System.Windows.Forms.TextBox tbCourse6;
@@ -1010,7 +1276,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button Page2NextButton;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Page2PreviousButton;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.RadioButton rbElectivesYes;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -1018,7 +1284,7 @@
         private System.Windows.Forms.RadioButton rbTransferNo;
         private System.Windows.Forms.Panel panelResidence;
         private System.Windows.Forms.Button ResidenceNextButton;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button ResidencePreviousButton;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panelPage4;
         private System.Windows.Forms.Label label26;
@@ -1028,7 +1294,35 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox tbResidenceCreditHours;
         private System.Windows.Forms.Button Page4NextButton;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Page4PreviousButton;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }

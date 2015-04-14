@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfirmNewGradAppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmNewGradAppForm.Designer.cs">
+      <DependentUpon>ConfirmNewGradAppForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateNewGradAppForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="VerificationForm.Designer.cs">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConfirmNewGradAppForm.resx">
+      <DependentUpon>ConfirmNewGradAppForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateNewGradAppForm.resx">
       <DependentUpon>CreateNewGradAppForm.cs</DependentUpon>
     </EmbeddedResource>
