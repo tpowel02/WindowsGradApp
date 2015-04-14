@@ -29,8 +29,9 @@ namespace GradAppTracker
         {
             StringBuilder query = new StringBuilder();
 
-            query.Append("SELECT * ");
+            query.Append("SELECT [USERS].[FIRST_NAME] AS [First Name], [USERS].[LAST_NAME] AS [Last Name], [USERS].[EMAIL] AS [Email], [POSITION].[POSITION_NAME] AS [User Type]  ");
             query.Append("FROM [TGA_Project].[dbo].[USERS] ");
+            query.Append("JOIN [TGA_Project].[dbo].[POSITION] ON [POSITION].[POSITION_ID] = [USERS].[POSITION_ID]");
 
             DataTable table = new DataTable();
 
@@ -96,6 +97,41 @@ namespace GradAppTracker
                         {return false;}
                     }
                     catch(Exception e)
+                    {
+                        return false;
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+        public static bool UpdateUser(User user)
+        {
+            //For Admin Use - Create a New Faculty User (for application login)
+            StringBuilder query = new StringBuilder();
+
+            string resultString = "!";
+
+            query.Append("INSERT INTO [TGA_Project].[dbo].[USERS] ");
+            query.Append("([FIRST_NAME],[LAST_NAME],[EMAIL],[PASSWORD],[POSITION_ID]) ");
+            query.Append(String.Format("VALUES ('{0}', '{1}', '{2}', '{3}', {4})", user.FirstName, user.LastName, user.Email, user.Password, user.PositionID));
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    try
+                    {
+                        int result = command.ExecuteNonQuery();
+
+                        if (result == 1)
+                        { return true; }
+                        else
+                        { return false; }
+                    }
+                    catch (Exception e)
                     {
                         return false;
                     }

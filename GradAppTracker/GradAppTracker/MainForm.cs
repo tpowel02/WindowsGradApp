@@ -31,8 +31,6 @@ namespace GradAppTracker
             dt = DB.GetPastApplications();
             dgvPast.DataSource = dt;
 
-
-            //TODO: IF user is admin, load users DGV, need to get user.PositionID of currently logged in user, and check to see that it is corresponding value  (1 = admin?)
             dt = DB.GetUsers();
             dgvUsers.DataSource = dt;
 
@@ -50,7 +48,14 @@ namespace GradAppTracker
             }
             else
             {
-                (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
+                try
+                {
+                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
+                }
+                catch(Exception e1)
+                {
+                    //don't care
+                }
             }
         }
 
@@ -59,11 +64,21 @@ namespace GradAppTracker
         {
             if (tbSearchByStudentIdNumber.Text == "")
             {
+                SqlConnection conn = DB.GetConnection();
+                dt = DB.GetCurrentApplications();
+                dgvCurrent.DataSource = dt;
                 return;
             }
             else
             {
-                (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
+                try
+                {
+                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
+                }
+                catch(Exception e1)
+                {
+                    //don't care
+                }
             }
         }
 
@@ -88,6 +103,39 @@ namespace GradAppTracker
             //pass a selected datarow from dgvUsers to update method (need to create this still)
             //try to update DB on accept button
             //return updated data row and update dgv source from DB
+
+            string firstName;
+            string lastName;
+            string email;
+            string positionName;
+
+            DataGridViewRow dgvRow;
+            DataGridView dgv;
+            DataGridViewSelectedRowCollection dgvRows;
+            User user = new User();
+            try
+            {
+                UUForm uf = new UUForm();
+                dgvRows = dgvUsers.SelectedRows;
+                dgvRow = dgvRows[0];
+
+                firstName = (string) dgvRow.Cells["First Name"].Value;
+                lastName = (string)dgvRow.Cells["Last Name"].Value;
+                email = (string)dgvRow.Cells["Email"].Value;
+                positionName = (string)dgvRow.Cells["User Type"].Value;
+
+
+                uf.Tag = firstName + " " +  lastName + " " + email;
+                uf.ShowDialog();
+
+            }
+            catch(Exception e1)
+            {
+
+            }
+
+
+
         }
 
         private void btnCreateGradApp_Click(object sender, EventArgs e)
@@ -108,24 +156,65 @@ namespace GradAppTracker
         {
             if (tbYearFilter.Text == "")
             {
+                SqlConnection conn = DB.GetConnection();
+                dt = DB.GetCurrentApplications();
+                dgvCurrent.DataSource = dt;
                 return;
             }
             else
             {
-                (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Year] = '{0}'", tbYearFilter.Text);
+                try
+                {
+                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Year] = '{0}'", tbYearFilter.Text);
+                }
+                catch(Exception e1)
+                {
+                    //dont' care
+                }
+
             }
         }
 
         private void cbFilterBySemester_SelectedIndexChanged(object sender, EventArgs e)
         {
-            (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Semester] LIKE '{0}%'", cbFilterBySemester.SelectedItem);
-
+            if (cbFilterBySemester.Text == "")
+            {
+                SqlConnection conn = DB.GetConnection();
+                dt = DB.GetCurrentApplications();
+                dgvCurrent.DataSource = dt;
+            }
+            else
+            {
+                try
+                {
+                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Semester] LIKE '{0}%'", cbFilterBySemester.SelectedItem);
+                }
+                catch (Exception e1)
+                {
+                    //don't care
+                }
+            }
         }
 
         private void cbFilterByStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Status] LIKE '{0}%'", cbFilterByStatus.SelectedItem);
-
+            if (cbFilterByStatus.Text == "")
+            {
+                SqlConnection conn = DB.GetConnection();
+                dt = DB.GetCurrentApplications();
+                dgvCurrent.DataSource = dt;
+            }
+            else
+            {
+                try
+                {
+                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Status] LIKE '{0}%'", cbFilterByStatus.SelectedItem);
+                }
+                catch (Exception e1)
+                {
+                    //don't care
+                }
+            }
         }
     }
 }
