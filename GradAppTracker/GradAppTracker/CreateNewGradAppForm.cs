@@ -12,7 +12,7 @@ namespace GradAppTracker
 {
     public partial class CreateNewGradAppForm : Form
     {
-        bool duelDegree = false;
+        bool duelDegree = true;
         bool doubleMajor = false;
         
        
@@ -212,6 +212,7 @@ namespace GradAppTracker
 
             int txtStudentID = Convert.ToInt32(tbStudentID.Text);
             dt = DB.GetStudentInfo(txtStudentID);
+
 
             foreach (DataRow row in dt.Rows)
             {
