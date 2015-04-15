@@ -115,6 +115,7 @@ namespace GradAppTracker
             User user = new User();
             try
             {
+                UUForm uf = new UUForm();
                 dgvRows = dgvUsers.SelectedRows;
                 dgvRow = dgvRows[0];
 
@@ -123,7 +124,7 @@ namespace GradAppTracker
                 email = (string)dgvRow.Cells["Email"].Value;
                 positionName = (string)dgvRow.Cells["User Type"].Value;
 
-                DGVUpdateForm uf = new DGVUpdateForm();
+
                 uf.Tag = firstName + " " +  lastName + " " + email;
                 uf.ShowDialog();
 

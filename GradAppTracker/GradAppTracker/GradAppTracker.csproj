@@ -81,12 +81,6 @@
       <DependentUpon>CreateNewUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
-    <Compile Include="DGVUpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DGVUpdateForm.Designer.cs">
-      <DependentUpon>DGVUpdateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="GradApp.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -124,9 +118,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateNewUserForm.resx">
       <DependentUpon>CreateNewUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DGVUpdateForm.resx">
-      <DependentUpon>DGVUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.af.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
