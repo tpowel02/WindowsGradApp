@@ -226,17 +226,16 @@ namespace GradAppTracker
                 gradApp.StudentEmail = row[1].ToString();
                 gradApp.TotalGPA = Convert.ToDouble(row[2].ToString());
                 gradApp.EarnedMajorGPA = Convert.ToDouble(row[3].ToString());
-                //gradApp.EarnedMinorGPA      = Convert.ToDouble(row[4].ToString());
-                gradApp.MajorName = row[4].ToString();
-                gradApp.MajorID = Convert.ToInt32(row[5].ToString());
-                gradApp.MajorCatalog = row[6].ToString();
-                gradApp.Concentration = row[7].ToString();
-                gradApp.ConcentrationCode = row[8].ToString();
-                /*gradApp.MinorID             = Convert.ToInt32(row[5].ToString());
-                gradApp.MinorName           = row[6].ToString();
-                gradApp.MinorCatalog        = row[7].ToString();*/
-                gradApp.GradYear = Convert.ToInt32(row[9].ToString());
-                gradApp.GradSemester = row[10].ToString();
+                gradApp.EarnedMinorGPA = Convert.ToDouble(row[4].ToString());
+                gradApp.MajorName = row[5].ToString();
+                gradApp.MajorID = Convert.ToInt32(row[6].ToString());
+                gradApp.MajorCatalog = row[7].ToString();
+                gradApp.Concentration = row[8].ToString();
+                gradApp.ConcentrationCode = row[9].ToString();
+                gradApp.MinorID = Convert.ToInt32(row[10].ToString());
+                gradApp.MinorName = row[11].ToString();
+                gradApp.MinorCatalog = row[12].ToString();
+                gradApp.GradYear = Convert.ToInt32(row[13].ToString());
                 //etc.....
             }
 
