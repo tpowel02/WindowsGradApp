@@ -106,6 +106,7 @@ namespace GradAppTracker
             get { return active; }
             set { active = value; }
         }
+        // ----------------------------------------------------------------------------------------
         public int StudentID
         {
             get { return studentID; }
