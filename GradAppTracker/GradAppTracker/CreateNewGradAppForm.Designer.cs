@@ -187,7 +187,7 @@
             this.tbStudentID.Name = "tbStudentID";
             this.tbStudentID.Size = new System.Drawing.Size(114, 20);
             this.tbStudentID.TabIndex = 1;
-            this.tbStudentID.TextChanged += new System.EventHandler(this.tbStudentID_TextChanged);
+            this.tbStudentID.Leave += new System.EventHandler(this.tbStudentID_Leave);
             // 
             // label1
             // 

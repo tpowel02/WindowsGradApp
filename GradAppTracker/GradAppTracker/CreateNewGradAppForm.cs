@@ -205,10 +205,8 @@ namespace GradAppTracker
         {
 
         }
-
-        private void tbStudentID_TextChanged(object sender, EventArgs e)
+        private void tbStudentID_Leave(object sender, EventArgs e)
         {
-
             DataTable dt = new DataTable();
             GradApp gradApp = new GradApp();
 
@@ -217,11 +215,25 @@ namespace GradAppTracker
 
             foreach (DataRow row in dt.Rows)
             {
-
-                gradApp.StudentName = row[0].ToString();
+                gradApp.StudentName         = row[0].ToString();
+                gradApp.StudentEmail        = row[1].ToString();
+                gradApp.TotalGPA            = Convert.ToDouble(row[2].ToString());
+                gradApp.EarnedMajorGPA      = Convert.ToDouble(row[3].ToString());
+                gradApp.EarnedMinorGPA      = Convert.ToDouble(row[4].ToString());
+                gradApp.MajorName           = row[1].ToString();
+                gradApp.MajorID             = Convert.ToInt32(row[1].ToString());
+                gradApp.MajorCatalog        = row[1].ToString();
+                gradApp.Concentration       = row[1].ToString();
+                gradApp.ConcentrationCode   = row[1].ToString();
+                gradApp.MinorID             = Convert.ToInt32(row[1].ToString());
+                gradApp.MinorName           = row[1].ToString();
+                gradApp.MinorCatalog        = row[1].ToString();
+                gradApp.GradYear            = Convert.ToInt32(row[1].ToString());
 
                 //etc.....
             }
+
+            lblStudentName.Text = gradApp.StudentName;
         }
 
       

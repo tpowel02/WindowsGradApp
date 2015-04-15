@@ -194,7 +194,6 @@ namespace GradAppTracker
             query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [grad_app].[major_id] ");
             query.Append(String.Format("WHERE GRAD_APP.ACTIVE = {0} ", 0));
 
-
             DataTable table = new DataTable();
 
             using (SqlConnection conn = GetConnection())
@@ -210,7 +209,6 @@ namespace GradAppTracker
             }
             return table;
         }
-
         public static int Login(string email, string password)
         {
             StringBuilder query = new StringBuilder();
@@ -241,11 +239,7 @@ namespace GradAppTracker
             {
                 return 0;
             }
-
-
         }
-
-
         public static int CreateGradApp()
         {
             return 1;
@@ -267,12 +261,12 @@ namespace GradAppTracker
                         + "(minor.minor_id) AS [Minor ID - not code], "
                         + "(minor.minor_name) AS [Minor Name], "
                         + "(minor.catalog_term) AS [Minor Catalog Year], "
-                        + "student.grad_year AS [Graduation Year], student.grad_semester AS [Graduation Semester], ");
+                        + "student.grad_year AS [Graduation Year], student.grad_semester AS [Graduation Semester] ");
             query.Append("FROM [TGA_Project].[dbo].[student] ");
             query.Append("JOIN [TGA_Project].[dbo].[minor] on [minor].[minor_id] = [student].[minor_id] ");
-            query.Append("JOIN [TGA_Project].[dbo].[student_major] on [student_major].[student_id] = [student].[student_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[student_major] on [student_major].[db_student_id] = [student].[db_student_id] ");
             query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [student_major].[major_id] ");
-            query.Append(String.Format("WHERE student.student_id = {0} ", tempID));
+            query.Append(String.Format("WHERE student.student_id = {0} ", 29347));
 
             DataTable table = new DataTable();
 
