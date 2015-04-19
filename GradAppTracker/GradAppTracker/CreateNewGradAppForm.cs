@@ -23,6 +23,7 @@ namespace GradAppTracker
             
         }
 
+        //BUTTON CODE-------------------------------------------------------
         private void CreateNewGradAppForm_Load(object sender, EventArgs e)
         {
             
@@ -30,7 +31,7 @@ namespace GradAppTracker
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            
+            //This is on PanelPage1
             if (duelDegree)
             {
                 panelPage1.Hide();
@@ -57,10 +58,41 @@ namespace GradAppTracker
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            //This is one PanelPage1
             this.Close();
         }
 
-        
+        private void DuelDegreeNextButton_Click(object sender, EventArgs e)
+        {
+            panelDuelDegree.Hide();
+            panelPage2.Show();
+            panelDuelDegree.Enabled = false;
+            panelPage2.Enabled = true;
+        }
+
+        private void DuelDegreePreviousButton_Click(object sender, EventArgs e)
+        {
+            panelDuelDegree.Hide();
+            panelPage1.Show();
+            panelDuelDegree.Enabled = false;
+            panelPage1.Enabled = true;
+        }
+
+        private void DoubleMajorNextButton_Click(object sender, EventArgs e)
+        {
+            panelDoubleMajor.Hide();
+            panelPage2.Show();
+            panelDoubleMajor.Enabled = false;
+            panelPage2.Enabled = true;
+        }
+
+        private void DoubleMajorPreviousButton_Click(object sender, EventArgs e)
+        {
+            panelDoubleMajor.Hide();
+            panelPage1.Show();
+            panelDoubleMajor.Enabled = false;
+            panelPage1.Enabled = true;
+        }
 
         private void Page2NextButton_Click(object sender, EventArgs e)
         {
@@ -78,36 +110,6 @@ namespace GradAppTracker
                 panelPage2.Enabled = false;
                 panelPage3.Enabled = true;
             }
-        }
-
-        private void Page3NextButton_Click(object sender, EventArgs e)
-        {
-            panelPage3.Hide();
-            panelPage4.Show();
-            panelPage3.Enabled = false;
-            panelPage4.Enabled = true;
-        }
-
-        private void Page4NextButton_Click(object sender, EventArgs e)
-        {
-            ConfirmNewGradAppForm confirm = new ConfirmNewGradAppForm();
-            confirm.FormClosed += new FormClosedEventHandler(confirm_FormClosed);
-            confirm.Show();
-            //this.Hide();
-            
-            
-        }
-        private void confirm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void ResidenceNextButton_Click(object sender, EventArgs e)
-        {
-            panelResidence.Hide();
-            panelPage3.Show();
-            panelResidence.Enabled = false;
-            panelPage3.Enabled = true;
         }
 
         private void Page2PreviousButton_Click(object sender, EventArgs e)
@@ -135,28 +137,28 @@ namespace GradAppTracker
             }
         }
 
-        private void DuelDegreePreviousButton_Click(object sender, EventArgs e)
+        private void ResidenceNextButton_Click(object sender, EventArgs e)
         {
-            panelDuelDegree.Hide();
-            panelPage1.Show();
-            panelDuelDegree.Enabled = false;
-            panelPage1.Enabled = true;
-        }
-
-        private void DoubleMajorPreviousButton_Click(object sender, EventArgs e)
-        {
-            panelDoubleMajor.Hide();
-            panelPage1.Show();
-            panelDoubleMajor.Enabled = false;
-            panelPage1.Enabled = true;
-        }
-
-        private void Page4PreviousButton_Click(object sender, EventArgs e)
-        {
-            panelPage4.Hide();
+            panelResidence.Hide();
             panelPage3.Show();
-            panelPage4.Enabled = false;
+            panelResidence.Enabled = false;
             panelPage3.Enabled = true;
+        }
+
+        private void ResidencePreviousButton_Click(object sender, EventArgs e)
+        {
+            panelResidence.Hide();
+            panelPage2.Show();
+            panelResidence.Enabled = false;
+            panelPage2.Enabled = true;
+        }
+
+        private void Page3NextButton_Click(object sender, EventArgs e)
+        {
+            panelPage3.Hide();
+            panelPage4.Show();
+            panelPage3.Enabled = false;
+            panelPage4.Enabled = true;
         }
 
         private void Page3PreviousButton_Click(object sender, EventArgs e)
@@ -177,30 +179,50 @@ namespace GradAppTracker
             }
         }
 
-        private void ResidencePreviousButton_Click(object sender, EventArgs e)
+        private void Page4NextButton_Click(object sender, EventArgs e)
         {
-            panelResidence.Hide();
-            panelPage2.Show();
-            panelResidence.Enabled = false;
-            panelPage2.Enabled = true;
+            panelPage4.Hide();
+            panelConfirm.Show();
+            this.Size = new System.Drawing.Size(500, 500);
+        }
+        /* This code opens a new form. Currently not in use.
+        private void Page4NextButton_Click(object sender, EventArgs e)
+        {
+            ConfirmNewGradAppForm confirm = new ConfirmNewGradAppForm();
+            confirm.FormClosed += new FormClosedEventHandler(confirm_FormClosed);
+            
+            confirm.Show();
+            //this.Hide();
+            
+            
+        }
+        private void confirm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }*/
+
+        private void Page4PreviousButton_Click(object sender, EventArgs e)
+        {
+            panelPage4.Hide();
+            panelPage3.Show();
+            panelPage4.Enabled = false;
+            panelPage3.Enabled = true;
         }
 
-        private void DuelDegreeNextButton_Click(object sender, EventArgs e)
+        private void ConfirmConfirmButton_Click(object sender, EventArgs e)
         {
-            panelDuelDegree.Hide();
-            panelPage2.Show();
-            panelDuelDegree.Enabled = false;
-            panelPage2.Enabled = true;
+            //Code to export info to PDF
+            this.Close();
         }
 
-        private void DoubleMajorNextButton_Click(object sender, EventArgs e)
+        private void ConfirmPreviousButton_Click(object sender, EventArgs e)
         {
-            panelDoubleMajor.Hide();
-            panelPage2.Show();
-            panelDoubleMajor.Enabled = false;
-            panelPage2.Enabled = true;
+            panelConfirm.Hide();
+            this.Size = new System.Drawing.Size(220, 486);
+            panelPage4.Show();
         }
 
+        //USER INFO/DB CODE-------------------------------------------------------
         private void rbCeremonyYes_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -242,5 +264,9 @@ namespace GradAppTracker
 
             lblStudentName.Text = gradApp.StudentName;
         }
+
+        
+
+        
     }
 }

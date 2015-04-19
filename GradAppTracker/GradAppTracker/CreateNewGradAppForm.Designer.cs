@@ -46,6 +46,7 @@
             this.rbCeremonyNo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelPage1 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.panelPage3 = new System.Windows.Forms.Panel();
             this.Page3NextButton = new System.Windows.Forms.Button();
@@ -75,14 +76,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbSecondMajorHours = new System.Windows.Forms.TextBox();
             this.DoubleMajorNextButton = new System.Windows.Forms.Button();
-            this.DuelDegreePreviousButton = new System.Windows.Forms.Button();
+            this.DoubleMajorPreviousButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.DuelDegreePreviousButton = new System.Windows.Forms.Button();
             this.panelDuelDegree = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.DuelDegreeNextButton = new System.Windows.Forms.Button();
-            this.DoubleMajorPreviousButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panelPage2 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -138,6 +139,11 @@
             this.Page4NextButton = new System.Windows.Forms.Button();
             this.Page4PreviousButton = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
+            this.panelConfirm = new System.Windows.Forms.Panel();
+            this.ConfirmPreviousButton = new System.Windows.Forms.Button();
+            this.ConfirmConfirmButton = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelPage1.SuspendLayout();
@@ -150,6 +156,7 @@
             this.groupBox2.SuspendLayout();
             this.panelResidence.SuspendLayout();
             this.panelPage4.SuspendLayout();
+            this.panelConfirm.SuspendLayout();
             this.SuspendLayout();
             // 
             // NextButton
@@ -302,6 +309,7 @@
             // 
             // panelPage1
             // 
+            this.panelPage1.Controls.Add(this.label33);
             this.panelPage1.Controls.Add(this.lblStudentName);
             this.panelPage1.Controls.Add(this.label1);
             this.panelPage1.Controls.Add(this.NextButton);
@@ -316,19 +324,27 @@
             this.panelPage1.Controls.Add(this.tbMiddleName);
             this.panelPage1.Controls.Add(this.label3);
             this.panelPage1.Controls.Add(this.label4);
-            this.panelPage1.Location = new System.Drawing.Point(200, 3);
+            this.panelPage1.Location = new System.Drawing.Point(1, 3);
             this.panelPage1.Name = "panelPage1";
             this.panelPage1.Size = new System.Drawing.Size(200, 370);
             this.panelPage1.TabIndex = 2;
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, 33);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(78, 13);
+            this.label33.TabIndex = 11;
+            this.label33.Text = "Student Name:";
+            // 
             // lblStudentName
             // 
-            this.lblStudentName.AutoSize = true;
-            this.lblStudentName.Location = new System.Drawing.Point(3, 31);
+            this.lblStudentName.Location = new System.Drawing.Point(82, 33);
             this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(126, 13);
+            this.lblStudentName.Size = new System.Drawing.Size(113, 13);
             this.lblStudentName.TabIndex = 10;
-            this.lblStudentName.Text = "STUDENT NAME HERE";
+            this.lblStudentName.Text = "  ";
             // 
             // panelPage3
             // 
@@ -544,7 +560,7 @@
             this.panelDoubleMajor.Controls.Add(this.label9);
             this.panelDoubleMajor.Controls.Add(this.tbSecondMajorHours);
             this.panelDoubleMajor.Controls.Add(this.DoubleMajorNextButton);
-            this.panelDoubleMajor.Controls.Add(this.DuelDegreePreviousButton);
+            this.panelDoubleMajor.Controls.Add(this.DoubleMajorPreviousButton);
             this.panelDoubleMajor.Controls.Add(this.label6);
             this.panelDoubleMajor.Enabled = false;
             this.panelDoubleMajor.Location = new System.Drawing.Point(1, 3);
@@ -589,15 +605,15 @@
             this.DoubleMajorNextButton.UseVisualStyleBackColor = true;
             this.DoubleMajorNextButton.Click += new System.EventHandler(this.DoubleMajorNextButton_Click);
             // 
-            // DuelDegreePreviousButton
+            // DoubleMajorPreviousButton
             // 
-            this.DuelDegreePreviousButton.Location = new System.Drawing.Point(6, 332);
-            this.DuelDegreePreviousButton.Name = "DuelDegreePreviousButton";
-            this.DuelDegreePreviousButton.Size = new System.Drawing.Size(58, 33);
-            this.DuelDegreePreviousButton.TabIndex = 12;
-            this.DuelDegreePreviousButton.Text = "Previous";
-            this.DuelDegreePreviousButton.UseVisualStyleBackColor = true;
-            this.DuelDegreePreviousButton.Click += new System.EventHandler(this.DuelDegreePreviousButton_Click);
+            this.DoubleMajorPreviousButton.Location = new System.Drawing.Point(5, 332);
+            this.DoubleMajorPreviousButton.Name = "DoubleMajorPreviousButton";
+            this.DoubleMajorPreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.DoubleMajorPreviousButton.TabIndex = 12;
+            this.DoubleMajorPreviousButton.Text = "Previous";
+            this.DoubleMajorPreviousButton.UseVisualStyleBackColor = true;
+            this.DoubleMajorPreviousButton.Click += new System.EventHandler(this.DoubleMajorPreviousButton_Click);
             // 
             // label6
             // 
@@ -607,14 +623,24 @@
             this.label6.Size = new System.Drawing.Size(189, 2);
             this.label6.TabIndex = 10;
             // 
+            // DuelDegreePreviousButton
+            // 
+            this.DuelDegreePreviousButton.Location = new System.Drawing.Point(5, 332);
+            this.DuelDegreePreviousButton.Name = "DuelDegreePreviousButton";
+            this.DuelDegreePreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.DuelDegreePreviousButton.TabIndex = 12;
+            this.DuelDegreePreviousButton.Text = "Previous";
+            this.DuelDegreePreviousButton.UseVisualStyleBackColor = true;
+            this.DuelDegreePreviousButton.Click += new System.EventHandler(this.DuelDegreePreviousButton_Click);
+            // 
             // panelDuelDegree
             // 
             this.panelDuelDegree.Controls.Add(this.label8);
             this.panelDuelDegree.Controls.Add(this.label12);
             this.panelDuelDegree.Controls.Add(this.textBox1);
             this.panelDuelDegree.Controls.Add(this.DuelDegreeNextButton);
-            this.panelDuelDegree.Controls.Add(this.DoubleMajorPreviousButton);
             this.panelDuelDegree.Controls.Add(this.label10);
+            this.panelDuelDegree.Controls.Add(this.DuelDegreePreviousButton);
             this.panelDuelDegree.Enabled = false;
             this.panelDuelDegree.Location = new System.Drawing.Point(1, 3);
             this.panelDuelDegree.Name = "panelDuelDegree";
@@ -656,16 +682,6 @@
             this.DuelDegreeNextButton.Text = "Next";
             this.DuelDegreeNextButton.UseVisualStyleBackColor = true;
             this.DuelDegreeNextButton.Click += new System.EventHandler(this.DuelDegreeNextButton_Click);
-            // 
-            // DoubleMajorPreviousButton
-            // 
-            this.DoubleMajorPreviousButton.Location = new System.Drawing.Point(6, 332);
-            this.DoubleMajorPreviousButton.Name = "DoubleMajorPreviousButton";
-            this.DoubleMajorPreviousButton.Size = new System.Drawing.Size(58, 33);
-            this.DoubleMajorPreviousButton.TabIndex = 12;
-            this.DoubleMajorPreviousButton.Text = "Previous";
-            this.DoubleMajorPreviousButton.UseVisualStyleBackColor = true;
-            this.DoubleMajorPreviousButton.Click += new System.EventHandler(this.DoubleMajorPreviousButton_Click);
             // 
             // label10
             // 
@@ -1168,12 +1184,62 @@
             this.label22.Size = new System.Drawing.Size(189, 2);
             this.label22.TabIndex = 16;
             // 
+            // panelConfirm
+            // 
+            this.panelConfirm.Controls.Add(this.ConfirmPreviousButton);
+            this.panelConfirm.Controls.Add(this.ConfirmConfirmButton);
+            this.panelConfirm.Controls.Add(this.label32);
+            this.panelConfirm.Controls.Add(this.label31);
+            this.panelConfirm.Location = new System.Drawing.Point(1, 3);
+            this.panelConfirm.Name = "panelConfirm";
+            this.panelConfirm.Size = new System.Drawing.Size(500, 440);
+            this.panelConfirm.TabIndex = 12;
+            this.panelConfirm.Visible = false;
+            // 
+            // ConfirmPreviousButton
+            // 
+            this.ConfirmPreviousButton.Location = new System.Drawing.Point(148, 400);
+            this.ConfirmPreviousButton.Name = "ConfirmPreviousButton";
+            this.ConfirmPreviousButton.Size = new System.Drawing.Size(58, 33);
+            this.ConfirmPreviousButton.TabIndex = 20;
+            this.ConfirmPreviousButton.Text = "Previous";
+            this.ConfirmPreviousButton.UseVisualStyleBackColor = true;
+            this.ConfirmPreviousButton.Click += new System.EventHandler(this.ConfirmPreviousButton_Click);
+            // 
+            // ConfirmConfirmButton
+            // 
+            this.ConfirmConfirmButton.Location = new System.Drawing.Point(211, 400);
+            this.ConfirmConfirmButton.Name = "ConfirmConfirmButton";
+            this.ConfirmConfirmButton.Size = new System.Drawing.Size(126, 33);
+            this.ConfirmConfirmButton.TabIndex = 19;
+            this.ConfirmConfirmButton.Text = "Confirm";
+            this.ConfirmConfirmButton.UseVisualStyleBackColor = true;
+            this.ConfirmConfirmButton.Click += new System.EventHandler(this.ConfirmConfirmButton_Click);
+            // 
+            // label32
+            // 
+            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label32.Location = new System.Drawing.Point(18, 395);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(450, 2);
+            this.label32.TabIndex = 18;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(208, 169);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(117, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "CONFIRM INFO HERE";
+            // 
             // CreateNewGradAppForm
             // 
             this.AcceptButton = this.NextButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 448);
+            this.ClientSize = new System.Drawing.Size(203, 448);
+            this.Controls.Add(this.panelConfirm);
             this.Controls.Add(this.panelPage4);
             this.Controls.Add(this.panelResidence);
             this.Controls.Add(this.panelDoubleMajor);
@@ -1183,11 +1249,12 @@
             this.Controls.Add(this.panelPage1);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CreateNewGradAppForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Add New Graduation App";
+            this.Text = "Create New Application";
             this.Load += new System.EventHandler(this.CreateNewGradAppForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -1211,6 +1278,8 @@
             this.panelResidence.PerformLayout();
             this.panelPage4.ResumeLayout(false);
             this.panelPage4.PerformLayout();
+            this.panelConfirm.ResumeLayout(false);
+            this.panelConfirm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1326,5 +1395,11 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Panel panelConfirm;
+        private System.Windows.Forms.Button ConfirmPreviousButton;
+        private System.Windows.Forms.Button ConfirmConfirmButton;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label33;
     }
 }
