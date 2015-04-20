@@ -284,5 +284,41 @@ namespace GradAppTracker
             }
             return table;
         }
+        public static bool UpdateApprovalStatus(string advisor, string dept, string dean, string records, string name)
+        {
+
+            StringBuilder query = new StringBuilder();
+
+            string resultString = "!";
+
+            query.Append("UPDATE [TGA_Project].[dbo].[GRAD_APP] ");
+            query.Append(String.Format("SET [ADVISOR_APPROVAL]='{0}',[DEPT_CHAIR_APPROVAL]='{1}',[DEAN_APPROVAL]='{2}',[RECORDS_APPROVAL]='{3}' ", advisor,dept,dean,records));
+            query.Append(string.Format("WHERE [STUDENT_ID] = (SELECT [TGA_Project].[dbo].[grad_app].STUDENT_ID FROM  [TGA_Project].[dbo].[GRAD_APP] JOIN  [TGA_Project].[dbo].[USERS] ON  [TGA_Project].[dbo].[grad_app].student_id= [TGA_Project].[dbo].[users].user_id WHERE CONCAT( [TGA_Project].[dbo].[users].first_name, ' ',  [TGA_Project].[dbo].[users].last_name) LIKE '{0}')", name));
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    try
+                    {
+                        int result = command.ExecuteNonQuery();
+
+                        if (result == 1)
+                        { return true; }
+                        else
+                        { return false; }
+                    }
+                    catch (Exception e)
+                    {
+                        return false;
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+
     }
 }

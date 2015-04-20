@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DGVUpdateForm));
             this.updateUserDgv = new System.Windows.Forms.DataGridView();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.FIRST_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LAST_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.updateUserDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // updateUserDgv
             // 
             this.updateUserDgv.AllowUserToAddRows = false;
+            this.updateUserDgv.AllowUserToDeleteRows = false;
             this.updateUserDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.updateUserDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.updateUserDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -52,6 +53,21 @@
             this.updateUserDgv.RowHeadersVisible = false;
             this.updateUserDgv.Size = new System.Drawing.Size(462, 51);
             this.updateUserDgv.TabIndex = 0;
+            // 
+            // FIRST_NAME
+            // 
+            this.FIRST_NAME.HeaderText = "First Name";
+            this.FIRST_NAME.Name = "FIRST_NAME";
+            // 
+            // LAST_NAME
+            // 
+            this.LAST_NAME.HeaderText = "Last Name";
+            this.LAST_NAME.Name = "LAST_NAME";
+            // 
+            // EMAIL
+            // 
+            this.EMAIL.HeaderText = "Email";
+            this.EMAIL.Name = "EMAIL";
             // 
             // btnUpdate
             // 
@@ -73,21 +89,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // FIRST_NAME
-            // 
-            this.FIRST_NAME.HeaderText = "First Name";
-            this.FIRST_NAME.Name = "FIRST_NAME";
-            // 
-            // LAST_NAME
-            // 
-            this.LAST_NAME.HeaderText = "Last Name";
-            this.LAST_NAME.Name = "LAST_NAME";
-            // 
-            // EMAIL
-            // 
-            this.EMAIL.HeaderText = "Email";
-            this.EMAIL.Name = "EMAIL";
-            // 
             // DGVUpdateForm
             // 
             this.AcceptButton = this.btnUpdate;
@@ -95,13 +96,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(486, 95);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.updateUserDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DGVUpdateForm";
-            this.Text = "DGVUpdateForm";
+            this.Text = "Update User Information";
             this.Load += new System.EventHandler(this.DGVUpdateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.updateUserDgv)).EndInit();
             this.ResumeLayout(false);

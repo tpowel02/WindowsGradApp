@@ -58,6 +58,7 @@
             this.lblSearchByName = new System.Windows.Forms.Label();
             this.tbSearchByName = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Pending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
@@ -243,6 +244,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.cbFilterByStatus);
             this.groupBox1.Controls.Add(this.cbFilterBySemester);
             this.groupBox1.Controls.Add(this.label6);
@@ -268,7 +270,7 @@
             "COMPLETED"});
             this.cbFilterByStatus.Location = new System.Drawing.Point(7, 225);
             this.cbFilterByStatus.Name = "cbFilterByStatus";
-            this.cbFilterByStatus.Size = new System.Drawing.Size(150, 21);
+            this.cbFilterByStatus.Size = new System.Drawing.Size(156, 21);
             this.cbFilterByStatus.TabIndex = 19;
             this.cbFilterByStatus.SelectedIndexChanged += new System.EventHandler(this.cbFilterByStatus_SelectedIndexChanged);
             // 
@@ -281,7 +283,7 @@
             "Summer"});
             this.cbFilterBySemester.Location = new System.Drawing.Point(10, 128);
             this.cbFilterBySemester.Name = "cbFilterBySemester";
-            this.cbFilterBySemester.Size = new System.Drawing.Size(150, 21);
+            this.cbFilterBySemester.Size = new System.Drawing.Size(153, 21);
             this.cbFilterBySemester.TabIndex = 18;
             this.cbFilterBySemester.SelectedIndexChanged += new System.EventHandler(this.cbFilterBySemester_SelectedIndexChanged);
             // 
@@ -374,11 +376,21 @@
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(7, 403);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 53);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Update Approval Status";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 620);
+            this.ClientSize = new System.Drawing.Size(1354, 620);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
@@ -437,6 +449,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbFilterBySemester;
         private System.Windows.Forms.ComboBox cbFilterByStatus;
+        private System.Windows.Forms.Button button3;
     }
 }
 
