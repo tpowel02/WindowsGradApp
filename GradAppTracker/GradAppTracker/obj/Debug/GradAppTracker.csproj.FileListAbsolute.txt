@@ -84,4 +84,10 @@ C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin
 C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\af\GradAppTracker.resources.dll
 C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csprojResolveAssemblyReference.cache
 C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
+<<<<<<< HEAD
 C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.AddTrackingRecordForm.resources
+=======
+C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
+C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
+C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
+>>>>>>> origin/master
