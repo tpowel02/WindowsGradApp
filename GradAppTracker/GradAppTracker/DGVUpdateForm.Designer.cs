@@ -42,6 +42,8 @@
             // 
             this.updateUserDgv.AllowUserToAddRows = false;
             this.updateUserDgv.AllowUserToDeleteRows = false;
+            this.updateUserDgv.AllowUserToResizeColumns = false;
+            this.updateUserDgv.AllowUserToResizeRows = false;
             this.updateUserDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.updateUserDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.updateUserDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

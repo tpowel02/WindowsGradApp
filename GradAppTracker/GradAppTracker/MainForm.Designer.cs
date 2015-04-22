@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.cbFilterByStatus = new System.Windows.Forms.ComboBox();
             this.cbFilterBySemester = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,7 +59,7 @@
             this.lblSearchByName = new System.Windows.Forms.Label();
             this.tbSearchByName = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addTrackingRecordbtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Pending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
@@ -244,6 +245,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.addTrackingRecordbtn);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.cbFilterByStatus);
             this.groupBox1.Controls.Add(this.cbFilterBySemester);
@@ -261,6 +263,16 @@
             this.groupBox1.Size = new System.Drawing.Size(168, 523);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(7, 403);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 53);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Update Approval Status";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // cbFilterByStatus
             // 
@@ -376,26 +388,29 @@
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
-            // button3
+            // addTrackingRecordbtn
             // 
-            this.button3.Location = new System.Drawing.Point(7, 403);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 53);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Update Approval Status";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 344);
+            this.addTrackingRecordbtn.Name = "addTrackingRecordbtn";
+            this.addTrackingRecordbtn.Size = new System.Drawing.Size(156, 53);
+            this.addTrackingRecordbtn.TabIndex = 1;
+            this.addTrackingRecordbtn.Text = "Add Tracking Record";
+            this.addTrackingRecordbtn.UseVisualStyleBackColor = true;
+            this.addTrackingRecordbtn.Click += new System.EventHandler(this.addTrackingRecordbtn_Click);
             // 
             // MainForm
             // 
+            this.AcceptButton = this.addTrackingRecordbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1354, 620);
+            this.ClientSize = new System.Drawing.Size(1348, 613);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1364, 659);
             this.Name = "MainForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UAFS Graduation Application Tracker";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -450,6 +465,7 @@
         private System.Windows.Forms.ComboBox cbFilterBySemester;
         private System.Windows.Forms.ComboBox cbFilterByStatus;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addTrackingRecordbtn;
     }
 }
 

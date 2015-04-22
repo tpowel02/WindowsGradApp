@@ -43,22 +43,39 @@ namespace GradAppTracker
             if (tbSearchByName.Text == "")
             {
                 SqlConnection conn = DB.GetConnection();
+
                 dt = DB.GetCurrentApplications();
                 dgvCurrent.DataSource = dt;
+
+                dt = DB.GetPastApplications();
+                dgvPast.DataSource = dt;
             }
             else
             {
-                try
+                if (tabControl1.SelectedTab == tabControl1.TabPages["Pending"])
                 {
-                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
+                    try
+                    {
+                        (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
                 }
-                catch(Exception e1)
+                else if(tabControl1.SelectedTab == tabControl1.TabPages["Completed"])
                 {
-                    //don't care
+                    try
+                    {
+                        (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
                 }
             }
         }
-
 
         private void tbSearchByStudentIdNumber_TextChanged(object sender, EventArgs e)
         {
@@ -71,13 +88,27 @@ namespace GradAppTracker
             }
             else
             {
-                try
+                if (tabControl1.SelectedTab == tabControl1.TabPages["Pending"])
                 {
-                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
+                    try
+                    {
+                        (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
                 }
-                catch(Exception e1)
+                else if (tabControl1.SelectedTab == tabControl1.TabPages["Completed"])
                 {
-                    //don't care
+                    try
+                    {
+                        (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
                 }
             }
         }
@@ -127,13 +158,13 @@ namespace GradAppTracker
                 uf.Tag = firstName + " " +  lastName + " " + email;
                 uf.ShowDialog();
 
+                Refresh refresh = new Refresh();
+                refresh.RefreshAdvisorTools(dgvUsers);
             }
             catch(Exception e1)
             {
 
             }
-
-
 
         }
 
@@ -184,6 +215,7 @@ namespace GradAppTracker
             }
             else
             {
+            
                 try
                 {
                     (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Semester] LIKE '{0}%'", cbFilterBySemester.SelectedItem);
@@ -216,7 +248,7 @@ namespace GradAppTracker
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Update Approval Status
         {
 
             string advisor;
@@ -228,7 +260,6 @@ namespace GradAppTracker
             DataGridViewRow dgvRow;
             DataGridView dgv;
             DataGridViewSelectedRowCollection dgvRows;
-
 
             try
             {
@@ -247,12 +278,18 @@ namespace GradAppTracker
 
                 dgvu.ShowDialog();
 
-
+                Refresh refresh = new Refresh();
+                refresh.RefreshMain(dgvCurrent);
             }
             catch (Exception e1)
             {
 
             }
+        }
+
+        private void addTrackingRecordbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

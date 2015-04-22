@@ -107,17 +107,17 @@ namespace GradAppTracker
                 }
             }
         }
-        public static bool UpdateUser(User user)
+        public static bool UpdateUser(String firstName, String lastName, String email)
         {
             //For Admin Use - Create a New Faculty User (for application login)
             StringBuilder query = new StringBuilder();
 
             string resultString = "!";
 
-            query.Append("INSERT INTO [TGA_Project].[dbo].[USERS] ");
-            query.Append("([FIRST_NAME],[LAST_NAME],[EMAIL],[PASSWORD],[POSITION_ID]) ");
-            query.Append(String.Format("VALUES ('{0}', '{1}', '{2}', '{3}', {4})", user.FirstName, user.LastName, user.Email, user.Password, user.PositionID));
-
+            query.Append("USE [TGA_Project] ");
+            query.Append("UPDATE [USERS] ");
+            query.Append(String.Format("SET [FIRST_NAME] = '{0}',[LAST_NAME] = '{1}',[EMAIL] = '{2}' ", firstName, lastName, email));
+            query.Append(string.Format("WHERE [EMAIL] = '{0}'",email));
             using (SqlConnection conn = GetConnection())
             {
                 using (SqlCommand command = new SqlCommand(query.ToString(), conn))
@@ -293,7 +293,7 @@ namespace GradAppTracker
 
             query.Append("UPDATE [TGA_Project].[dbo].[GRAD_APP] ");
             query.Append(String.Format("SET [ADVISOR_APPROVAL]='{0}',[DEPT_CHAIR_APPROVAL]='{1}',[DEAN_APPROVAL]='{2}',[RECORDS_APPROVAL]='{3}' ", advisor,dept,dean,records));
-            query.Append(string.Format("WHERE [STUDENT_ID] = (SELECT [TGA_Project].[dbo].[grad_app].STUDENT_ID FROM  [TGA_Project].[dbo].[GRAD_APP] JOIN  [TGA_Project].[dbo].[USERS] ON  [TGA_Project].[dbo].[grad_app].student_id= [TGA_Project].[dbo].[users].user_id WHERE CONCAT( [TGA_Project].[dbo].[users].first_name, ' ',  [TGA_Project].[dbo].[users].last_name) LIKE '{0}')", name));
+            query.Append(string.Format("WHERE [STUDENT_ID] = (SELECT [TGA_Project].[dbo].[grad_app].STUDENT_ID FROM [TGA_Project].[dbo].[GRAD_APP] JOIN  [TGA_Project].[dbo].[USERS] ON  [TGA_Project].[dbo].[grad_app].student_id= [TGA_Project].[dbo].[users].user_id WHERE CONCAT( [TGA_Project].[dbo].[users].first_name, ' ',  [TGA_Project].[dbo].[users].last_name) LIKE '{0}')", name));
 
             using (SqlConnection conn = GetConnection())
             {

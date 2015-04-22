@@ -77,8 +77,10 @@ namespace GradAppTracker
             }
             catch (Exception e1)
             {
-                MessageBox.Show("Update Unsuccessful! (CATCH)");
+                //MessageBox.Show("Update Unsuccessful! (CATCH)");
             }
+
+            this.Close();
         }
     }
 }

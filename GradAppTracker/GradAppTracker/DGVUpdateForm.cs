@@ -35,7 +35,44 @@ namespace GradAppTracker
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string firstName;
+            string lastName;
+            string email;
 
+            Boolean result = false;
+            DataGridViewRow dgvRow;
+            DataGridView dgv;
+            DataGridViewSelectedRowCollection dgvRows;
+
+            try
+            {
+                updateUserDgv.Rows[0].Selected = true;
+                dgvRows = updateUserDgv.SelectedRows;
+                dgvRow = dgvRows[0];
+
+                DGVUpdateForm dgvu = new DGVUpdateForm();
+
+                firstName = (string)dgvRow.Cells["FIRST_NAME"].Value;
+                lastName = (string)dgvRow.Cells["LAST_NAME"].Value;
+                email = (string)dgvRow.Cells["EMAIL"].Value;
+
+                result = DB.UpdateUser(firstName,lastName,email);
+
+                if (result == true)
+                {
+                    MessageBox.Show("Update Successful!");
+                }
+                else
+                {
+                    MessageBox.Show("Update Unsuccessful!");
+                }
+
+            }
+            catch (Exception e1)
+            {
+                //MessageBox.Show("Update Unsuccessful! (CATCH)");
+            }
+            this.Close();
         }
     }
 }
