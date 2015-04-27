@@ -46,9 +46,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addTrackingRecordbtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.cbFilterByStatus = new System.Windows.Forms.ComboBox();
             this.cbFilterBySemester = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbYearFilter = new System.Windows.Forms.TextBox();
             this.btnCreateGradApp = new System.Windows.Forms.Button();
@@ -58,8 +59,7 @@
             this.lblSearchByName = new System.Windows.Forms.Label();
             this.tbSearchByName = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbSearchByAdvisorName = new System.Windows.Forms.TextBox();
+            this.addTrackingRecordbtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Pending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
@@ -245,11 +245,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.tbSearchByAdvisorName);
             this.groupBox1.Controls.Add(this.addTrackingRecordbtn);
             this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.cbFilterByStatus);
             this.groupBox1.Controls.Add(this.cbFilterBySemester);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbYearFilter);
             this.groupBox1.Controls.Add(this.btnCreateGradApp);
@@ -264,16 +264,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // addTrackingRecordbtn
-            // 
-            this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 344);
-            this.addTrackingRecordbtn.Name = "addTrackingRecordbtn";
-            this.addTrackingRecordbtn.Size = new System.Drawing.Size(156, 53);
-            this.addTrackingRecordbtn.TabIndex = 1;
-            this.addTrackingRecordbtn.Text = "Add Tracking Record";
-            this.addTrackingRecordbtn.UseVisualStyleBackColor = true;
-            this.addTrackingRecordbtn.Click += new System.EventHandler(this.addTrackingRecordbtn_Click);
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(7, 403);
@@ -284,25 +274,44 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // cbFilterByStatus
+            // 
+            this.cbFilterByStatus.FormattingEnabled = true;
+            this.cbFilterByStatus.Items.AddRange(new object[] {
+            "PENDING",
+            "COMPLETED"});
+            this.cbFilterByStatus.Location = new System.Drawing.Point(7, 225);
+            this.cbFilterByStatus.Name = "cbFilterByStatus";
+            this.cbFilterByStatus.Size = new System.Drawing.Size(156, 21);
+            this.cbFilterByStatus.TabIndex = 19;
+            this.cbFilterByStatus.SelectedIndexChanged += new System.EventHandler(this.cbFilterByStatus_SelectedIndexChanged);
+            // 
             // cbFilterBySemester
             // 
-            this.cbFilterBySemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFilterBySemester.FormattingEnabled = true;
             this.cbFilterBySemester.Items.AddRange(new object[] {
-            "All",
             "Fall",
             "Spring",
             "Summer"});
-            this.cbFilterBySemester.Location = new System.Drawing.Point(6, 173);
+            this.cbFilterBySemester.Location = new System.Drawing.Point(10, 128);
             this.cbFilterBySemester.Name = "cbFilterBySemester";
-            this.cbFilterBySemester.Size = new System.Drawing.Size(157, 21);
+            this.cbFilterBySemester.Size = new System.Drawing.Size(153, 21);
             this.cbFilterBySemester.TabIndex = 18;
             this.cbFilterBySemester.SelectedIndexChanged += new System.EventHandler(this.cbFilterBySemester_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 209);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Filter By Status:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 205);
+            this.label2.Location = new System.Drawing.Point(7, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 15;
@@ -310,7 +319,7 @@
             // 
             // tbYearFilter
             // 
-            this.tbYearFilter.Location = new System.Drawing.Point(7, 222);
+            this.tbYearFilter.Location = new System.Drawing.Point(7, 177);
             this.tbYearFilter.Name = "tbYearFilter";
             this.tbYearFilter.Size = new System.Drawing.Size(156, 20);
             this.tbYearFilter.TabIndex = 14;
@@ -329,7 +338,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 63);
+            this.label3.Location = new System.Drawing.Point(7, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 13);
             this.label3.TabIndex = 12;
@@ -346,7 +355,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 156);
+            this.label1.Location = new System.Drawing.Point(6, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 5;
@@ -355,7 +364,7 @@
             // lblSearchByName
             // 
             this.lblSearchByName.AutoSize = true;
-            this.lblSearchByName.Location = new System.Drawing.Point(6, 15);
+            this.lblSearchByName.Location = new System.Drawing.Point(6, 16);
             this.lblSearchByName.Name = "lblSearchByName";
             this.lblSearchByName.Size = new System.Drawing.Size(129, 13);
             this.lblSearchByName.TabIndex = 3;
@@ -379,29 +388,22 @@
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
-            // label6
+            // addTrackingRecordbtn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Search by Advisor Name:";
-            // 
-            // tbSearchByAdvisorName
-            // 
-            this.tbSearchByAdvisorName.Location = new System.Drawing.Point(6, 126);
-            this.tbSearchByAdvisorName.Name = "tbSearchByAdvisorName";
-            this.tbSearchByAdvisorName.Size = new System.Drawing.Size(156, 20);
-            this.tbSearchByAdvisorName.TabIndex = 21;
-            this.tbSearchByAdvisorName.TextChanged += new System.EventHandler(this.tbSearchByAdvisorName_TextChanged);
+            this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 344);
+            this.addTrackingRecordbtn.Name = "addTrackingRecordbtn";
+            this.addTrackingRecordbtn.Size = new System.Drawing.Size(156, 53);
+            this.addTrackingRecordbtn.TabIndex = 1;
+            this.addTrackingRecordbtn.Text = "Add Tracking Record";
+            this.addTrackingRecordbtn.UseVisualStyleBackColor = true;
+            this.addTrackingRecordbtn.Click += new System.EventHandler(this.addTrackingRecordbtn_Click);
             // 
             // MainForm
             // 
             this.AcceptButton = this.addTrackingRecordbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 613);
+            this.ClientSize = new System.Drawing.Size(1348, 613);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
@@ -459,11 +461,11 @@
         private System.Windows.Forms.Button btnCreateGradApp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbYearFilter;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbFilterBySemester;
+        private System.Windows.Forms.ComboBox cbFilterByStatus;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button addTrackingRecordbtn;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbSearchByAdvisorName;
     }
 }
 

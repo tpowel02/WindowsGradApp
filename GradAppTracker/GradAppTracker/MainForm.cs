@@ -34,7 +34,83 @@ namespace GradAppTracker
             dt = DB.GetUsers();
             dgvUsers.DataSource = dt;
 
-            cbFilterBySemester.SelectedIndex = 0;
+        }
+
+        private void tbSearchByName_TextChanged(object sender, EventArgs e)
+        {
+            //Search student first and last name fields then filter
+
+            if (tbSearchByName.Text == "")
+            {
+                SqlConnection conn = DB.GetConnection();
+
+                dt = DB.GetCurrentApplications();
+                dgvCurrent.DataSource = dt;
+
+                dt = DB.GetPastApplications();
+                dgvPast.DataSource = dt;
+            }
+            else
+            {
+                if (tabControl1.SelectedTab == tabControl1.TabPages["Pending"])
+                {
+                    try
+                    {
+                        (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
+                }
+                else if(tabControl1.SelectedTab == tabControl1.TabPages["Completed"])
+                {
+                    try
+                    {
+                        (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '{0}%'", tbSearchByName.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
+                }
+            }
+        }
+
+        private void tbSearchByStudentIdNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (tbSearchByStudentIdNumber.Text == "")
+            {
+                SqlConnection conn = DB.GetConnection();
+                dt = DB.GetCurrentApplications();
+                dgvCurrent.DataSource = dt;
+                return;
+            }
+            else
+            {
+                if (tabControl1.SelectedTab == tabControl1.TabPages["Pending"])
+                {
+                    try
+                    {
+                        (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
+                }
+                else if (tabControl1.SelectedTab == tabControl1.TabPages["Completed"])
+                {
+                    try
+                    {
+                        (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
+                    }
+                    catch (Exception e1)
+                    {
+                        //don't care
+                    }
+                }
+            }
         }
 
         private void btnCreateNewLogin_Click(object sender, EventArgs e)
@@ -106,87 +182,6 @@ namespace GradAppTracker
             // if not, tell user to try again (and why if possible)
         }
 
-        private void tbSearchByName_TextChanged(object sender, EventArgs e)
-        {
-            //Search student first and last name fields then filter
-
-            if (tbSearchByName.Text == "")
-            {
-                SqlConnection conn = DB.GetConnection();
-
-                dt = DB.GetCurrentApplications();
-                dgvCurrent.DataSource = dt;
-
-                dt = DB.GetPastApplications();
-                dgvPast.DataSource = dt;
-            }
-            else
-            {
-               try
-               {
-                   (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '%{0}%'", tbSearchByName.Text);
-                   (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student Name] LIKE '%{0}%'", tbSearchByName.Text);
-               }
-               catch (Exception e1)
-               {
-                  //don't care
-               }
-            }
-        }
-
-        private void tbSearchByStudentIdNumber_TextChanged(object sender, EventArgs e)
-        {
-            if (tbSearchByStudentIdNumber.Text == "")
-            {
-                SqlConnection conn = DB.GetConnection();
-                dt = DB.GetCurrentApplications();
-                dgvCurrent.DataSource = dt;
-
-                dt = DB.GetPastApplications();
-                dgvPast.DataSource = dt;
-                return;
-            }
-            else
-            {
-                try
-                {
-                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
-                    (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Student ID] LIKE '{0}%'", tbSearchByStudentIdNumber.Text);
-                }
-                catch (Exception e1)
-                {
-                        //don't care
-                }
-            }
-        }
-        private void tbSearchByAdvisorName_TextChanged(object sender, EventArgs e)
-        {
-            //Search advisor first and last name fields then filter
-
-            if (tbSearchByAdvisorName.Text == "")
-            {
-                SqlConnection conn = DB.GetConnection();
-
-                dt = DB.GetCurrentApplications();
-                dgvCurrent.DataSource = dt;
-
-                dt = DB.GetPastApplications();
-                dgvPast.DataSource = dt;
-            }
-            else
-            {
-                try
-                {
-                    (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Advisor Name] LIKE '%{0}%'", tbSearchByAdvisorName.Text);
-                    (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Advisor Name] LIKE '%{0}%'", tbSearchByAdvisorName.Text);
-                }
-                catch (Exception e1)
-                {
-                    //don't care
-                }
-            }
-        }
-
         private void tbYearFilter_TextChanged(object sender, EventArgs e)
         {
             if (tbYearFilter.Text == "")
@@ -194,9 +189,6 @@ namespace GradAppTracker
                 SqlConnection conn = DB.GetConnection();
                 dt = DB.GetCurrentApplications();
                 dgvCurrent.DataSource = dt;
-
-                dt = DB.GetPastApplications();
-                dgvPast.DataSource = dt;
                 return;
             }
             else
@@ -204,7 +196,6 @@ namespace GradAppTracker
                 try
                 {
                     (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Year] = '{0}'", tbYearFilter.Text);
-                    (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Year] = '{0}'", tbYearFilter.Text);
                 }
                 catch(Exception e1)
                 {
@@ -216,14 +207,11 @@ namespace GradAppTracker
 
         private void cbFilterBySemester_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFilterBySemester.Text == "All")
+            if (cbFilterBySemester.Text == "")
             {
                 SqlConnection conn = DB.GetConnection();
                 dt = DB.GetCurrentApplications();
                 dgvCurrent.DataSource = dt;
-
-                dt = DB.GetPastApplications();
-                dgvPast.DataSource = dt;
             }
             else
             {
@@ -231,7 +219,6 @@ namespace GradAppTracker
                 try
                 {
                     (dgvCurrent.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Semester] LIKE '{0}%'", cbFilterBySemester.SelectedItem);
-                    (dgvPast.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Graduation Semester] LIKE '{0}%'", cbFilterBySemester.SelectedItem);
                 }
                 catch (Exception e1)
                 {
@@ -240,7 +227,7 @@ namespace GradAppTracker
             }
         }
 
-       /* private void cbFilterByStatus_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbFilterByStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFilterByStatus.Text == "")
             {
@@ -260,7 +247,6 @@ namespace GradAppTracker
                 }
             }
         }
-        */
 
         private void button3_Click(object sender, EventArgs e) //Update Approval Status
         {
@@ -305,7 +291,5 @@ namespace GradAppTracker
         {
 
         }
-
-
     }
 }
