@@ -35,6 +35,58 @@ namespace GradAppTracker
             dgvUsers.DataSource = dt;
 
             cbFilterBySemester.SelectedIndex = 0;
+           
+            //Setting Current Column widths
+            DataGridViewColumn column0 = dgvCurrent.Columns[0];
+            column0.Width = 120;
+            DataGridViewColumn column1 = dgvCurrent.Columns[1];
+            column1.Width = 70;
+            DataGridViewColumn column2 = dgvCurrent.Columns[2];
+            column2.Width = 120;
+            DataGridViewColumn column3 = dgvCurrent.Columns[3];
+            column3.Width = 120;
+            DataGridViewColumn column4 = dgvCurrent.Columns[4];
+            column4.Width = 120;
+            DataGridViewColumn column5 = dgvCurrent.Columns[5];
+            column5.Width = 60;
+            DataGridViewColumn column6 = dgvCurrent.Columns[6];
+            column6.Width = 60;
+            DataGridViewColumn column7 = dgvCurrent.Columns[7];
+            column7.Width = 60;
+            DataGridViewColumn column8 = dgvCurrent.Columns[8];
+            column8.Width = 60;
+            DataGridViewColumn column9 = dgvCurrent.Columns[9];
+            column9.Width = 60;
+            DataGridViewColumn column10 = dgvCurrent.Columns[10];
+            column10.Width = 60;
+            DataGridViewColumn column11 = dgvCurrent.Columns[11];
+            column11.Width = 60;
+
+            //Setting Past Column widths
+            DataGridViewColumn pastColumn0 = dgvPast.Columns[0];
+            pastColumn0.Width = 120;
+            DataGridViewColumn pastColumn1 = dgvPast.Columns[1];
+            pastColumn1.Width = 70;
+            DataGridViewColumn pastColumn2 = dgvPast.Columns[2];
+            pastColumn2.Width = 120;
+            DataGridViewColumn pastColumn3 = dgvPast.Columns[3];
+            pastColumn3.Width = 120;
+            DataGridViewColumn pastColumn4 = dgvPast.Columns[4];
+            pastColumn4.Width = 120;
+            DataGridViewColumn pastColumn5 = dgvPast.Columns[5];
+            pastColumn5.Width = 60;
+            DataGridViewColumn pastColumn6 = dgvPast.Columns[6];
+            pastColumn6.Width = 60;
+            DataGridViewColumn pastColumn7 = dgvPast.Columns[7];
+            pastColumn7.Width = 60;
+            DataGridViewColumn pastColumn8 = dgvPast.Columns[8];
+            pastColumn8.Width = 60;
+            DataGridViewColumn pastColumn9 = dgvPast.Columns[9];
+            pastColumn9.Width = 60;
+            DataGridViewColumn pastColumn10 = dgvPast.Columns[10];
+            pastColumn10.Width = 60;
+            DataGridViewColumn pastColumn11 = dgvPast.Columns[11];
+            pastColumn11.Width = 60;
         }
 
         private void btnCreateNewLogin_Click(object sender, EventArgs e)

@@ -79,10 +79,10 @@
             this.tabControl1.Controls.Add(this.Pending);
             this.tabControl1.Controls.Add(this.Completed);
             this.tabControl1.Controls.Add(this.Admin);
-            this.tabControl1.Location = new System.Drawing.Point(179, 12);
+            this.tabControl1.Location = new System.Drawing.Point(181, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1181, 596);
+            this.tabControl1.Size = new System.Drawing.Size(1030, 596);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.TabStop = false;
             // 
@@ -92,7 +92,7 @@
             this.Pending.Location = new System.Drawing.Point(4, 22);
             this.Pending.Name = "Pending";
             this.Pending.Padding = new System.Windows.Forms.Padding(3);
-            this.Pending.Size = new System.Drawing.Size(1173, 570);
+            this.Pending.Size = new System.Drawing.Size(1022, 570);
             this.Pending.TabIndex = 0;
             this.Pending.Text = "Current Applications";
             this.Pending.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             this.dgvCurrent.Location = new System.Drawing.Point(3, 3);
             this.dgvCurrent.Name = "dgvCurrent";
             this.dgvCurrent.ReadOnly = true;
-            this.dgvCurrent.Size = new System.Drawing.Size(1167, 564);
+            this.dgvCurrent.Size = new System.Drawing.Size(1016, 564);
             this.dgvCurrent.TabIndex = 0;
             // 
             // Completed
@@ -375,7 +375,7 @@
             this.logoBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("logoBox.InitialImage")));
             this.logoBox.Location = new System.Drawing.Point(5, 12);
             this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(172, 67);
+            this.logoBox.Size = new System.Drawing.Size(177, 67);
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
@@ -401,7 +401,7 @@
             this.AcceptButton = this.addTrackingRecordbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 613);
+            this.ClientSize = new System.Drawing.Size(1213, 613);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
