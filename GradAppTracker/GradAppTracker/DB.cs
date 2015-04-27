@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -354,6 +355,95 @@ namespace GradAppTracker
                 }
             }
         }
+        public static string GetStudentName(int id)
+        {
+            StringBuilder query = new StringBuilder();
 
+            query.Append("USE [TGA_Project]");
+            query.Append("SELECT [FIRST_NAME] + ' ' + [LAST_NAME] ");
+            query.Append("FROM [USERS] ");
+            query.Append("JOIN [STUDENT] ON [USERS].[USER_ID]=[STUDENT].[DB_STUDENT_ID]");
+            query.Append(string.Format("WHERE [STUDENT_ID] = {0}", id));
+
+            DataTable table = new DataTable();
+
+            string name;
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    SqlDataReader rdr = command.ExecuteReader();
+                    name = rdr.GetString(0) + " " + rdr.GetString(1);
+                    conn.Close();
+                }
+            }
+            return name;
+        }
+
+        public static ArrayList GetAdvisors()
+        {
+            StringBuilder query = new StringBuilder();
+            ArrayList advisors = new ArrayList();
+
+
+            query.Append("USE [TGA_Project]");
+            query.Append("SELECT [FIRST_NAME] + ' ' + [LAST_NAME] ");
+            query.Append("FROM [USERS] ");
+            query.Append(string.Format("WHERE [POSITION_ID] = {0}", 3));
+
+            DataTable table = new DataTable();
+
+            string name;
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    SqlDataReader rdr = command.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        //name = rdr.GetString(0) + " " + rdr.GetString(1);
+
+                        name = rdr.GetString(0);
+                        advisors.Add(name);
+                    }
+                    conn.Close();
+                }
+            }
+            return advisors;
+        }
+
+        public static ArrayList GetDeptChairs()
+        {
+            StringBuilder query = new StringBuilder();
+            ArrayList deptChairs = new ArrayList();
+
+
+            query.Append("USE [TGA_Project]");
+            query.Append("SELECT [FIRST_NAME] + ' ' + [LAST_NAME] ");
+            query.Append("FROM [USERS] ");
+            query.Append(string.Format("WHERE [POSITION_ID] = {0}", 4));
+
+            DataTable table = new DataTable();
+
+            string name;
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    SqlDataReader rdr = command.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        //name = rdr.GetString(0) + " " + rdr.GetString(1);
+                        name = rdr.GetString(0);
+                        deptChairs.Add(name);
+                    }
+                    conn.Close();
+                }
+            }
+            return deptChairs;
+        }
     }
 }
