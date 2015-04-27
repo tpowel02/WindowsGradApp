@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addTrackingRecordbtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.cbFilterByStatus = new System.Windows.Forms.ComboBox();
             this.cbFilterBySemester = new System.Windows.Forms.ComboBox();
@@ -59,7 +60,7 @@
             this.lblSearchByName = new System.Windows.Forms.Label();
             this.tbSearchByName = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.addTrackingRecordbtn = new System.Windows.Forms.Button();
+            this.viewDegreeEvaluationbtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Pending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
@@ -245,6 +246,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.viewDegreeEvaluationbtn);
             this.groupBox1.Controls.Add(this.addTrackingRecordbtn);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.cbFilterByStatus);
@@ -263,6 +265,16 @@
             this.groupBox1.Size = new System.Drawing.Size(168, 523);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // addTrackingRecordbtn
+            // 
+            this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 344);
+            this.addTrackingRecordbtn.Name = "addTrackingRecordbtn";
+            this.addTrackingRecordbtn.Size = new System.Drawing.Size(156, 53);
+            this.addTrackingRecordbtn.TabIndex = 1;
+            this.addTrackingRecordbtn.Text = "Add Tracking Record";
+            this.addTrackingRecordbtn.UseVisualStyleBackColor = true;
+            this.addTrackingRecordbtn.Click += new System.EventHandler(this.addTrackingRecordbtn_Click);
             // 
             // button3
             // 
@@ -388,15 +400,14 @@
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
-            // addTrackingRecordbtn
+            // viewDegreeEvaluationbtn
             // 
-            this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 344);
-            this.addTrackingRecordbtn.Name = "addTrackingRecordbtn";
-            this.addTrackingRecordbtn.Size = new System.Drawing.Size(156, 53);
-            this.addTrackingRecordbtn.TabIndex = 1;
-            this.addTrackingRecordbtn.Text = "Add Tracking Record";
-            this.addTrackingRecordbtn.UseVisualStyleBackColor = true;
-            this.addTrackingRecordbtn.Click += new System.EventHandler(this.addTrackingRecordbtn_Click);
+            this.viewDegreeEvaluationbtn.Location = new System.Drawing.Point(6, 285);
+            this.viewDegreeEvaluationbtn.Name = "viewDegreeEvaluationbtn";
+            this.viewDegreeEvaluationbtn.Size = new System.Drawing.Size(156, 53);
+            this.viewDegreeEvaluationbtn.TabIndex = 21;
+            this.viewDegreeEvaluationbtn.Text = "View Degree Evaluation";
+            this.viewDegreeEvaluationbtn.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -466,6 +477,7 @@
         private System.Windows.Forms.ComboBox cbFilterByStatus;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button addTrackingRecordbtn;
+        private System.Windows.Forms.Button viewDegreeEvaluationbtn;
     }
 }
 
