@@ -91,3 +91,5 @@ C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\
 C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
 C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
 >>>>>>> origin/master
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.AddTrackingRecordForm.resources
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateStatusForm.resources

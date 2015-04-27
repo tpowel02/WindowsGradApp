@@ -14,8 +14,8 @@ namespace GradAppTracker
     {
         bool duelDegree = true;
         bool doubleMajor = false;
-        
-       
+
+        private BindingList<GradApp> _list = new BindingList<GradApp>();
 
         public CreateNewGradAppForm()
         {
@@ -181,6 +181,12 @@ namespace GradAppTracker
 
         private void Page4NextButton_Click(object sender, EventArgs e)
         {
+            GradApp gradApp = new GradApp();
+            gradApp = _list[0];
+            labelStudentID.Text = gradApp.StudentID.ToString();
+            labelStudentName.Text = gradApp.StudentName;
+            labelStudentEmail.Text = gradApp.StudentEmail;
+
             panelPage4.Hide();
             panelConfirm.Show();
             this.Size = new System.Drawing.Size(500, 500);
@@ -236,6 +242,7 @@ namespace GradAppTracker
             {
                 int txtStudentID = Convert.ToInt32(tbStudentID.Text);
                 dt = DB.GetStudentInfo(txtStudentID);
+                gradApp.StudentID = txtStudentID;
             }
             catch(Exception e3)
             {
@@ -262,8 +269,11 @@ namespace GradAppTracker
                 //etc.....
             }
 
+            _list.Add(gradApp);
+
             lblStudentName.Text = gradApp.StudentName;
         }
+
 
         
 

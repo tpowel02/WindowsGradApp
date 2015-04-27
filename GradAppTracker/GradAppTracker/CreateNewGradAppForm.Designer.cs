@@ -140,6 +140,41 @@
             this.Page4PreviousButton = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.panelConfirm = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.labelGradSemester = new System.Windows.Forms.Label();
+            this.labelGradYear = new System.Windows.Forms.Label();
+            this.labelCeremony = new System.Windows.Forms.Label();
+            this.labelStudentNameDiploma = new System.Windows.Forms.Label();
+            this.labelStudentEmail = new System.Windows.Forms.Label();
+            this.labelStudentName = new System.Windows.Forms.Label();
+            this.labelStudentID = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.ConfirmPreviousButton = new System.Windows.Forms.Button();
             this.ConfirmConfirmButton = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
@@ -1186,6 +1221,41 @@
             // 
             // panelConfirm
             // 
+            this.panelConfirm.Controls.Add(this.label63);
+            this.panelConfirm.Controls.Add(this.label64);
+            this.panelConfirm.Controls.Add(this.label65);
+            this.panelConfirm.Controls.Add(this.label66);
+            this.panelConfirm.Controls.Add(this.label67);
+            this.panelConfirm.Controls.Add(this.label68);
+            this.panelConfirm.Controls.Add(this.label48);
+            this.panelConfirm.Controls.Add(this.label49);
+            this.panelConfirm.Controls.Add(this.label50);
+            this.panelConfirm.Controls.Add(this.label51);
+            this.panelConfirm.Controls.Add(this.label52);
+            this.panelConfirm.Controls.Add(this.label53);
+            this.panelConfirm.Controls.Add(this.label54);
+            this.panelConfirm.Controls.Add(this.label55);
+            this.panelConfirm.Controls.Add(this.label56);
+            this.panelConfirm.Controls.Add(this.label57);
+            this.panelConfirm.Controls.Add(this.label58);
+            this.panelConfirm.Controls.Add(this.label59);
+            this.panelConfirm.Controls.Add(this.label60);
+            this.panelConfirm.Controls.Add(this.label61);
+            this.panelConfirm.Controls.Add(this.label62);
+            this.panelConfirm.Controls.Add(this.label45);
+            this.panelConfirm.Controls.Add(this.label46);
+            this.panelConfirm.Controls.Add(this.label47);
+            this.panelConfirm.Controls.Add(this.label41);
+            this.panelConfirm.Controls.Add(this.labelGradSemester);
+            this.panelConfirm.Controls.Add(this.labelGradYear);
+            this.panelConfirm.Controls.Add(this.labelCeremony);
+            this.panelConfirm.Controls.Add(this.labelStudentNameDiploma);
+            this.panelConfirm.Controls.Add(this.labelStudentEmail);
+            this.panelConfirm.Controls.Add(this.labelStudentName);
+            this.panelConfirm.Controls.Add(this.labelStudentID);
+            this.panelConfirm.Controls.Add(this.label35);
+            this.panelConfirm.Controls.Add(this.label36);
+            this.panelConfirm.Controls.Add(this.label34);
             this.panelConfirm.Controls.Add(this.ConfirmPreviousButton);
             this.panelConfirm.Controls.Add(this.ConfirmConfirmButton);
             this.panelConfirm.Controls.Add(this.label32);
@@ -1195,6 +1265,321 @@
             this.panelConfirm.Size = new System.Drawing.Size(500, 440);
             this.panelConfirm.TabIndex = 12;
             this.panelConfirm.Visible = false;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(339, 122);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(98, 13);
+            this.label63.TabIndex = 55;
+            this.label63.Text = "Course Substitution";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(339, 102);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(96, 13);
+            this.label64.TabIndex = 54;
+            this.label64.Text = "Substitution Check";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(339, 82);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(62, 13);
+            this.label65.TabIndex = 53;
+            this.label65.Text = "Hours of \'D\'";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(339, 62);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(99, 13);
+            this.label66.TabIndex = 52;
+            this.label66.Text = "Approved Electives";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(339, 40);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(126, 13);
+            this.label67.TabIndex = 51;
+            this.label67.Text = "Last 36 Residency Hours";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(339, 20);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(115, 13);
+            this.label68.TabIndex = 50;
+            this.label68.Text = "Total Residency Hours";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(176, 269);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(95, 13);
+            this.label48.TabIndex = 49;
+            this.label48.Text = "Earned Major GPA";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(176, 310);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(95, 13);
+            this.label49.TabIndex = 48;
+            this.label49.Text = "Earned Minor GPA";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(176, 290);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(104, 13);
+            this.label50.TabIndex = 47;
+            this.label50.Text = "Required Minor GPA";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(176, 164);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(98, 13);
+            this.label51.TabIndex = 46;
+            this.label51.Text = "Dual Degree Hours";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(176, 144);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(106, 13);
+            this.label52.TabIndex = 45;
+            this.label52.Text = "Dual Degree Catalog";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(176, 122);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(98, 13);
+            this.label53.TabIndex = 44;
+            this.label53.Text = "Dual Degree Name";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(176, 102);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(81, 13);
+            this.label54.TabIndex = 43;
+            this.label54.Text = "Dual Degree ID";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(176, 82);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(101, 13);
+            this.label55.TabIndex = 42;
+            this.label55.Text = "Double Major Hours";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(176, 62);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(109, 13);
+            this.label56.TabIndex = 41;
+            this.label56.Text = "Double Major Catalog";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(176, 40);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(101, 13);
+            this.label57.TabIndex = 40;
+            this.label57.Text = "Double Major Name";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(176, 20);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(84, 13);
+            this.label58.TabIndex = 39;
+            this.label58.Text = "Double Major ID";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(176, 247);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(104, 13);
+            this.label59.TabIndex = 38;
+            this.label59.Text = "Required Major GPA";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(176, 227);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(56, 13);
+            this.label60.TabIndex = 37;
+            this.label60.Text = "Total GPA";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(176, 205);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(96, 13);
+            this.label61.TabIndex = 36;
+            this.label61.Text = "Lower Level Hours";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(176, 185);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(96, 13);
+            this.label62.TabIndex = 35;
+            this.label62.Text = "Upper Level Hours";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(15, 269);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(47, 13);
+            this.label45.TabIndex = 34;
+            this.label45.Text = "Minor ID";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(15, 310);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(72, 13);
+            this.label46.TabIndex = 33;
+            this.label46.Text = "Minor Catalog";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(15, 290);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(64, 13);
+            this.label47.TabIndex = 32;
+            this.label47.Text = "Minor Name";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(15, 164);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(47, 13);
+            this.label41.TabIndex = 31;
+            this.label41.Text = "Major ID";
+            // 
+            // labelGradSemester
+            // 
+            this.labelGradSemester.AutoSize = true;
+            this.labelGradSemester.Location = new System.Drawing.Point(15, 144);
+            this.labelGradSemester.Name = "labelGradSemester";
+            this.labelGradSemester.Size = new System.Drawing.Size(77, 13);
+            this.labelGradSemester.TabIndex = 30;
+            this.labelGradSemester.Text = "Grad Semester";
+            // 
+            // labelGradYear
+            // 
+            this.labelGradYear.AutoSize = true;
+            this.labelGradYear.Location = new System.Drawing.Point(15, 122);
+            this.labelGradYear.Name = "labelGradYear";
+            this.labelGradYear.Size = new System.Drawing.Size(55, 13);
+            this.labelGradYear.TabIndex = 29;
+            this.labelGradYear.Text = "Grad Year";
+            // 
+            // labelCeremony
+            // 
+            this.labelCeremony.AutoSize = true;
+            this.labelCeremony.Location = new System.Drawing.Point(15, 102);
+            this.labelCeremony.Name = "labelCeremony";
+            this.labelCeremony.Size = new System.Drawing.Size(102, 13);
+            this.labelCeremony.TabIndex = 28;
+            this.labelCeremony.Text = "Attending Ceremony";
+            // 
+            // labelStudentNameDiploma
+            // 
+            this.labelStudentNameDiploma.AutoSize = true;
+            this.labelStudentNameDiploma.Location = new System.Drawing.Point(15, 82);
+            this.labelStudentNameDiploma.Name = "labelStudentNameDiploma";
+            this.labelStudentNameDiploma.Size = new System.Drawing.Size(91, 13);
+            this.labelStudentNameDiploma.TabIndex = 27;
+            this.labelStudentNameDiploma.Text = "Name on Diploma";
+            // 
+            // labelStudentEmail
+            // 
+            this.labelStudentEmail.AutoSize = true;
+            this.labelStudentEmail.Location = new System.Drawing.Point(15, 62);
+            this.labelStudentEmail.Name = "labelStudentEmail";
+            this.labelStudentEmail.Size = new System.Drawing.Size(72, 13);
+            this.labelStudentEmail.TabIndex = 26;
+            this.labelStudentEmail.Text = "Student Email";
+            // 
+            // labelStudentName
+            // 
+            this.labelStudentName.AutoSize = true;
+            this.labelStudentName.Location = new System.Drawing.Point(15, 40);
+            this.labelStudentName.Name = "labelStudentName";
+            this.labelStudentName.Size = new System.Drawing.Size(75, 13);
+            this.labelStudentName.TabIndex = 25;
+            this.labelStudentName.Text = "Student Name";
+            // 
+            // labelStudentID
+            // 
+            this.labelStudentID.AutoSize = true;
+            this.labelStudentID.Location = new System.Drawing.Point(15, 20);
+            this.labelStudentID.Name = "labelStudentID";
+            this.labelStudentID.Size = new System.Drawing.Size(58, 13);
+            this.labelStudentID.TabIndex = 24;
+            this.labelStudentID.Text = "Student ID";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(15, 247);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(101, 13);
+            this.label35.TabIndex = 23;
+            this.label35.Text = "Concentration Code";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(15, 227);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(73, 13);
+            this.label36.TabIndex = 22;
+            this.label36.Text = "Concentration";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(15, 205);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(72, 13);
+            this.label34.TabIndex = 21;
+            this.label34.Text = "Major Catalog";
             // 
             // ConfirmPreviousButton
             // 
@@ -1227,18 +1612,18 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(208, 169);
+            this.label31.Location = new System.Drawing.Point(15, 185);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(117, 13);
+            this.label31.Size = new System.Drawing.Size(64, 13);
             this.label31.TabIndex = 0;
-            this.label31.Text = "CONFIRM INFO HERE";
+            this.label31.Text = "Major Name";
             // 
             // CreateNewGradAppForm
             // 
             this.AcceptButton = this.NextButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(203, 448);
+            this.ClientSize = new System.Drawing.Size(204, 448);
             this.Controls.Add(this.panelConfirm);
             this.Controls.Add(this.panelPage4);
             this.Controls.Add(this.panelResidence);
@@ -1254,6 +1639,7 @@
             this.MinimizeBox = false;
             this.Name = "CreateNewGradAppForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create New Application";
             this.Load += new System.EventHandler(this.CreateNewGradAppForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1401,5 +1787,40 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label labelGradSemester;
+        private System.Windows.Forms.Label labelGradYear;
+        private System.Windows.Forms.Label labelCeremony;
+        private System.Windows.Forms.Label labelStudentNameDiploma;
+        private System.Windows.Forms.Label labelStudentEmail;
+        private System.Windows.Forms.Label labelStudentName;
+        private System.Windows.Forms.Label labelStudentID;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label68;
     }
 }
