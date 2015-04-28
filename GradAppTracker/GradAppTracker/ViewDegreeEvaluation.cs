@@ -24,6 +24,7 @@ namespace GradAppTracker
 
             int evalStudentID;
             int result;
+            int count=0;
 
             try
             {
@@ -33,19 +34,31 @@ namespace GradAppTracker
                 dt = DB.GetStudentInfo(evalStudentID);
                 foreach (DataRow row in dt.Rows)
                 {
-                    gradApp.StudentName         = row[0].ToString();
-                    gradApp.StudentEmail        = row[1].ToString();
-                    gradApp.TotalGPA            = Convert.ToDouble(row[2].ToString());
-                    gradApp.EarnedMajorGPA      = Convert.ToDouble(row[3].ToString());
-                    gradApp.MajorName           = row[4].ToString();
-                    gradApp.MajorID             = Convert.ToInt32(row[5].ToString());
-                    gradApp.MajorCatalog        = row[6].ToString();
-                    gradApp.Concentration       = row[7].ToString();
-                    gradApp.ConcentrationCode   = row[8].ToString();
-                    gradApp.GradYear            = Convert.ToInt32(row[9].ToString());
-                    gradApp.GradSemester        = row[10].ToString();
+                    if (count == 0)
+                    {
+                        // general info
 
-                    //etc.....
+                        gradApp.StudentName         = row[0].ToString();
+                        gradApp.StudentEmail        = row[1].ToString();
+                        gradApp.TotalGPA            = Convert.ToDouble(row[2].ToString());
+                        gradApp.EarnedMajorGPA      = Convert.ToDouble(row[3].ToString());
+                        gradApp.MajorName           = row[4].ToString();
+                        gradApp.MajorID             = Convert.ToInt32(row[5].ToString());
+                        gradApp.MajorCatalog        = row[6].ToString();
+                        gradApp.Concentration       = row[7].ToString();
+                        gradApp.ConcentrationCode   = row[8].ToString();
+                        gradApp.GradYear            = Convert.ToInt32(row[9].ToString());
+                        gradApp.GradSemester        = row[10].ToString();
+                    }
+                    else if (count == 1)
+                    {
+                        // info for student with double major
+
+                        gradApp.DoubleMajorName     = row[4].ToString();
+                        gradApp.DoubleMajorID       = Convert.ToInt32(row[5].ToString());
+                        gradApp.DoubleMajorCatalog  = row[6].ToString();
+                    }
+                    count++;
                 }
 
                 result = DB.CheckForMinor(evalStudentID);
@@ -54,6 +67,8 @@ namespace GradAppTracker
                     dt = DB.GetStudentInfoMinor(evalStudentID);
                     foreach (DataRow row in dt.Rows)
                     {
+                        // info for student with minor
+
                         gradApp.EarnedMinorGPA  = Convert.ToDouble(row[0].ToString());
                         gradApp.MinorID         = Convert.ToInt32(row[1].ToString());
                         gradApp.MinorName       = row[2].ToString();
@@ -61,20 +76,7 @@ namespace GradAppTracker
                     }
                 }
 
-                /*result = DB.CheckForDouble(evalStudentID);
-                if (result == 1)
-                {
-                    dt = DB.GetStudentInfoDouble(evalStudentID);
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        gradApp.EarnedMinorGPA  = Convert.ToDouble(row[0].ToString());
-                        gradApp.MinorID         = Convert.ToInt32(row[1].ToString());
-                        gradApp.MinorName       = row[2].ToString();
-                        gradApp.MinorCatalog    = row[3].ToString();
-                    }
-                }
-
-                result = DB.CheckForDual(evalStudentID);
+                /*result = DB.CheckForDual(evalStudentID);
                 if (result == 1)
                 {
                     dt = DB.GetStudentInfoDual(evalStudentID);
