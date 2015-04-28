@@ -123,6 +123,12 @@
     <Compile Include="VerificationForm.Designer.cs">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewDegreeEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDegreeEvaluation.Designer.cs">
+      <DependentUpon>ViewDegreeEvaluation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddTrackingRecordForm.resx">
       <DependentUpon>AddTrackingRecordForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +167,9 @@
     </Compile>
     <EmbeddedResource Include="VerificationForm.resx">
       <DependentUpon>VerificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDegreeEvaluation.resx">
+      <DependentUpon>ViewDegreeEvaluation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

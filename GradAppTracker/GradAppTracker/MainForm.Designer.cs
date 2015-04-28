@@ -46,6 +46,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbSearchByAdvisorName = new System.Windows.Forms.TextBox();
             this.addTrackingRecordbtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.cbFilterBySemester = new System.Windows.Forms.ComboBox();
@@ -58,8 +60,7 @@
             this.lblSearchByName = new System.Windows.Forms.Label();
             this.tbSearchByName = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbSearchByAdvisorName = new System.Windows.Forms.TextBox();
+            this.viewDegreeEvaluationBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Pending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
@@ -115,7 +116,7 @@
             this.Completed.Location = new System.Drawing.Point(4, 22);
             this.Completed.Name = "Completed";
             this.Completed.Padding = new System.Windows.Forms.Padding(3);
-            this.Completed.Size = new System.Drawing.Size(1173, 570);
+            this.Completed.Size = new System.Drawing.Size(1022, 570);
             this.Completed.TabIndex = 1;
             this.Completed.Text = "Past Applications";
             this.Completed.UseVisualStyleBackColor = true;
@@ -129,7 +130,7 @@
             this.dgvPast.Location = new System.Drawing.Point(3, 3);
             this.dgvPast.Name = "dgvPast";
             this.dgvPast.ReadOnly = true;
-            this.dgvPast.Size = new System.Drawing.Size(1167, 564);
+            this.dgvPast.Size = new System.Drawing.Size(1016, 564);
             this.dgvPast.TabIndex = 0;
             // 
             // Admin
@@ -138,7 +139,7 @@
             this.Admin.Controls.Add(this.panel2);
             this.Admin.Location = new System.Drawing.Point(4, 22);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(1173, 570);
+            this.Admin.Size = new System.Drawing.Size(1022, 570);
             this.Admin.TabIndex = 2;
             this.Admin.Text = "Advisor Tools";
             this.Admin.UseVisualStyleBackColor = true;
@@ -245,6 +246,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.viewDegreeEvaluationBtn);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tbSearchByAdvisorName);
             this.groupBox1.Controls.Add(this.addTrackingRecordbtn);
@@ -263,6 +265,23 @@
             this.groupBox1.Size = new System.Drawing.Size(168, 523);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 109);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Search by Advisor Name:";
+            // 
+            // tbSearchByAdvisorName
+            // 
+            this.tbSearchByAdvisorName.Location = new System.Drawing.Point(6, 126);
+            this.tbSearchByAdvisorName.Name = "tbSearchByAdvisorName";
+            this.tbSearchByAdvisorName.Size = new System.Drawing.Size(156, 20);
+            this.tbSearchByAdvisorName.TabIndex = 21;
+            this.tbSearchByAdvisorName.TextChanged += new System.EventHandler(this.tbSearchByAdvisorName_TextChanged);
             // 
             // addTrackingRecordbtn
             // 
@@ -379,22 +398,15 @@
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
-            // label6
+            // viewDegreeEvaluationBtn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Search by Advisor Name:";
-            // 
-            // tbSearchByAdvisorName
-            // 
-            this.tbSearchByAdvisorName.Location = new System.Drawing.Point(6, 126);
-            this.tbSearchByAdvisorName.Name = "tbSearchByAdvisorName";
-            this.tbSearchByAdvisorName.Size = new System.Drawing.Size(156, 20);
-            this.tbSearchByAdvisorName.TabIndex = 21;
-            this.tbSearchByAdvisorName.TextChanged += new System.EventHandler(this.tbSearchByAdvisorName_TextChanged);
+            this.viewDegreeEvaluationBtn.Location = new System.Drawing.Point(6, 285);
+            this.viewDegreeEvaluationBtn.Name = "viewDegreeEvaluationBtn";
+            this.viewDegreeEvaluationBtn.Size = new System.Drawing.Size(156, 53);
+            this.viewDegreeEvaluationBtn.TabIndex = 24;
+            this.viewDegreeEvaluationBtn.Text = "View Degree Evaluation";
+            this.viewDegreeEvaluationBtn.UseVisualStyleBackColor = true;
+            this.viewDegreeEvaluationBtn.Click += new System.EventHandler(this.viewDegreeEvaluationBtn_Click);
             // 
             // MainForm
             // 
@@ -464,6 +476,7 @@
         private System.Windows.Forms.Button addTrackingRecordbtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbSearchByAdvisorName;
+        private System.Windows.Forms.Button viewDegreeEvaluationBtn;
     }
 }
 

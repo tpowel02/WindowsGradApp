@@ -358,6 +358,12 @@ namespace GradAppTracker
 
         }
 
+        private void viewDegreeEvaluationBtn_Click(object sender, EventArgs e)
+        {
+            ViewDegreeEvaluation evaluation = new ViewDegreeEvaluation();
+            evaluation.ShowDialog();
+        }
+
 
     }
 }

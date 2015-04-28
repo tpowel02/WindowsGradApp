@@ -1,115 +1,21 @@
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.pdb
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\bin\Debug\af\GradAppTracker.resources.dll
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.resources
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.MainForm.resources
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.Properties.Resources.resources
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.VerificationForm.resources
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.af.resources
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csproj.GenerateResource.Cache
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
-C:\Users\Trent\Google Drive\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.pdb
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\af\GradAppTracker.resources.dll
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csprojResolveAssemblyReference.cache
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewUserForm.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.MainForm.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.Properties.Resources.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.VerificationForm.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.af.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csproj.GenerateResource.Cache
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
-C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
-C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.pdb
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\af\GradAppTracker.resources.dll
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csprojResolveAssemblyReference.cache
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.AddTrackingRecordForm.resources
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.ConfirmNewGradAppForm.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewGradAppForm.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewUserForm.resources
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateForm.resources
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateStatusForm.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.MainForm.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.Properties.Resources.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.VerificationForm.resources
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.ViewDegreeEvaluation.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.af.resources
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csproj.GenerateResource.Cache
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewGradAppForm.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.ConfirmNewGradAppForm.resources
-C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.ConfirmNewGradAppForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.ConfirmNewGradAppForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewGradAppForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.UpdateUserForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewUserForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.MainForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.Properties.Resources.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.VerificationForm.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.af.resources
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csproj.GenerateResource.Cache
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.pdb
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\bin\Debug\af\GradAppTracker.resources.dll
-F:\Documents\Google Drive\Spring 2015 Final\Capstone\WindowsGradApp-master\WindowsGradApp-master\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.UUForm.resources
-C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateForm.resources
-C:\Users\Katie\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.ConfirmNewGradAppForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewGradAppForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewUserForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateStatusForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.MainForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.Properties.Resources.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.VerificationForm.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.af.resources
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csproj.GenerateResource.Cache
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.pdb
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\af\GradAppTracker.resources.dll
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csprojResolveAssemblyReference.cache
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
-<<<<<<< HEAD
-C:\Users\Trent\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.AddTrackingRecordForm.resources
-=======
-C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
-C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
-C:\Users\pgammi01\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
->>>>>>> origin/master
-C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.AddTrackingRecordForm.resources
-C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateStatusForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe.config
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.pdb
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\af\GradAppTracker.resources.dll
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csprojResolveAssemblyReference.cache
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.AddTrackingRecordForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.ConfirmNewGradAppForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewGradAppForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.CreateNewUserForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.DGVUpdateStatusForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.MainForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.Properties.Resources.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.VerificationForm.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.LoginForm.af.resources
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.csproj.GenerateResource.Cache
-C:\Users\CTRAN00\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
+C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
