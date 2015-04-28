@@ -27,7 +27,7 @@ namespace GradAppTracker
 
             try
             {
-                evalStudentID = Convert.ToInt32(tbEvalStudentID);
+                evalStudentID = Convert.ToInt32(tbEvalStudentID.Text);
                 gradApp.StudentID = evalStudentID;
 
                 dt = DB.GetStudentInfo(evalStudentID);
