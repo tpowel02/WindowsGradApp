@@ -245,8 +245,7 @@ namespace GradAppTracker
                 gradApp.StudentID = txtStudentID;
             }
             catch(Exception e3)
-            {
-            }
+            { }
 
             foreach (DataRow row in dt.Rows)
             {

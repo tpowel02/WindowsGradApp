@@ -245,6 +245,37 @@ namespace GradAppTracker
         {
             return 1;
         }
+        public static int CheckForMinor(int evalStudentID)
+        {
+            StringBuilder query = new StringBuilder();
+
+            query.Append("SELECT * ");
+            query.Append("FROM [TGA_Project].[dbo].[STUDENT] ");
+            query.Append(String.Format("WHERE STUDENT_ID = '{0}' AND MINOR_ID IS NOT NULL", evalStudentID));
+
+            DataTable table = new DataTable();
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query.ToString(), conn))
+                    {
+                        adapter.Fill(table);
+                        conn.Close();
+                    }
+                }
+            }
+
+            if (table.Rows.Count == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         public static DataTable GetStudentInfo(int tempID)
         {
             StringBuilder query = new StringBuilder();
