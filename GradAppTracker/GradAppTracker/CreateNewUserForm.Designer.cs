@@ -60,7 +60,7 @@
             this.label2.Location = new System.Drawing.Point(5, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "First Name:";
             // 
             // label3
@@ -113,7 +113,7 @@
             this.CreateButton.Location = new System.Drawing.Point(71, 168);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(126, 33);
-            this.CreateButton.TabIndex = 7;
+            this.CreateButton.TabIndex = 5;
             this.CreateButton.Text = "Create";
             this.CreateButton.UseVisualStyleBackColor = true;
             this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
@@ -124,7 +124,7 @@
             this.CancelButton.Location = new System.Drawing.Point(8, 168);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(58, 33);
-            this.CancelButton.TabIndex = 8;
+            this.CancelButton.TabIndex = 6;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -134,21 +134,21 @@
             this.tbFirstName.Location = new System.Drawing.Point(71, 6);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(126, 20);
-            this.tbFirstName.TabIndex = 1;
+            this.tbFirstName.TabIndex = 0;
             // 
             // tbLastName
             // 
             this.tbLastName.Location = new System.Drawing.Point(71, 38);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(126, 20);
-            this.tbLastName.TabIndex = 2;
+            this.tbLastName.TabIndex = 1;
             // 
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(71, 70);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(126, 20);
-            this.tbEmail.TabIndex = 3;
+            this.tbEmail.TabIndex = 2;
             // 
             // tbPassword
             // 
@@ -156,7 +156,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(126, 20);
-            this.tbPassword.TabIndex = 4;
+            this.tbPassword.TabIndex = 3;
             // 
             // tbConfirmPassword
             // 
@@ -164,7 +164,7 @@
             this.tbConfirmPassword.Name = "tbConfirmPassword";
             this.tbConfirmPassword.PasswordChar = '*';
             this.tbConfirmPassword.Size = new System.Drawing.Size(126, 20);
-            this.tbConfirmPassword.TabIndex = 5;
+            this.tbConfirmPassword.TabIndex = 4;
             // 
             // CreateNewUserForm
             // 
@@ -192,7 +192,7 @@
             this.MinimizeBox = false;
             this.Name = "CreateNewUserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Add New Login";
+            this.Text = "Create New Login";
             this.Load += new System.EventHandler(this.CreateNewUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -38,7 +38,7 @@ namespace GradAppTracker
            
             //Setting Current Column widths
             DataGridViewColumn column0 = dgvCurrent.Columns[0];
-            column0.Width = 113;
+            column0.Width = 108;
             DataGridViewColumn column1 = dgvCurrent.Columns[1];
             column1.Width = 70;
             DataGridViewColumn column2 = dgvCurrent.Columns[2];
@@ -52,7 +52,7 @@ namespace GradAppTracker
             DataGridViewColumn column6 = dgvCurrent.Columns[6];
             column6.Width = 60;
             DataGridViewColumn column7 = dgvCurrent.Columns[7];
-            column7.Width = 70;
+            column7.Width = 75;
             DataGridViewColumn column8 = dgvCurrent.Columns[8];
             column8.Width = 60;
             DataGridViewColumn column9 = dgvCurrent.Columns[9];
@@ -64,7 +64,7 @@ namespace GradAppTracker
 
             //Setting Past Column widths
             DataGridViewColumn pastColumn0 = dgvPast.Columns[0];
-            pastColumn0.Width = 113;
+            pastColumn0.Width = 108;
             DataGridViewColumn pastColumn1 = dgvPast.Columns[1];
             pastColumn1.Width = 70;
             DataGridViewColumn pastColumn2 = dgvPast.Columns[2];
@@ -78,7 +78,7 @@ namespace GradAppTracker
             DataGridViewColumn pastColumn6 = dgvPast.Columns[6];
             pastColumn6.Width = 60;
             DataGridViewColumn pastColumn7 = dgvPast.Columns[7];
-            pastColumn7.Width = 70;
+            pastColumn7.Width = 75;
             DataGridViewColumn pastColumn8 = dgvPast.Columns[8];
             pastColumn8.Width = 60;
             DataGridViewColumn pastColumn9 = dgvPast.Columns[9];

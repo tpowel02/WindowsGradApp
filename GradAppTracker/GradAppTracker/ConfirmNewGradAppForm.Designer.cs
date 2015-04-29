@@ -878,6 +878,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.label4);
+            this.MaximizeBox = false;
             this.Name = "ConfirmNewGradAppForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Degree Evaluation";

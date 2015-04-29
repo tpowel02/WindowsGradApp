@@ -147,7 +147,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DGVUpdateStatusForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Update Degree Status";
+            this.Text = "Update Approval Status";
             this.Load += new System.EventHandler(this.DGVUpdateStatusForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpdateStatus)).EndInit();
             this.ResumeLayout(false);

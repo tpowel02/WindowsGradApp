@@ -84,7 +84,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1030, 596);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndex = 1;
             this.tabControl1.TabStop = false;
             // 
             // Pending
@@ -136,7 +136,6 @@
             // Admin
             // 
             this.Admin.Controls.Add(this.flowLayoutPanel1);
-            this.Admin.Controls.Add(this.panel2);
             this.Admin.Location = new System.Drawing.Point(4, 22);
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(1022, 570);
@@ -148,10 +147,11 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.dgvUsers);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(659, 266);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1013, 564);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -202,8 +202,9 @@
             this.dgvUsers.Location = new System.Drawing.Point(192, 3);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
+            this.dgvUsers.RowHeadersWidth = 50;
             this.dgvUsers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvUsers.Size = new System.Drawing.Size(449, 250);
+            this.dgvUsers.Size = new System.Drawing.Size(460, 553);
             this.dgvUsers.TabIndex = 1;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
             // 
@@ -212,10 +213,11 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(6, 275);
+            this.panel2.Location = new System.Drawing.Point(658, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(183, 100);
             this.panel2.TabIndex = 3;
+            this.panel2.Visible = false;
             // 
             // button1
             // 
@@ -229,7 +231,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 13);
+            this.label5.Location = new System.Drawing.Point(58, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 1;
@@ -263,7 +265,7 @@
             this.groupBox1.Location = new System.Drawing.Point(5, 85);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(168, 523);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // viewDegreeEvaluationBtn
@@ -271,7 +273,7 @@
             this.viewDegreeEvaluationBtn.Location = new System.Drawing.Point(6, 403);
             this.viewDegreeEvaluationBtn.Name = "viewDegreeEvaluationBtn";
             this.viewDegreeEvaluationBtn.Size = new System.Drawing.Size(156, 53);
-            this.viewDegreeEvaluationBtn.TabIndex = 24;
+            this.viewDegreeEvaluationBtn.TabIndex = 7;
             this.viewDegreeEvaluationBtn.Text = "View Degree Evaluation";
             this.viewDegreeEvaluationBtn.UseVisualStyleBackColor = true;
             this.viewDegreeEvaluationBtn.Click += new System.EventHandler(this.viewDegreeEvaluationBtn_Click);
@@ -282,7 +284,7 @@
             this.label6.Location = new System.Drawing.Point(6, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 13);
-            this.label6.TabIndex = 22;
+            this.label6.TabIndex = 2;
             this.label6.Text = "Search by Advisor Name:";
             // 
             // tbSearchByAdvisorName
@@ -290,7 +292,7 @@
             this.tbSearchByAdvisorName.Location = new System.Drawing.Point(6, 126);
             this.tbSearchByAdvisorName.Name = "tbSearchByAdvisorName";
             this.tbSearchByAdvisorName.Size = new System.Drawing.Size(156, 20);
-            this.tbSearchByAdvisorName.TabIndex = 21;
+            this.tbSearchByAdvisorName.TabIndex = 2;
             this.tbSearchByAdvisorName.TextChanged += new System.EventHandler(this.tbSearchByAdvisorName_TextChanged);
             // 
             // addTrackingRecordbtn
@@ -298,7 +300,7 @@
             this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 285);
             this.addTrackingRecordbtn.Name = "addTrackingRecordbtn";
             this.addTrackingRecordbtn.Size = new System.Drawing.Size(156, 53);
-            this.addTrackingRecordbtn.TabIndex = 1;
+            this.addTrackingRecordbtn.TabIndex = 5;
             this.addTrackingRecordbtn.Text = "Add Tracking Record";
             this.addTrackingRecordbtn.UseVisualStyleBackColor = true;
             this.addTrackingRecordbtn.Click += new System.EventHandler(this.addTrackingRecordbtn_Click);
@@ -308,7 +310,7 @@
             this.button3.Location = new System.Drawing.Point(6, 344);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 53);
-            this.button3.TabIndex = 20;
+            this.button3.TabIndex = 6;
             this.button3.Text = "Update Approval Status";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -325,7 +327,7 @@
             this.cbFilterBySemester.Location = new System.Drawing.Point(6, 173);
             this.cbFilterBySemester.Name = "cbFilterBySemester";
             this.cbFilterBySemester.Size = new System.Drawing.Size(157, 21);
-            this.cbFilterBySemester.TabIndex = 18;
+            this.cbFilterBySemester.TabIndex = 3;
             this.cbFilterBySemester.SelectedIndexChanged += new System.EventHandler(this.cbFilterBySemester_SelectedIndexChanged);
             // 
             // label2
@@ -334,7 +336,7 @@
             this.label2.Location = new System.Drawing.Point(7, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 15;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Filter By Grad Year:";
             // 
             // tbYearFilter
@@ -342,7 +344,7 @@
             this.tbYearFilter.Location = new System.Drawing.Point(7, 222);
             this.tbYearFilter.Name = "tbYearFilter";
             this.tbYearFilter.Size = new System.Drawing.Size(156, 20);
-            this.tbYearFilter.TabIndex = 14;
+            this.tbYearFilter.TabIndex = 4;
             this.tbYearFilter.TextChanged += new System.EventHandler(this.tbYearFilter_TextChanged);
             // 
             // btnCreateGradApp
@@ -350,7 +352,7 @@
             this.btnCreateGradApp.Location = new System.Drawing.Point(6, 463);
             this.btnCreateGradApp.Name = "btnCreateGradApp";
             this.btnCreateGradApp.Size = new System.Drawing.Size(156, 53);
-            this.btnCreateGradApp.TabIndex = 13;
+            this.btnCreateGradApp.TabIndex = 8;
             this.btnCreateGradApp.Text = "Create New Graduation Application";
             this.btnCreateGradApp.UseVisualStyleBackColor = true;
             this.btnCreateGradApp.Click += new System.EventHandler(this.btnCreateGradApp_Click);
@@ -361,7 +363,7 @@
             this.label3.Location = new System.Drawing.Point(7, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 13);
-            this.label3.TabIndex = 12;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Search By Student ID Number:";
             // 
             // tbSearchByStudentIdNumber
@@ -369,7 +371,7 @@
             this.tbSearchByStudentIdNumber.Location = new System.Drawing.Point(7, 80);
             this.tbSearchByStudentIdNumber.Name = "tbSearchByStudentIdNumber";
             this.tbSearchByStudentIdNumber.Size = new System.Drawing.Size(156, 20);
-            this.tbSearchByStudentIdNumber.TabIndex = 11;
+            this.tbSearchByStudentIdNumber.TabIndex = 1;
             this.tbSearchByStudentIdNumber.TextChanged += new System.EventHandler(this.tbSearchByStudentIdNumber_TextChanged);
             // 
             // label1
@@ -378,7 +380,7 @@
             this.label1.Location = new System.Drawing.Point(6, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Filter By Semester:";
             // 
             // lblSearchByName
@@ -387,7 +389,7 @@
             this.lblSearchByName.Location = new System.Drawing.Point(6, 15);
             this.lblSearchByName.Name = "lblSearchByName";
             this.lblSearchByName.Size = new System.Drawing.Size(129, 13);
-            this.lblSearchByName.TabIndex = 3;
+            this.lblSearchByName.TabIndex = 0;
             this.lblSearchByName.Text = "Search by Student Name:";
             // 
             // tbSearchByName
@@ -395,7 +397,7 @@
             this.tbSearchByName.Location = new System.Drawing.Point(6, 32);
             this.tbSearchByName.Name = "tbSearchByName";
             this.tbSearchByName.Size = new System.Drawing.Size(156, 20);
-            this.tbSearchByName.TabIndex = 2;
+            this.tbSearchByName.TabIndex = 0;
             this.tbSearchByName.TextChanged += new System.EventHandler(this.tbSearchByName_TextChanged);
             // 
             // logoBox
