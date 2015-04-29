@@ -355,13 +355,42 @@ namespace GradAppTracker
 
         private void addTrackingRecordbtn_Click(object sender, EventArgs e)
         {
-
+            AddTrackingRecordForm form = new AddTrackingRecordForm();
+            form.ShowDialog();
         }
 
         private void viewDegreeEvaluationBtn_Click(object sender, EventArgs e)
         {
-            ViewDegreeEvaluation evaluation = new ViewDegreeEvaluation();
-            evaluation.ShowDialog();
+
+            int studentId = 0;
+
+            DataGridViewRow dgvRow;
+            DataGridView dgv;
+            DataGridViewSelectedRowCollection dgvRows;
+
+            try
+            {
+                dgvRows = dgvCurrent.SelectedRows;
+                dgvRow = dgvRows[0];
+
+                studentId = Int32.Parse((string)dgvRow.Cells["Student ID"].Value);
+
+                ConfirmNewGradAppForm  evaluation = new ConfirmNewGradAppForm(studentId);
+
+                evaluation.Tag = studentId;
+
+                evaluation.ShowDialog();
+
+                Refresh refresh = new Refresh();
+                refresh.RefreshMain(dgvCurrent);
+            }
+            catch (Exception e1)
+            {
+
+            }
+
+
+
         }
 
 

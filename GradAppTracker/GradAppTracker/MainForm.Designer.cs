@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.viewDegreeEvaluationBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tbSearchByAdvisorName = new System.Windows.Forms.TextBox();
             this.addTrackingRecordbtn = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.lblSearchByName = new System.Windows.Forms.Label();
             this.tbSearchByName = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.viewDegreeEvaluationBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Pending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
@@ -266,6 +266,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // viewDegreeEvaluationBtn
+            // 
+            this.viewDegreeEvaluationBtn.Location = new System.Drawing.Point(6, 285);
+            this.viewDegreeEvaluationBtn.Name = "viewDegreeEvaluationBtn";
+            this.viewDegreeEvaluationBtn.Size = new System.Drawing.Size(156, 53);
+            this.viewDegreeEvaluationBtn.TabIndex = 24;
+            this.viewDegreeEvaluationBtn.Text = "View Degree Evaluation";
+            this.viewDegreeEvaluationBtn.UseVisualStyleBackColor = true;
+            this.viewDegreeEvaluationBtn.Click += new System.EventHandler(this.viewDegreeEvaluationBtn_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -398,19 +408,8 @@
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
             // 
-            // viewDegreeEvaluationBtn
-            // 
-            this.viewDegreeEvaluationBtn.Location = new System.Drawing.Point(6, 285);
-            this.viewDegreeEvaluationBtn.Name = "viewDegreeEvaluationBtn";
-            this.viewDegreeEvaluationBtn.Size = new System.Drawing.Size(156, 53);
-            this.viewDegreeEvaluationBtn.TabIndex = 24;
-            this.viewDegreeEvaluationBtn.Text = "View Degree Evaluation";
-            this.viewDegreeEvaluationBtn.UseVisualStyleBackColor = true;
-            this.viewDegreeEvaluationBtn.Click += new System.EventHandler(this.viewDegreeEvaluationBtn_Click);
-            // 
             // MainForm
             // 
-            this.AcceptButton = this.addTrackingRecordbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 613);
