@@ -363,10 +363,15 @@ namespace GradAppTracker
         {
 
             int studentId = 0;
+            int result;
+            int count = 0;
 
             DataGridViewRow dgvRow;
             DataGridView dgv;
             DataGridViewSelectedRowCollection dgvRows;
+
+            DataTable gt = new DataTable();
+            GradApp gradApp = new GradApp();
 
             try
             {
@@ -375,10 +380,68 @@ namespace GradAppTracker
 
                 studentId = Int32.Parse((string)dgvRow.Cells["Student ID"].Value);
 
-                ConfirmNewGradAppForm  evaluation = new ConfirmNewGradAppForm(studentId);
+                gradApp.StudentID = studentId;
 
-                evaluation.Tag = studentId;
+                gt = DB.GetStudentInfo(studentId);
+                foreach (DataRow row in gt.Rows)
+                {
+                    if (count == 0)
+                    {
+                        // ------------------------------------------------------------------------ general student info
 
+                        gradApp.StudentName = row[0].ToString();
+                        gradApp.StudentEmail = row[1].ToString();
+                        gradApp.TotalGPA = Convert.ToDouble(row[2].ToString());
+                        gradApp.EarnedMajorGPA = Convert.ToDouble(row[3].ToString());
+                        gradApp.MajorName = row[4].ToString();
+                        gradApp.MajorID = Convert.ToInt32(row[5].ToString());
+                        gradApp.MajorCatalog = row[6].ToString();
+                        gradApp.Concentration = row[7].ToString();
+                        gradApp.ConcentrationCode = row[8].ToString();
+                        gradApp.GradYear = Convert.ToInt32(row[9].ToString());
+                        gradApp.GradSemester = row[10].ToString();
+                        gradApp.Ceremony = row[11].ToString();
+                    }
+                    else if (count == 1)
+                    {
+                        // ------------------------------------------------------------------------ info for student with double major
+
+                        gradApp.DoubleMajorName = row[4].ToString();
+                        gradApp.DoubleMajorID = Convert.ToInt32(row[5].ToString());
+                        gradApp.DoubleMajorCatalog = row[6].ToString();
+                    }
+                    count++;
+                }
+
+                result = DB.CheckForMinor(studentId);
+                if (result == 1)
+                {
+                    gt = DB.GetStudentInfoMinor(studentId);
+                    foreach (DataRow row in gt.Rows)
+                    {
+                        // ------------------------------------------------------------------------ info for student with minor
+
+                        gradApp.EarnedMinorGPA = Convert.ToDouble(row[0].ToString());
+                        gradApp.MinorID = Convert.ToInt32(row[1].ToString());
+                        gradApp.MinorName = row[2].ToString();
+                        gradApp.MinorCatalog = row[3].ToString();
+                    }
+                }
+
+                /*result = DB.CheckForDual(evalStudentID);
+                if (result == 1)
+                {
+                    dt = DB.GetStudentInfoDual(evalStudentID);
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        gradApp.EarnedMinorGPA  = Convert.ToDouble(row[0].ToString());
+                        gradApp.MinorID         = Convert.ToInt32(row[1].ToString());
+                        gradApp.MinorName       = row[2].ToString();
+                        gradApp.MinorCatalog    = row[3].ToString();
+                    }
+                }*/
+
+                ConfirmNewGradAppForm  evaluation = new ConfirmNewGradAppForm(gradApp);
                 evaluation.ShowDialog();
 
                 Refresh refresh = new Refresh();
