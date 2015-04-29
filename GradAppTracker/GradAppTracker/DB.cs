@@ -245,6 +245,181 @@ namespace GradAppTracker
         {
             return 1;
         }
+
+        public static int GetAdvisorId(string advisorName)
+        {
+            int advisorId;
+  
+
+            try
+            {
+                StringBuilder query = new StringBuilder();
+
+                query.Append("USE [TGA_PROJECT] ");
+                query.Append("SELECT [USER_ID] ");
+                query.Append("FROM [USERS] ");
+                query.Append(String.Format("WHERE CONCAT([users].first_name, ' ',  [users].last_name) LIKE '{0}')", advisorName));
+                
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                    {
+                        SqlDataReader rdr = command.ExecuteReader();
+                        advisorId = rdr.GetInt32(0);
+                        conn.Close();
+
+                        return advisorId;
+                    }
+                }
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+            return 0;
+        }
+        public static int GetDeptChairId(string deptChairName)
+        {
+            int deptChairId;
+
+            try
+            {
+                StringBuilder query = new StringBuilder();
+
+                query.Append("USE [TGA_PROJECT] ");
+                query.Append("SELECT [USER_ID] ");
+                query.Append("FROM [USERS] ");
+                query.Append(String.Format("WHERE CONCAT([users].first_name, ' ', [users].last_name) LIKE '{0}')", deptChairName));
+
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                    {
+                        SqlDataReader rdr = command.ExecuteReader();
+                        deptChairId = rdr.GetInt32(0);
+                        conn.Close();
+
+                        return deptChairId;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return 0;
+        }
+        public static int GetMajorId(int studentId)
+        {
+            int majorId;
+
+            try
+            {
+                StringBuilder query = new StringBuilder();
+
+                query.Append("USE [TGA_PROJECT] ");
+                query.Append("SELECT [STUDENT_MAJOR].[MAJOR_ID] ");
+                query.Append("FROM [STUDENT] JOIN [STUDENT_MAJOR] ON [STUDENT].[DB_STUDENT_ID] = [STUDENT_MAJOR].[MAJOR_ID]");
+                query.Append(String.Format("WHERE [STUDENT].[STUDENT_ID] = {0})", studentId));
+
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                    {
+                        SqlDataReader rdr = command.ExecuteReader();
+                        majorId = rdr.GetInt32(0);
+                        conn.Close();
+
+                        return majorId;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return 0;
+        }
+        public static int GetStudentUserId(int studentId)
+        {
+            try
+            {
+                StringBuilder query = new StringBuilder();
+
+                query.Append("USE [TGA_PROJECT] ");
+                query.Append("SELECT [USERS].[USER_ID] ");
+                query.Append("FROM [STUDENT] JOIN [USERS] ON [STUDENT].[DB_STUDENT_ID]=[USERS].[USER_ID]");
+                query.Append(String.Format("WHERE [STUDENT].[STUDENT_ID] = {0})", studentId));
+
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                    {
+                        SqlDataReader rdr = command.ExecuteReader();
+                        int studentUser = rdr.GetInt32(0);
+                        conn.Close();
+
+                        return studentUser;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return 0;
+        }
+        public static int CreateTrackingRecord(int studentId, string advisorName, string deptChair, string gradYear, string gradSem)
+        {
+            StringBuilder query = new StringBuilder();
+            try
+            {
+                string name = DB.GetStudentName(studentId);
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
+            int advisorId = DB.GetAdvisorId(advisorName);
+            int deptChairId  = DB.GetDeptChairId(deptChair);
+            int majorId = DB.GetMajorId(studentId);
+            int studentUser = DB.GetStudentUserId(studentId);
+
+            query.Append("USE [TGA_PROJECT] ");
+            query.Append("UPDATE [STUDENT] ");
+            query.Append(string.Format("SET [GRAD_YEAR]='{0}',[GRAD_SEMESTER]= '{1}' ", gradYear, gradSem));
+            query.Append(string.Format("WHERE [STUDENT_ID] = {0}", studentId));
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {          
+                    int result1 = command.ExecuteNonQuery();
+                }
+
+            }
+
+            query.Clear();
+            query.Append("USE [TGA_PROJECT] ");
+            query.Append("INSERT INTO [GRAD_APP] ");
+            query.Append(("([STUDENT_ID],[ADVISOR_ID],[DEPT_CHAIR_ID],[MAJOR_ID],[STATUS],[ADVISOR_APPROVAL],[DEPT_CHAIR_APPROVAL],[DEAN_APPROVAL],[RECORDS_APPROVAL],[DEGREE_EVAL],[ACTIVE]) "));
+            query.Append(string.Format("VALUES ({0},{1},{2},{3},'PENDING','N','N','N','N','n/a',1)", studentUser,advisorId,deptChairId,majorId));
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    int result2 = command.ExecuteNonQuery();
+                }
+
+            }
+
+            return 1;
+        }
+
         public static DataTable GetStudentInfo(int tempID)
         {
             StringBuilder query = new StringBuilder();
@@ -436,12 +611,10 @@ namespace GradAppTracker
             StringBuilder query = new StringBuilder();
 
             query.Append("USE [TGA_Project]");
-            query.Append("SELECT [FIRST_NAME] + ' ' + [LAST_NAME] ");
+            query.Append("SELECT [USERS].[FIRST_NAME] + ' ' + [USERS].[LAST_NAME] ");
             query.Append("FROM [USERS] ");
             query.Append("JOIN [STUDENT] ON [USERS].[USER_ID]=[STUDENT].[DB_STUDENT_ID]");
-            query.Append(string.Format("WHERE [STUDENT_ID] = {0}", id));
-
-            DataTable table = new DataTable();
+            query.Append(string.Format("WHERE [STUDENT].[STUDENT_ID] = {0}", id));
 
             string name;
 
@@ -450,7 +623,8 @@ namespace GradAppTracker
                 using (SqlCommand command = new SqlCommand(query.ToString(), conn))
                 {
                     SqlDataReader rdr = command.ExecuteReader();
-                    name = rdr.GetString(0) + " " + rdr.GetString(1);
+                    //name = rdr.GetString(0) + " " + rdr.GetString(1);
+                    name = rdr.GetString(0);
                     conn.Close();
                 }
             }

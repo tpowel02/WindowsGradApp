@@ -20,7 +20,7 @@ namespace GradAppTracker
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            string studentID;
+            int studentId;
             string gradYear;
             string gradSem;
 
@@ -29,12 +29,24 @@ namespace GradAppTracker
 
             try
             {
-                studentID = tbStudentID.Text;
+                studentId = Int32.Parse(tbStudentID.Text);
                 gradYear = tbGradYear.Text;
                 gradSem = tbGradSem.Text;
                 advisorName = tbAdvisorName.Text;
                 deptChair = tbDeptChair.Text;
 
+
+                int result = DB.CreateTrackingRecord(studentId, advisorName, deptChair, gradYear, gradSem);
+
+                if(result != 0)
+                {
+                    MessageBox.Show("Success");
+
+                }
+                else
+                {
+                    MessageBox.Show ("Failed");
+                }
 
 
             }
