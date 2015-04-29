@@ -191,7 +191,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CreateNewUserForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add New Login";
             this.Load += new System.EventHandler(this.CreateNewUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

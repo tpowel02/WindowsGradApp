@@ -42,6 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.clbResidenceHours = new System.Windows.Forms.CheckedListBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -54,9 +57,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.clbResidenceHours = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -207,6 +207,39 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(295, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "OK";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Enabled = false;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.checkedListBox1.Location = new System.Drawing.Point(129, 113);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(47, 34);
+            this.checkedListBox1.TabIndex = 16;
+            // 
+            // clbResidenceHours
+            // 
+            this.clbResidenceHours.Enabled = false;
+            this.clbResidenceHours.FormattingEnabled = true;
+            this.clbResidenceHours.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.clbResidenceHours.Location = new System.Drawing.Point(129, 73);
+            this.clbResidenceHours.Name = "clbResidenceHours";
+            this.clbResidenceHours.Size = new System.Drawing.Size(47, 34);
+            this.clbResidenceHours.TabIndex = 15;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(105, 47);
@@ -310,39 +343,6 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Total Credit Hours:";
             // 
-            // clbResidenceHours
-            // 
-            this.clbResidenceHours.Enabled = false;
-            this.clbResidenceHours.FormattingEnabled = true;
-            this.clbResidenceHours.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.clbResidenceHours.Location = new System.Drawing.Point(129, 73);
-            this.clbResidenceHours.Name = "clbResidenceHours";
-            this.clbResidenceHours.Size = new System.Drawing.Size(47, 34);
-            this.clbResidenceHours.TabIndex = 15;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Enabled = false;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.checkedListBox1.Location = new System.Drawing.Point(129, 113);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(47, 34);
-            this.checkedListBox1.TabIndex = 16;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(295, 124);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // VerificationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +351,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "VerificationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Student Evaluation Report";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

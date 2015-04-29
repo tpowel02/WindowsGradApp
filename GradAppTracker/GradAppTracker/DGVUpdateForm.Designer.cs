@@ -105,6 +105,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DGVUpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Update User Information";
             this.Load += new System.EventHandler(this.DGVUpdateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.updateUserDgv)).EndInit();

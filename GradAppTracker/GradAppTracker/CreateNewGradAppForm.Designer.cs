@@ -1639,7 +1639,7 @@
             this.MinimizeBox = false;
             this.Name = "CreateNewGradAppForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create New Application";
             this.Load += new System.EventHandler(this.CreateNewGradAppForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

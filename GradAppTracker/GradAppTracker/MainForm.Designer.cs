@@ -268,7 +268,7 @@
             // 
             // viewDegreeEvaluationBtn
             // 
-            this.viewDegreeEvaluationBtn.Location = new System.Drawing.Point(6, 285);
+            this.viewDegreeEvaluationBtn.Location = new System.Drawing.Point(6, 403);
             this.viewDegreeEvaluationBtn.Name = "viewDegreeEvaluationBtn";
             this.viewDegreeEvaluationBtn.Size = new System.Drawing.Size(156, 53);
             this.viewDegreeEvaluationBtn.TabIndex = 24;
@@ -295,7 +295,7 @@
             // 
             // addTrackingRecordbtn
             // 
-            this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 344);
+            this.addTrackingRecordbtn.Location = new System.Drawing.Point(6, 285);
             this.addTrackingRecordbtn.Name = "addTrackingRecordbtn";
             this.addTrackingRecordbtn.Size = new System.Drawing.Size(156, 53);
             this.addTrackingRecordbtn.TabIndex = 1;
@@ -305,7 +305,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(7, 403);
+            this.button3.Location = new System.Drawing.Point(6, 344);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 53);
             this.button3.TabIndex = 20;
@@ -417,6 +417,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1364, 659);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
