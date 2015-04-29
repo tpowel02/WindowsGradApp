@@ -36,7 +36,7 @@ namespace GradAppTracker
                 {
                     if (count == 0)
                     {
-                        // general info
+                        // ------------------------------------------------------------------------ general student info
 
                         gradApp.StudentName         = row[0].ToString();
                         gradApp.StudentEmail        = row[1].ToString();
@@ -52,7 +52,7 @@ namespace GradAppTracker
                     }
                     else if (count == 1)
                     {
-                        // info for student with double major
+                        // ------------------------------------------------------------------------ info for student with double major
 
                         gradApp.DoubleMajorName     = row[4].ToString();
                         gradApp.DoubleMajorID       = Convert.ToInt32(row[5].ToString());
@@ -67,7 +67,7 @@ namespace GradAppTracker
                     dt = DB.GetStudentInfoMinor(evalStudentID);
                     foreach (DataRow row in dt.Rows)
                     {
-                        // info for student with minor
+                        // ------------------------------------------------------------------------ info for student with minor
 
                         gradApp.EarnedMinorGPA  = Convert.ToDouble(row[0].ToString());
                         gradApp.MinorID         = Convert.ToInt32(row[1].ToString());
@@ -88,11 +88,13 @@ namespace GradAppTracker
                         gradApp.MinorCatalog    = row[3].ToString();
                     }
                 }*/
+
+
             } 
             catch(Exception e3)
             { }
 
-            ConfirmNewGradAppForm evaluationByID = new ConfirmNewGradAppForm();
+            ConfirmNewGradAppForm evaluationByID = new ConfirmNewGradAppForm(gradApp);
             evaluationByID.ShowDialog();
             this.Close();
         }
