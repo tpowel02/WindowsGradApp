@@ -108,18 +108,18 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(150, 549);
+            this.CancelButton.Location = new System.Drawing.Point(154, 549);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(58, 33);
             this.CancelButton.TabIndex = 12;
-            this.CancelButton.Text = "Finished ";
+            this.CancelButton.Text = "Finished";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(90, 544);
+            this.label4.Location = new System.Drawing.Point(94, 544);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 2);
             this.label4.TabIndex = 10;

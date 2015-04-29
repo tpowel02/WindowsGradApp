@@ -49,6 +49,7 @@ namespace GradAppTracker
                         gradApp.ConcentrationCode   = row[8].ToString();
                         gradApp.GradYear            = Convert.ToInt32(row[9].ToString());
                         gradApp.GradSemester        = row[10].ToString();
+                        gradApp.Ceremony            = row[11].ToString();
                     }
                     else if (count == 1)
                     {

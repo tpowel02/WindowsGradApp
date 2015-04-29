@@ -259,7 +259,8 @@ namespace GradAppTracker
                         + "(major.concentration) AS [Concentration], "
                         + "(major.concentration_code) AS [Concentration Code], "
                         + "(student.grad_year) AS [Graduation Year], "
-                        + "(student.grad_semester) AS [Graduation Semester] ");
+                        + "(student.grad_semester) AS [Graduation Semester], "
+                        + "(student.participation) AS [Ceremony Participation] ");
             query.Append("FROM [TGA_Project].[dbo].[student] ");
             query.Append("JOIN [TGA_Project].[dbo].[student_major] on [student_major].[db_student_id] = [student].[db_student_id] ");
             query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [student_major].[major_id] ");
