@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GradAppTracker
 {
-    class GradApp
+    public class GradApp
     {
         private int advisorID;
         private int deptChairID;
