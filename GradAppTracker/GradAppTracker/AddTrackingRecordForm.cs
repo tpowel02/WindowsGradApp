@@ -40,19 +40,19 @@ namespace GradAppTracker
 
                 if(result != 0)
                 {
-                    MessageBox.Show("Success");
+                    MessageBox.Show("New Tracking Record Added!");
 
                 }
                 else
                 {
-                    MessageBox.Show ("Failed");
+                    MessageBox.Show ("Error Adding New Tracking Record. :(");
                 }
-
 
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show("Error Adding New Tracking Record. :(");
+                this.Close();
             }
 
 

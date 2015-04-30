@@ -248,9 +248,8 @@ namespace GradAppTracker
 
         public static int GetAdvisorId(string advisorName)
         {
-            int advisorId;
+            int advisorId = 0;
   
-
             try
             {
                 StringBuilder query = new StringBuilder();
@@ -258,14 +257,19 @@ namespace GradAppTracker
                 query.Append("USE [TGA_PROJECT] ");
                 query.Append("SELECT [USER_ID] ");
                 query.Append("FROM [USERS] ");
-                query.Append(String.Format("WHERE CONCAT([users].first_name, ' ',  [users].last_name) LIKE '{0}')", advisorName));
+                query.Append(String.Format("WHERE CONCAT([USERS].[FIRST_NAME], ' ',  [USERS].[LAST_NAME]) = '{0}'", advisorName));
                 
                 using (SqlConnection conn = GetConnection())
                 {
                     using (SqlCommand command = new SqlCommand(query.ToString(), conn))
                     {
                         SqlDataReader rdr = command.ExecuteReader();
-                        advisorId = rdr.GetInt32(0);
+
+                        if(rdr.Read())
+                        {
+                            advisorId = rdr.GetInt32(0);
+                        }
+
                         conn.Close();
 
                         return advisorId;
@@ -282,7 +286,7 @@ namespace GradAppTracker
         }
         public static int GetDeptChairId(string deptChairName)
         {
-            int deptChairId;
+            int deptChairId = 0;
 
             try
             {
@@ -291,16 +295,20 @@ namespace GradAppTracker
                 query.Append("USE [TGA_PROJECT] ");
                 query.Append("SELECT [USER_ID] ");
                 query.Append("FROM [USERS] ");
-                query.Append(String.Format("WHERE CONCAT([users].first_name, ' ', [users].last_name) LIKE '{0}')", deptChairName));
+                query.Append(String.Format("WHERE CONCAT([users].first_name, ' ', [users].last_name) = '{0}'", deptChairName));
 
                 using (SqlConnection conn = GetConnection())
                 {
                     using (SqlCommand command = new SqlCommand(query.ToString(), conn))
                     {
                         SqlDataReader rdr = command.ExecuteReader();
-                        deptChairId = rdr.GetInt32(0);
-                        conn.Close();
 
+                        if(rdr.Read())
+                        {
+                            deptChairId = rdr.GetInt32(0);
+                        }
+
+                        conn.Close();
                         return deptChairId;
                     }
                 }
@@ -313,7 +321,7 @@ namespace GradAppTracker
         }
         public static int GetMajorId(int studentId)
         {
-            int majorId;
+            int majorId = 0;
 
             try
             {
@@ -321,15 +329,20 @@ namespace GradAppTracker
 
                 query.Append("USE [TGA_PROJECT] ");
                 query.Append("SELECT [STUDENT_MAJOR].[MAJOR_ID] ");
-                query.Append("FROM [STUDENT] JOIN [STUDENT_MAJOR] ON [STUDENT].[DB_STUDENT_ID] = [STUDENT_MAJOR].[MAJOR_ID]");
-                query.Append(String.Format("WHERE [STUDENT].[STUDENT_ID] = {0})", studentId));
+                query.Append("FROM [STUDENT] JOIN [STUDENT_MAJOR] ON [STUDENT].[DB_STUDENT_ID] = [STUDENT_MAJOR].[MAJOR_ID] ");
+                query.Append(String.Format("WHERE [STUDENT].[STUDENT_ID] = {0}", studentId));
 
                 using (SqlConnection conn = GetConnection())
                 {
                     using (SqlCommand command = new SqlCommand(query.ToString(), conn))
                     {
                         SqlDataReader rdr = command.ExecuteReader();
-                        majorId = rdr.GetInt32(0);
+
+                        if(rdr.Read())
+                        {
+                            majorId = rdr.GetInt32(0);
+                        }
+                        
                         conn.Close();
 
                         return majorId;
@@ -350,15 +363,21 @@ namespace GradAppTracker
 
                 query.Append("USE [TGA_PROJECT] ");
                 query.Append("SELECT [USERS].[USER_ID] ");
-                query.Append("FROM [STUDENT] JOIN [USERS] ON [STUDENT].[DB_STUDENT_ID]=[USERS].[USER_ID]");
-                query.Append(String.Format("WHERE [STUDENT].[STUDENT_ID] = {0})", studentId));
+                query.Append("FROM [STUDENT] JOIN [USERS] ON [STUDENT].[DB_STUDENT_ID]=[USERS].[USER_ID] ");
+                query.Append(String.Format("WHERE [STUDENT].[STUDENT_ID] = {0} ", studentId));
+                
+                int studentUser = 0;
 
                 using (SqlConnection conn = GetConnection())
                 {
                     using (SqlCommand command = new SqlCommand(query.ToString(), conn))
                     {
                         SqlDataReader rdr = command.ExecuteReader();
-                        int studentUser = rdr.GetInt32(0);
+                        if(rdr.Read())
+                        {
+                            studentUser = rdr.GetInt32(0);
+                        }
+
                         conn.Close();
 
                         return studentUser;
@@ -616,15 +635,18 @@ namespace GradAppTracker
             query.Append("JOIN [STUDENT] ON [USERS].[USER_ID]=[STUDENT].[DB_STUDENT_ID]");
             query.Append(string.Format("WHERE [STUDENT].[STUDENT_ID] = {0}", id));
 
-            string name;
+            string name = "";
 
             using (SqlConnection conn = GetConnection())
             {
                 using (SqlCommand command = new SqlCommand(query.ToString(), conn))
                 {
                     SqlDataReader rdr = command.ExecuteReader();
-                    //name = rdr.GetString(0) + " " + rdr.GetString(1);
-                    name = rdr.GetString(0);
+                    if (rdr.Read())
+                    {
+                        name = rdr.GetString(0);
+                    }
+
                     conn.Close();
                 }
             }

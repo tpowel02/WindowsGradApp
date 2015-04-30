@@ -51,7 +51,7 @@
             this.button1.Location = new System.Drawing.Point(14, 188);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -60,7 +60,7 @@
             this.createButton.Location = new System.Drawing.Point(91, 188);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(111, 33);
-            this.createButton.TabIndex = 1;
+            this.createButton.TabIndex = 6;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
@@ -102,14 +102,14 @@
             this.tbGradSem.Location = new System.Drawing.Point(90, 125);
             this.tbGradSem.Name = "tbGradSem";
             this.tbGradSem.Size = new System.Drawing.Size(111, 21);
-            this.tbGradSem.TabIndex = 10;
+            this.tbGradSem.TabIndex = 4;
             // 
             // tbGradYear
             // 
             this.tbGradYear.Location = new System.Drawing.Point(90, 162);
             this.tbGradYear.Name = "tbGradYear";
             this.tbGradYear.Size = new System.Drawing.Size(112, 20);
-            this.tbGradYear.TabIndex = 11;
+            this.tbGradYear.TabIndex = 5;
             // 
             // label3
             // 
@@ -126,7 +126,7 @@
             this.tbAdvisorName.Location = new System.Drawing.Point(90, 45);
             this.tbAdvisorName.Name = "tbAdvisorName";
             this.tbAdvisorName.Size = new System.Drawing.Size(111, 21);
-            this.tbAdvisorName.TabIndex = 15;
+            this.tbAdvisorName.TabIndex = 2;
             // 
             // label2
             // 
@@ -143,7 +143,7 @@
             this.tbDeptChair.Location = new System.Drawing.Point(90, 83);
             this.tbDeptChair.Name = "tbDeptChair";
             this.tbDeptChair.Size = new System.Drawing.Size(111, 21);
-            this.tbDeptChair.TabIndex = 17;
+            this.tbDeptChair.TabIndex = 3;
             // 
             // label4
             // 
@@ -159,7 +159,7 @@
             this.tbStudentID.Location = new System.Drawing.Point(90, 12);
             this.tbStudentID.Name = "tbStudentID";
             this.tbStudentID.Size = new System.Drawing.Size(112, 20);
-            this.tbStudentID.TabIndex = 18;
+            this.tbStudentID.TabIndex = 1;
             // 
             // AddTrackingRecordForm
             // 

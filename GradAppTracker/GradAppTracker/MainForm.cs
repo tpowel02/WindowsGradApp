@@ -357,6 +357,10 @@ namespace GradAppTracker
         {
             AddTrackingRecordForm form = new AddTrackingRecordForm();
             form.ShowDialog();
+            form.Close();
+
+            Refresh refresh = new Refresh();
+            refresh.RefreshMain(dgvCurrent);
         }
 
         private void viewDegreeEvaluationBtn_Click(object sender, EventArgs e)
