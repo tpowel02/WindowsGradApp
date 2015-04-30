@@ -533,6 +533,31 @@ namespace GradAppTracker
             }
             return table;
         }
+        public static int GetStudentCourseLevelHours(int tempID, string tempGrade, int tempLevel1, int tempLevel2)
+        {
+            StringBuilder query = new StringBuilder();
+            int hours = 0;
+
+            query.Append("SELECT (SUM(course.credit_hours)) AS [Upper Level Hours] ");
+            query.Append("FROM [TGA_Project].[dbo].[student] ");
+            query.Append("JOIN [TGA_Project].[dbo].[enrollment] on [enrollment].[db_student_id] = [student].[db_student_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[course] on [course].[course_id] = [enrollment].[course_id] ");
+            query.Append(String.Format("WHERE student.student_id = {0} AND enrollment.final_grade = '{1}' AND course.course_num IN ({2}% , {3}%) ", tempID, tempGrade, tempLevel1, tempLevel2));
+            //(course.course_num = {2}% OR course.course_num = {3}%)
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    SqlDataReader rdr = command.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        hours = rdr.GetInt32(0);
+                    }
+                        conn.Close();
+                }
+            }
+            return hours;
+        }
         /*public static int CheckForDual(int tempID)
         {
             StringBuilder query = new StringBuilder();
