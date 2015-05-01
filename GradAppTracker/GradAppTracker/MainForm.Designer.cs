@@ -107,6 +107,7 @@
             this.dgvCurrent.Location = new System.Drawing.Point(3, 3);
             this.dgvCurrent.Name = "dgvCurrent";
             this.dgvCurrent.ReadOnly = true;
+            this.dgvCurrent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCurrent.Size = new System.Drawing.Size(1016, 564);
             this.dgvCurrent.TabIndex = 0;
             // 

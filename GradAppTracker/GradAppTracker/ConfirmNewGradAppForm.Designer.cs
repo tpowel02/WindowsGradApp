@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmNewGradAppForm));
             this.CancelButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.xUpper = new System.Windows.Forms.PictureBox();
             this.infoCourseSubstitution = new System.Windows.Forms.Label();
             this.infoSubstitutionCheck = new System.Windows.Forms.Label();
             this.infoHoursOfD = new System.Windows.Forms.Label();
@@ -103,7 +105,16 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.xMajor = new System.Windows.Forms.PictureBox();
+            this.xMinor = new System.Windows.Forms.PictureBox();
+            this.xDHours = new System.Windows.Forms.PictureBox();
+            this.xLower = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xUpper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMajor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMinor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xDHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xLower)).BeginInit();
             this.SuspendLayout();
             // 
             // CancelButton
@@ -127,6 +138,11 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.xLower);
+            this.panel1.Controls.Add(this.xDHours);
+            this.panel1.Controls.Add(this.xMinor);
+            this.panel1.Controls.Add(this.xMajor);
+            this.panel1.Controls.Add(this.xUpper);
             this.panel1.Controls.Add(this.infoCourseSubstitution);
             this.panel1.Controls.Add(this.infoSubstitutionCheck);
             this.panel1.Controls.Add(this.infoHoursOfD);
@@ -203,6 +219,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(360, 525);
             this.panel1.TabIndex = 13;
+            // 
+            // xUpper
+            // 
+            this.xUpper.Image = ((System.Drawing.Image)(resources.GetObject("xUpper.Image")));
+            this.xUpper.Location = new System.Drawing.Point(162, 485);
+            this.xUpper.Name = "xUpper";
+            this.xUpper.Size = new System.Drawing.Size(12, 13);
+            this.xUpper.TabIndex = 128;
+            this.xUpper.TabStop = false;
+            this.xUpper.Visible = false;
             // 
             // infoCourseSubstitution
             // 
@@ -286,12 +312,12 @@
             // infoRequiredMinorGPA
             // 
             this.infoRequiredMinorGPA.AutoSize = true;
-            this.infoRequiredMinorGPA.BackColor = System.Drawing.Color.Aqua;
+            this.infoRequiredMinorGPA.BackColor = System.Drawing.SystemColors.Control;
             this.infoRequiredMinorGPA.Location = new System.Drawing.Point(180, 590);
             this.infoRequiredMinorGPA.Name = "infoRequiredMinorGPA";
-            this.infoRequiredMinorGPA.Size = new System.Drawing.Size(86, 13);
+            this.infoRequiredMinorGPA.Size = new System.Drawing.Size(10, 13);
             this.infoRequiredMinorGPA.TabIndex = 119;
-            this.infoRequiredMinorGPA.Text = "- not in database";
+            this.infoRequiredMinorGPA.Text = "-";
             // 
             // infoDualDegreeHours
             // 
@@ -374,12 +400,12 @@
             // infoRequiredMajorGPA
             // 
             this.infoRequiredMajorGPA.AutoSize = true;
-            this.infoRequiredMajorGPA.BackColor = System.Drawing.Color.Aqua;
+            this.infoRequiredMajorGPA.BackColor = System.Drawing.SystemColors.Control;
             this.infoRequiredMajorGPA.Location = new System.Drawing.Point(180, 547);
             this.infoRequiredMajorGPA.Name = "infoRequiredMajorGPA";
-            this.infoRequiredMajorGPA.Size = new System.Drawing.Size(86, 13);
+            this.infoRequiredMajorGPA.Size = new System.Drawing.Size(22, 13);
             this.infoRequiredMajorGPA.TabIndex = 110;
-            this.infoRequiredMajorGPA.Text = "- not in database";
+            this.infoRequiredMajorGPA.Text = "2.0";
             // 
             // infoTotalGPA
             // 
@@ -871,6 +897,46 @@
             this.label31.TabIndex = 56;
             this.label31.Text = "Major Name";
             // 
+            // xMajor
+            // 
+            this.xMajor.Image = ((System.Drawing.Image)(resources.GetObject("xMajor.Image")));
+            this.xMajor.Location = new System.Drawing.Point(162, 569);
+            this.xMajor.Name = "xMajor";
+            this.xMajor.Size = new System.Drawing.Size(12, 13);
+            this.xMajor.TabIndex = 129;
+            this.xMajor.TabStop = false;
+            this.xMajor.Visible = false;
+            // 
+            // xMinor
+            // 
+            this.xMinor.Image = ((System.Drawing.Image)(resources.GetObject("xMinor.Image")));
+            this.xMinor.Location = new System.Drawing.Point(162, 590);
+            this.xMinor.Name = "xMinor";
+            this.xMinor.Size = new System.Drawing.Size(12, 13);
+            this.xMinor.TabIndex = 130;
+            this.xMinor.TabStop = false;
+            this.xMinor.Visible = false;
+            // 
+            // xDHours
+            // 
+            this.xDHours.Image = ((System.Drawing.Image)(resources.GetObject("xDHours.Image")));
+            this.xDHours.Location = new System.Drawing.Point(162, 694);
+            this.xDHours.Name = "xDHours";
+            this.xDHours.Size = new System.Drawing.Size(12, 13);
+            this.xDHours.TabIndex = 131;
+            this.xDHours.TabStop = false;
+            this.xDHours.Visible = false;
+            // 
+            // xLower
+            // 
+            this.xLower.Image = ((System.Drawing.Image)(resources.GetObject("xLower.Image")));
+            this.xLower.Location = new System.Drawing.Point(162, 505);
+            this.xLower.Name = "xLower";
+            this.xLower.Size = new System.Drawing.Size(12, 13);
+            this.xLower.TabIndex = 132;
+            this.xLower.TabStop = false;
+            this.xLower.Visible = false;
+            // 
             // ConfirmNewGradAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -885,6 +951,11 @@
             this.Text = "Degree Evaluation";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xUpper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMajor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMinor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xDHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xLower)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -966,5 +1037,10 @@
         private System.Windows.Forms.Label infoConcentration;
         private System.Windows.Forms.Label infoMajorCatalog;
         private System.Windows.Forms.Label infoMajorName;
+        private System.Windows.Forms.PictureBox xUpper;
+        private System.Windows.Forms.PictureBox xDHours;
+        private System.Windows.Forms.PictureBox xMinor;
+        private System.Windows.Forms.PictureBox xMajor;
+        private System.Windows.Forms.PictureBox xLower;
     }
 }
