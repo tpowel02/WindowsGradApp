@@ -365,23 +365,16 @@ namespace GradAppTracker
 
         private void viewDegreeEvaluationBtn_Click(object sender, EventArgs e)
         {
-            int studentId = 0;
-            int count = 0;
-            int result = 0;
-            int lowerLevel1 = 1;
-            int lowerLevel2 = 2;
-            int upperLevel1 = 3; 
-            int upperLevel2 = 4;
-            int aHours = 0;
-            int bHours = 0;
-            int cHours = 0;
-            int dHoursUpper = 0;
-            int dHoursLower = 0;
-            string aGrade = "A";
-            string bGrade = "B";
-            string cGrade = "C";
-            string dGrade = "D";
-            //string fGrade = "F";
+            int count         = 0;
+            int result        = 0;
+            int studentId     = 0;
+            int creditHours   = 0;
+            int upperHours    = 0;
+            int lowerHours    = 0;
+            int dHours        = 0;
+            string courseNum  = "";
+            string finalGrade = "";
+
 
             DataGridViewRow dgvRow;
             DataGridView dgv;
@@ -430,30 +423,25 @@ namespace GradAppTracker
                     count++;
                 }
 
-                aHours = DB.GetStudentCourseLevelHours(studentId, aGrade, upperLevel1, upperLevel2)*4;
-                bHours = DB.GetStudentCourseLevelHours(studentId, bGrade, upperLevel1, upperLevel2)*3;
-                cHours = DB.GetStudentCourseLevelHours(studentId, cGrade, upperLevel1, upperLevel2)*2;
-                dHoursUpper = DB.GetStudentCourseLevelHours(studentId, dGrade, upperLevel1, upperLevel2);
-                gradApp.UpperLevelHours = aHours + bHours + cHours + dHoursUpper;
-
-                aHours = DB.GetStudentCourseLevelHours(studentId, aGrade, lowerLevel1, lowerLevel2) * 4;
-                bHours = DB.GetStudentCourseLevelHours(studentId, bGrade, lowerLevel1, lowerLevel2) * 3;
-                cHours = DB.GetStudentCourseLevelHours(studentId, cGrade, lowerLevel1, lowerLevel2) * 2;
-                dHoursLower = DB.GetStudentCourseLevelHours(studentId, dGrade, lowerLevel1, lowerLevel2);
-                gradApp.LowerLevelHours = aHours + bHours + cHours + dHoursLower;
-
-                /*gt = DB.GetStudentLowerHours(studentId);
-                foreach (DataRow row in dt.Rows)
+                gt = DB.GetStudentHours(studentId);
+                foreach (DataRow row in gt.Rows)
                 {
-                    gradApp.LowerLevelHours = Convert.ToInt32(row[0].ToString());
+                    courseNum   = row[0].ToString();
+                    creditHours = Convert.ToInt32(row[1]);
+                    finalGrade  = row[2].ToString();
+
+                    if (finalGrade == "D")
+                        dHours += creditHours;
+
+                    if (courseNum[0] == '3' || courseNum[0] == '4')
+                        upperHours += creditHours;
+                    else
+                        lowerHours += creditHours;
                 }
-
-                gt = DB.GetStudentHoursOfD(studentId);
-                foreach (DataRow row in dt.Rows)
-                {
-                    gradApp.HoursOfD = Convert.ToInt32(row[0].ToString());
-                }*/
-
+                gradApp.HoursOfD = dHours;
+                gradApp.UpperLevelHours = upperHours;
+                gradApp.LowerLevelHours = lowerHours;
+                
                 result = DB.CheckForMinor(studentId);
                 if (result == 1)
                 {

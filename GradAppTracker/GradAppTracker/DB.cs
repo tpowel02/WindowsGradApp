@@ -533,30 +533,32 @@ namespace GradAppTracker
             }
             return table;
         }
-        public static int GetStudentCourseLevelHours(int tempID, string tempGrade, int tempLevel1, int tempLevel2)
+        public static DataTable GetStudentHours(int tempID)
         {
             StringBuilder query = new StringBuilder();
-            int hours = 0;
 
-            query.Append("SELECT (SUM(course.credit_hours)) AS [Upper Level Hours] ");
+            query.Append("SELECT(course.course_num) AS [Course Number], "
+                        + "(course.credit_hours) AS [Credit Hours], "
+                        + "(enrollment.final_grade) AS [Final Grade] ");
             query.Append("FROM [TGA_Project].[dbo].[student] ");
             query.Append("JOIN [TGA_Project].[dbo].[enrollment] on [enrollment].[db_student_id] = [student].[db_student_id] ");
             query.Append("JOIN [TGA_Project].[dbo].[course] on [course].[course_id] = [enrollment].[course_id] ");
-            query.Append(String.Format("WHERE student.student_id = {0} AND enrollment.final_grade = '{1}' AND course.course_num IN ({2}% , {3}%) ", tempID, tempGrade, tempLevel1, tempLevel2));
-            //(course.course_num = {2}% OR course.course_num = {3}%)
+            query.Append(String.Format("WHERE student.student_id = {0} ", tempID));
+
+            DataTable table = new DataTable();
+
             using (SqlConnection conn = GetConnection())
             {
                 using (SqlCommand command = new SqlCommand(query.ToString(), conn))
                 {
-                    SqlDataReader rdr = command.ExecuteReader();
-                    while (rdr.Read())
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query.ToString(), conn))
                     {
-                        hours = rdr.GetInt32(0);
-                    }
+                        adapter.Fill(table);
                         conn.Close();
+                    }
                 }
             }
-            return hours;
+            return table;
         }
         /*public static int CheckForDual(int tempID)
         {

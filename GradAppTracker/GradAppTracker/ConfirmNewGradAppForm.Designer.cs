@@ -227,7 +227,7 @@
             // infoHoursOfD
             // 
             this.infoHoursOfD.AutoSize = true;
-            this.infoHoursOfD.BackColor = System.Drawing.Color.Lime;
+            this.infoHoursOfD.BackColor = System.Drawing.SystemColors.Control;
             this.infoHoursOfD.Location = new System.Drawing.Point(180, 694);
             this.infoHoursOfD.Name = "infoHoursOfD";
             this.infoHoursOfD.Size = new System.Drawing.Size(62, 13);
@@ -289,9 +289,9 @@
             this.infoRequiredMinorGPA.BackColor = System.Drawing.Color.Aqua;
             this.infoRequiredMinorGPA.Location = new System.Drawing.Point(180, 590);
             this.infoRequiredMinorGPA.Name = "infoRequiredMinorGPA";
-            this.infoRequiredMinorGPA.Size = new System.Drawing.Size(10, 13);
+            this.infoRequiredMinorGPA.Size = new System.Drawing.Size(86, 13);
             this.infoRequiredMinorGPA.TabIndex = 119;
-            this.infoRequiredMinorGPA.Text = "-";
+            this.infoRequiredMinorGPA.Text = "- not in database";
             // 
             // infoDualDegreeHours
             // 
@@ -300,9 +300,9 @@
             this.infoDualDegreeHours.ForeColor = System.Drawing.SystemColors.ControlText;
             this.infoDualDegreeHours.Location = new System.Drawing.Point(180, 464);
             this.infoDualDegreeHours.Name = "infoDualDegreeHours";
-            this.infoDualDegreeHours.Size = new System.Drawing.Size(10, 13);
+            this.infoDualDegreeHours.Size = new System.Drawing.Size(148, 13);
             this.infoDualDegreeHours.TabIndex = 118;
-            this.infoDualDegreeHours.Text = "-";
+            this.infoDualDegreeHours.Text = "- not handled / no way to filter";
             // 
             // infoDualDegreeCatalog
             // 
@@ -310,9 +310,9 @@
             this.infoDualDegreeCatalog.BackColor = System.Drawing.Color.Aqua;
             this.infoDualDegreeCatalog.Location = new System.Drawing.Point(180, 444);
             this.infoDualDegreeCatalog.Name = "infoDualDegreeCatalog";
-            this.infoDualDegreeCatalog.Size = new System.Drawing.Size(10, 13);
+            this.infoDualDegreeCatalog.Size = new System.Drawing.Size(69, 13);
             this.infoDualDegreeCatalog.TabIndex = 117;
-            this.infoDualDegreeCatalog.Text = "-";
+            this.infoDualDegreeCatalog.Text = "- not handled";
             // 
             // infoDualDegreeName
             // 
@@ -320,9 +320,9 @@
             this.infoDualDegreeName.BackColor = System.Drawing.Color.Aqua;
             this.infoDualDegreeName.Location = new System.Drawing.Point(180, 422);
             this.infoDualDegreeName.Name = "infoDualDegreeName";
-            this.infoDualDegreeName.Size = new System.Drawing.Size(10, 13);
+            this.infoDualDegreeName.Size = new System.Drawing.Size(69, 13);
             this.infoDualDegreeName.TabIndex = 116;
-            this.infoDualDegreeName.Text = "-";
+            this.infoDualDegreeName.Text = "- not handled";
             // 
             // infoDualDegreeID
             // 
@@ -330,19 +330,19 @@
             this.infoDualDegreeID.BackColor = System.Drawing.Color.Aqua;
             this.infoDualDegreeID.Location = new System.Drawing.Point(180, 402);
             this.infoDualDegreeID.Name = "infoDualDegreeID";
-            this.infoDualDegreeID.Size = new System.Drawing.Size(10, 13);
+            this.infoDualDegreeID.Size = new System.Drawing.Size(69, 13);
             this.infoDualDegreeID.TabIndex = 115;
-            this.infoDualDegreeID.Text = "-";
+            this.infoDualDegreeID.Text = "- not handled";
             // 
             // infoDoubleMajorHours
             // 
             this.infoDoubleMajorHours.AutoSize = true;
-            this.infoDoubleMajorHours.BackColor = System.Drawing.Color.Lime;
+            this.infoDoubleMajorHours.BackColor = System.Drawing.Color.Cyan;
             this.infoDoubleMajorHours.Location = new System.Drawing.Point(180, 382);
             this.infoDoubleMajorHours.Name = "infoDoubleMajorHours";
-            this.infoDoubleMajorHours.Size = new System.Drawing.Size(10, 13);
+            this.infoDoubleMajorHours.Size = new System.Drawing.Size(81, 13);
             this.infoDoubleMajorHours.TabIndex = 114;
-            this.infoDoubleMajorHours.Text = "-";
+            this.infoDoubleMajorHours.Text = "- no way to filter";
             // 
             // infoDoubleMajorCatalog
             // 
@@ -377,9 +377,9 @@
             this.infoRequiredMajorGPA.BackColor = System.Drawing.Color.Aqua;
             this.infoRequiredMajorGPA.Location = new System.Drawing.Point(180, 547);
             this.infoRequiredMajorGPA.Name = "infoRequiredMajorGPA";
-            this.infoRequiredMajorGPA.Size = new System.Drawing.Size(104, 13);
+            this.infoRequiredMajorGPA.Size = new System.Drawing.Size(86, 13);
             this.infoRequiredMajorGPA.TabIndex = 110;
-            this.infoRequiredMajorGPA.Text = "Required Major GPA";
+            this.infoRequiredMajorGPA.Text = "- not in database";
             // 
             // infoTotalGPA
             // 
@@ -393,7 +393,7 @@
             // infoLowerLevelHours
             // 
             this.infoLowerLevelHours.AutoSize = true;
-            this.infoLowerLevelHours.BackColor = System.Drawing.Color.Lime;
+            this.infoLowerLevelHours.BackColor = System.Drawing.SystemColors.Control;
             this.infoLowerLevelHours.Location = new System.Drawing.Point(180, 505);
             this.infoLowerLevelHours.Name = "infoLowerLevelHours";
             this.infoLowerLevelHours.Size = new System.Drawing.Size(96, 13);
@@ -403,7 +403,7 @@
             // infoUpperLevelHours
             // 
             this.infoUpperLevelHours.AutoSize = true;
-            this.infoUpperLevelHours.BackColor = System.Drawing.Color.Lime;
+            this.infoUpperLevelHours.BackColor = System.Drawing.SystemColors.Control;
             this.infoUpperLevelHours.Location = new System.Drawing.Point(180, 485);
             this.infoUpperLevelHours.Name = "infoUpperLevelHours";
             this.infoUpperLevelHours.Size = new System.Drawing.Size(96, 13);
@@ -413,6 +413,7 @@
             // infoMinorID
             // 
             this.infoMinorID.AutoSize = true;
+            this.infoMinorID.BackColor = System.Drawing.SystemColors.Control;
             this.infoMinorID.Location = new System.Drawing.Point(180, 257);
             this.infoMinorID.Name = "infoMinorID";
             this.infoMinorID.Size = new System.Drawing.Size(10, 13);
@@ -605,18 +606,18 @@
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(61, 569);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(118, 13);
+            this.label48.Size = new System.Drawing.Size(95, 13);
             this.label48.TabIndex = 85;
-            this.label48.Text = "Earned Major GPA *****";
+            this.label48.Text = "Earned Major GPA";
             // 
             // label49
             // 
             this.label49.AutoSize = true;
             this.label49.Location = new System.Drawing.Point(61, 610);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(118, 13);
+            this.label49.Size = new System.Drawing.Size(95, 13);
             this.label49.TabIndex = 84;
-            this.label49.Text = "Earned Minor GPA *****";
+            this.label49.Text = "Earned Minor GPA";
             // 
             // label50
             // 

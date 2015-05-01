@@ -18,7 +18,7 @@ namespace GradAppTracker
             infoStudentID.Text = gradApp.StudentID.ToString();
             infoStudentName.Text = gradApp.StudentName;
             infoStudentEmail.Text = gradApp.StudentEmail;
-            //infoDiplomaName.Text = gradApp.StudentNameDiploma;
+            //infoDiplomaName.Text = gradApp.StudentNameDiploma; -- manual entry required
             infoCeremony.Text = gradApp.Ceremony;
             infoGradYear.Text = gradApp.GradYear.ToString();
             infoGradSemester.Text = gradApp.GradSemester;
@@ -36,7 +36,7 @@ namespace GradAppTracker
                 infoMinorID.Text = gradApp.MinorID.ToString();
                 infoMinorName.Text = gradApp.MinorName;
                 infoMinorCatalog.Text = gradApp.MinorCatalog;
-                infoRequiredMinorGPA.Text = gradApp.RequiredMinorGPA.ToString();
+                //infoRequiredMinorGPA.Text = gradApp.RequiredMinorGPA.ToString(); -- not in db
                 infoEarnedMinorGPA.Text = gradApp.EarnedMinorGPA.ToString();
             }
             if (gradApp.DoubleMajorID == 0)
@@ -64,14 +64,14 @@ namespace GradAppTracker
             infoUpperLevelHours.Text = gradApp.UpperLevelHours.ToString();
             infoLowerLevelHours.Text = gradApp.LowerLevelHours.ToString();
             infoTotalGPA.Text = gradApp.TotalGPA.ToString();
-            infoRequiredMajorGPA.Text = gradApp.RequiredMajorGPA.ToString();
+            //infoRequiredMajorGPA.Text = gradApp.RequiredMajorGPA.ToString(); -- not in db
             infoEarnedMajorGPA.Text = gradApp.EarnedMajorGPA.ToString();
-            //infoTotalResidencyHours.Text = gradApp.TotalResidencyHours.ToString();
-            //infoLast36ResidencyHours.Text = gradApp.Last36ResidencyHours.ToString();
-            //infoApprovedElectives.Text = gradApp.ApprovedElectives.ToString();
+            //infoTotalResidencyHours.Text = gradApp.TotalResidencyHours.ToString(); -- manual entry required
+            //infoLast36ResidencyHours.Text = gradApp.Last36ResidencyHours.ToString(); -- manual entry required
+            //infoApprovedElectives.Text = gradApp.ApprovedElectives.ToString(); -- manual entry required
             infoHoursOfD.Text = gradApp.HoursOfD.ToString();
-            //infoSubstitutionCheck.Text = gradApp.SubstitutionCheck.ToString();
-            //infoCourseSubstitution.Text = gradApp.CourseSubstitution.ToString();
+            //infoSubstitutionCheck.Text = gradApp.SubstitutionCheck.ToString(); -- manual entry required
+            //infoCourseSubstitution.Text = gradApp.CourseSubstitution.ToString(); -- manual entry required
         }
 
         private void ConfirmNewGradAppButton_Click(object sender, EventArgs e)
