@@ -43,6 +43,8 @@ namespace GradAppTracker
             string dean;
             string records;
             string name;
+            string status;
+            int active;
             Boolean result = false;
             DataGridViewRow dgvRow;
             DataGridView dgv;
@@ -60,10 +62,21 @@ namespace GradAppTracker
                 dept = (string)dgvRow.Cells["DeptChairApproval"].Value;
                 dean = (string)dgvRow.Cells["DeanApproval"].Value;
                 records = (string)dgvRow.Cells["RecordsApproval"].Value;
-                
+
+                if (advisor == "Y" && dept == "Y" && dean == "Y" && records == "Y")
+                {
+                    active = 0;
+                    status = "COMPLETED";
+                }
+                else
+                {
+                    status = "PENDING";
+                    active = 1;
+                }
+
                 name = studentLabel.Text;
 
-                result = DB.UpdateApprovalStatus(advisor, dept, dean, records, name);
+                result = DB.UpdateApprovalStatus(status, advisor, dept, dean, records, active, name);
 
                 if(result == true)
                 {
@@ -73,13 +86,11 @@ namespace GradAppTracker
                 {
                     MessageBox.Show("Update Unsuccessful!");
                 }
-
             }
             catch (Exception e1)
             {
                 //MessageBox.Show("Update Unsuccessful! (CATCH)");
             }
-
             this.Close();
         }
     }
