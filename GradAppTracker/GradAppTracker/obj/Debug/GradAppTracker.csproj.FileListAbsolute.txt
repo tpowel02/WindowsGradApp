@@ -19,3 +19,4 @@ C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\ob
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\af\GradAppTracker.resources.dll
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.exe
 C:\Users\Jarrod\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\obj\Debug\GradAppTracker.pdb
+C:\Users\Ein\Documents\GitHub\WindowsGradApp\GradAppTracker\GradAppTracker\bin\Debug\GradAppTracker.exe
