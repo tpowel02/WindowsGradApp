@@ -32,6 +32,17 @@
             this.CancelButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.yTotal = new System.Windows.Forms.PictureBox();
+            this.xTotal = new System.Windows.Forms.PictureBox();
+            this.yDHours = new System.Windows.Forms.PictureBox();
+            this.yMinor = new System.Windows.Forms.PictureBox();
+            this.yMajor = new System.Windows.Forms.PictureBox();
+            this.yLower = new System.Windows.Forms.PictureBox();
+            this.yUpper = new System.Windows.Forms.PictureBox();
+            this.xLower = new System.Windows.Forms.PictureBox();
+            this.xDHours = new System.Windows.Forms.PictureBox();
+            this.xMinor = new System.Windows.Forms.PictureBox();
+            this.xMajor = new System.Windows.Forms.PictureBox();
             this.xUpper = new System.Windows.Forms.PictureBox();
             this.infoCourseSubstitution = new System.Windows.Forms.Label();
             this.infoSubstitutionCheck = new System.Windows.Forms.Label();
@@ -105,16 +116,19 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.xMajor = new System.Windows.Forms.PictureBox();
-            this.xMinor = new System.Windows.Forms.PictureBox();
-            this.xDHours = new System.Windows.Forms.PictureBox();
-            this.xLower = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xUpper)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xMajor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xMinor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xDHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yDHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yMinor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yMajor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yLower)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yUpper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xLower)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xDHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMinor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMajor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUpper)).BeginInit();
             this.SuspendLayout();
             // 
             // CancelButton
@@ -138,6 +152,13 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.yTotal);
+            this.panel1.Controls.Add(this.xTotal);
+            this.panel1.Controls.Add(this.yDHours);
+            this.panel1.Controls.Add(this.yMinor);
+            this.panel1.Controls.Add(this.yMajor);
+            this.panel1.Controls.Add(this.yLower);
+            this.panel1.Controls.Add(this.yUpper);
             this.panel1.Controls.Add(this.xLower);
             this.panel1.Controls.Add(this.xDHours);
             this.panel1.Controls.Add(this.xMinor);
@@ -219,6 +240,116 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(360, 525);
             this.panel1.TabIndex = 13;
+            // 
+            // yTotal
+            // 
+            this.yTotal.Image = ((System.Drawing.Image)(resources.GetObject("yTotal.Image")));
+            this.yTotal.Location = new System.Drawing.Point(161, 527);
+            this.yTotal.Name = "yTotal";
+            this.yTotal.Size = new System.Drawing.Size(13, 13);
+            this.yTotal.TabIndex = 139;
+            this.yTotal.TabStop = false;
+            this.yTotal.Visible = false;
+            // 
+            // xTotal
+            // 
+            this.xTotal.Image = ((System.Drawing.Image)(resources.GetObject("xTotal.Image")));
+            this.xTotal.Location = new System.Drawing.Point(162, 527);
+            this.xTotal.Name = "xTotal";
+            this.xTotal.Size = new System.Drawing.Size(12, 13);
+            this.xTotal.TabIndex = 138;
+            this.xTotal.TabStop = false;
+            this.xTotal.Visible = false;
+            // 
+            // yDHours
+            // 
+            this.yDHours.Image = ((System.Drawing.Image)(resources.GetObject("yDHours.Image")));
+            this.yDHours.Location = new System.Drawing.Point(161, 694);
+            this.yDHours.Name = "yDHours";
+            this.yDHours.Size = new System.Drawing.Size(13, 13);
+            this.yDHours.TabIndex = 137;
+            this.yDHours.TabStop = false;
+            this.yDHours.Visible = false;
+            // 
+            // yMinor
+            // 
+            this.yMinor.Image = ((System.Drawing.Image)(resources.GetObject("yMinor.Image")));
+            this.yMinor.Location = new System.Drawing.Point(161, 610);
+            this.yMinor.Name = "yMinor";
+            this.yMinor.Size = new System.Drawing.Size(13, 13);
+            this.yMinor.TabIndex = 136;
+            this.yMinor.TabStop = false;
+            this.yMinor.Visible = false;
+            // 
+            // yMajor
+            // 
+            this.yMajor.Image = ((System.Drawing.Image)(resources.GetObject("yMajor.Image")));
+            this.yMajor.Location = new System.Drawing.Point(161, 569);
+            this.yMajor.Name = "yMajor";
+            this.yMajor.Size = new System.Drawing.Size(13, 13);
+            this.yMajor.TabIndex = 135;
+            this.yMajor.TabStop = false;
+            this.yMajor.Visible = false;
+            // 
+            // yLower
+            // 
+            this.yLower.Image = ((System.Drawing.Image)(resources.GetObject("yLower.Image")));
+            this.yLower.Location = new System.Drawing.Point(161, 505);
+            this.yLower.Name = "yLower";
+            this.yLower.Size = new System.Drawing.Size(13, 13);
+            this.yLower.TabIndex = 134;
+            this.yLower.TabStop = false;
+            this.yLower.Visible = false;
+            // 
+            // yUpper
+            // 
+            this.yUpper.Image = ((System.Drawing.Image)(resources.GetObject("yUpper.Image")));
+            this.yUpper.Location = new System.Drawing.Point(161, 485);
+            this.yUpper.Name = "yUpper";
+            this.yUpper.Size = new System.Drawing.Size(13, 13);
+            this.yUpper.TabIndex = 133;
+            this.yUpper.TabStop = false;
+            this.yUpper.Visible = false;
+            // 
+            // xLower
+            // 
+            this.xLower.Image = ((System.Drawing.Image)(resources.GetObject("xLower.Image")));
+            this.xLower.Location = new System.Drawing.Point(162, 505);
+            this.xLower.Name = "xLower";
+            this.xLower.Size = new System.Drawing.Size(12, 13);
+            this.xLower.TabIndex = 132;
+            this.xLower.TabStop = false;
+            this.xLower.Visible = false;
+            // 
+            // xDHours
+            // 
+            this.xDHours.Image = ((System.Drawing.Image)(resources.GetObject("xDHours.Image")));
+            this.xDHours.Location = new System.Drawing.Point(162, 694);
+            this.xDHours.Name = "xDHours";
+            this.xDHours.Size = new System.Drawing.Size(12, 13);
+            this.xDHours.TabIndex = 131;
+            this.xDHours.TabStop = false;
+            this.xDHours.Visible = false;
+            // 
+            // xMinor
+            // 
+            this.xMinor.Image = ((System.Drawing.Image)(resources.GetObject("xMinor.Image")));
+            this.xMinor.Location = new System.Drawing.Point(162, 610);
+            this.xMinor.Name = "xMinor";
+            this.xMinor.Size = new System.Drawing.Size(12, 13);
+            this.xMinor.TabIndex = 130;
+            this.xMinor.TabStop = false;
+            this.xMinor.Visible = false;
+            // 
+            // xMajor
+            // 
+            this.xMajor.Image = ((System.Drawing.Image)(resources.GetObject("xMajor.Image")));
+            this.xMajor.Location = new System.Drawing.Point(162, 569);
+            this.xMajor.Name = "xMajor";
+            this.xMajor.Size = new System.Drawing.Size(12, 13);
+            this.xMajor.TabIndex = 129;
+            this.xMajor.TabStop = false;
+            this.xMajor.Visible = false;
             // 
             // xUpper
             // 
@@ -326,9 +457,9 @@
             this.infoDualDegreeHours.ForeColor = System.Drawing.SystemColors.ControlText;
             this.infoDualDegreeHours.Location = new System.Drawing.Point(180, 464);
             this.infoDualDegreeHours.Name = "infoDualDegreeHours";
-            this.infoDualDegreeHours.Size = new System.Drawing.Size(148, 13);
+            this.infoDualDegreeHours.Size = new System.Drawing.Size(152, 13);
             this.infoDualDegreeHours.TabIndex = 118;
-            this.infoDualDegreeHours.Text = "- not handled / no way to filter";
+            this.infoDualDegreeHours.Text = "- not consistent enough to filter";
             // 
             // infoDualDegreeCatalog
             // 
@@ -336,9 +467,9 @@
             this.infoDualDegreeCatalog.BackColor = System.Drawing.Color.Aqua;
             this.infoDualDegreeCatalog.Location = new System.Drawing.Point(180, 444);
             this.infoDualDegreeCatalog.Name = "infoDualDegreeCatalog";
-            this.infoDualDegreeCatalog.Size = new System.Drawing.Size(69, 13);
+            this.infoDualDegreeCatalog.Size = new System.Drawing.Size(10, 13);
             this.infoDualDegreeCatalog.TabIndex = 117;
-            this.infoDualDegreeCatalog.Text = "- not handled";
+            this.infoDualDegreeCatalog.Text = "-";
             // 
             // infoDualDegreeName
             // 
@@ -346,9 +477,9 @@
             this.infoDualDegreeName.BackColor = System.Drawing.Color.Aqua;
             this.infoDualDegreeName.Location = new System.Drawing.Point(180, 422);
             this.infoDualDegreeName.Name = "infoDualDegreeName";
-            this.infoDualDegreeName.Size = new System.Drawing.Size(69, 13);
+            this.infoDualDegreeName.Size = new System.Drawing.Size(10, 13);
             this.infoDualDegreeName.TabIndex = 116;
-            this.infoDualDegreeName.Text = "- not handled";
+            this.infoDualDegreeName.Text = "-";
             // 
             // infoDualDegreeID
             // 
@@ -356,9 +487,9 @@
             this.infoDualDegreeID.BackColor = System.Drawing.Color.Aqua;
             this.infoDualDegreeID.Location = new System.Drawing.Point(180, 402);
             this.infoDualDegreeID.Name = "infoDualDegreeID";
-            this.infoDualDegreeID.Size = new System.Drawing.Size(69, 13);
+            this.infoDualDegreeID.Size = new System.Drawing.Size(10, 13);
             this.infoDualDegreeID.TabIndex = 115;
-            this.infoDualDegreeID.Text = "- not handled";
+            this.infoDualDegreeID.Text = "-";
             // 
             // infoDoubleMajorHours
             // 
@@ -366,9 +497,9 @@
             this.infoDoubleMajorHours.BackColor = System.Drawing.Color.Cyan;
             this.infoDoubleMajorHours.Location = new System.Drawing.Point(180, 382);
             this.infoDoubleMajorHours.Name = "infoDoubleMajorHours";
-            this.infoDoubleMajorHours.Size = new System.Drawing.Size(81, 13);
+            this.infoDoubleMajorHours.Size = new System.Drawing.Size(152, 13);
             this.infoDoubleMajorHours.TabIndex = 114;
-            this.infoDoubleMajorHours.Text = "- no way to filter";
+            this.infoDoubleMajorHours.Text = "- not consistent enough to filter";
             // 
             // infoDoubleMajorCatalog
             // 
@@ -897,46 +1028,6 @@
             this.label31.TabIndex = 56;
             this.label31.Text = "Major Name";
             // 
-            // xMajor
-            // 
-            this.xMajor.Image = ((System.Drawing.Image)(resources.GetObject("xMajor.Image")));
-            this.xMajor.Location = new System.Drawing.Point(162, 569);
-            this.xMajor.Name = "xMajor";
-            this.xMajor.Size = new System.Drawing.Size(12, 13);
-            this.xMajor.TabIndex = 129;
-            this.xMajor.TabStop = false;
-            this.xMajor.Visible = false;
-            // 
-            // xMinor
-            // 
-            this.xMinor.Image = ((System.Drawing.Image)(resources.GetObject("xMinor.Image")));
-            this.xMinor.Location = new System.Drawing.Point(162, 590);
-            this.xMinor.Name = "xMinor";
-            this.xMinor.Size = new System.Drawing.Size(12, 13);
-            this.xMinor.TabIndex = 130;
-            this.xMinor.TabStop = false;
-            this.xMinor.Visible = false;
-            // 
-            // xDHours
-            // 
-            this.xDHours.Image = ((System.Drawing.Image)(resources.GetObject("xDHours.Image")));
-            this.xDHours.Location = new System.Drawing.Point(162, 694);
-            this.xDHours.Name = "xDHours";
-            this.xDHours.Size = new System.Drawing.Size(12, 13);
-            this.xDHours.TabIndex = 131;
-            this.xDHours.TabStop = false;
-            this.xDHours.Visible = false;
-            // 
-            // xLower
-            // 
-            this.xLower.Image = ((System.Drawing.Image)(resources.GetObject("xLower.Image")));
-            this.xLower.Location = new System.Drawing.Point(162, 505);
-            this.xLower.Name = "xLower";
-            this.xLower.Size = new System.Drawing.Size(12, 13);
-            this.xLower.TabIndex = 132;
-            this.xLower.TabStop = false;
-            this.xLower.Visible = false;
-            // 
             // ConfirmNewGradAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -951,11 +1042,18 @@
             this.Text = "Degree Evaluation";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xUpper)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xMajor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xMinor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xDHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yDHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yMinor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yMajor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yLower)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yUpper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xLower)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xDHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMinor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMajor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xUpper)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1042,5 +1140,12 @@
         private System.Windows.Forms.PictureBox xMinor;
         private System.Windows.Forms.PictureBox xMajor;
         private System.Windows.Forms.PictureBox xLower;
+        private System.Windows.Forms.PictureBox yUpper;
+        private System.Windows.Forms.PictureBox yDHours;
+        private System.Windows.Forms.PictureBox yMinor;
+        private System.Windows.Forms.PictureBox yMajor;
+        private System.Windows.Forms.PictureBox yLower;
+        private System.Windows.Forms.PictureBox yTotal;
+        private System.Windows.Forms.PictureBox xTotal;
     }
 }

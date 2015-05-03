@@ -131,6 +131,7 @@
             this.dgvPast.Location = new System.Drawing.Point(3, 3);
             this.dgvPast.Name = "dgvPast";
             this.dgvPast.ReadOnly = true;
+            this.dgvPast.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPast.Size = new System.Drawing.Size(1016, 564);
             this.dgvPast.TabIndex = 0;
             // 
@@ -205,6 +206,7 @@
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersWidth = 50;
             this.dgvUsers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(460, 553);
             this.dgvUsers.TabIndex = 1;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);

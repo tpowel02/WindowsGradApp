@@ -375,6 +375,9 @@ namespace GradAppTracker
             string courseNum  = "";
             string finalGrade = "";
 
+            int degreeID1 = 0;
+            int degreeID2 = 0;
+
 
             DataGridViewRow dgvRow;
             DataGridView dgv;
@@ -411,14 +414,26 @@ namespace GradAppTracker
                         gradApp.GradYear = Convert.ToInt32(row[9].ToString());
                         gradApp.GradSemester = row[10].ToString();
                         gradApp.Ceremony = row[11].ToString();
+                        degreeID1 = Convert.ToInt32(row[12].ToString());
                     }
                     else if (count == 1)
                     {
-                        // ------------------------------------------------------------------------ info for student with double major
+                        // ------------------------------------------------------------------------ info for student with double major and/or dual degree (there is no student with dual degree)
 
-                        gradApp.DoubleMajorName = row[4].ToString();
-                        gradApp.DoubleMajorID = Convert.ToInt32(row[5].ToString());
-                        gradApp.DoubleMajorCatalog = row[6].ToString();
+                        degreeID2 = Convert.ToInt32(row[12].ToString());
+                        if (degreeID2 == degreeID1)
+                        {
+                            gradApp.DoubleMajorName = row[4].ToString();
+                            gradApp.DoubleMajorID = Convert.ToInt32(row[5].ToString());
+                            gradApp.DoubleMajorCatalog = row[6].ToString();
+                        }
+                        else
+                        {
+                            gradApp.DualDegreeName = row[4].ToString();
+                            gradApp.DualDegreeID = Convert.ToInt32(row[5].ToString());
+                            gradApp.DualDegreeCatalog = row[6].ToString();
+                        }
+                        
                     }
                     count++;
                 }
@@ -456,19 +471,6 @@ namespace GradAppTracker
                         gradApp.MinorCatalog = row[3].ToString();
                     }
                 }
-
-                /*result = DB.CheckForDual(evalStudentID);
-                if (result == 1)
-                {
-                    gt = DB.GetStudentInfoDual(evalStudentID);
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        gradApp.EarnedMinorGPA  = Convert.ToDouble(row[0].ToString());
-                        gradApp.MinorID         = Convert.ToInt32(row[1].ToString());
-                        gradApp.MinorName       = row[2].ToString();
-                        gradApp.MinorCatalog    = row[3].ToString();
-                    }
-                }*/
 
                 ConfirmNewGradAppForm  evaluation = new ConfirmNewGradAppForm(gradApp);
                 evaluation.ShowDialog();

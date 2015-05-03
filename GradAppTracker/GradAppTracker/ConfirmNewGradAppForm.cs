@@ -40,6 +40,8 @@ namespace GradAppTracker
                 infoEarnedMinorGPA.Text = gradApp.EarnedMinorGPA.ToString(); 
                 if (gradApp.EarnedMinorGPA < 2.0)
                     xMinor.Visible = true;
+                else
+                    yMinor.Visible = true;
             }
             if (gradApp.DoubleMajorID == 0)
             {
@@ -66,20 +68,33 @@ namespace GradAppTracker
             infoUpperLevelHours.Text = gradApp.UpperLevelHours.ToString();
             if (gradApp.UpperLevelHours < 45)
                 xUpper.Visible = true;
+            else
+                yUpper.Visible = true;
+            //xUpper.Hide();
             infoLowerLevelHours.Text = gradApp.LowerLevelHours.ToString();
             if (gradApp.UpperLevelHours < 68)
                 xLower.Visible = true;
-            infoTotalGPA.Text = gradApp.TotalGPA.ToString();
+            else
+                yLower.Visible = true;
+            infoTotalGPA.Text = gradApp.TotalGPA.ToString(); 
+            if (gradApp.TotalGPA < 2.0)
+                xTotal.Visible = true;
+            else
+                yTotal.Visible = true;
             infoRequiredMajorGPA.Text = "2.0"; // -- not in db
             infoEarnedMajorGPA.Text = gradApp.EarnedMajorGPA.ToString();
             if (gradApp.EarnedMajorGPA < 2.0)
                 xMajor.Visible = true;
+            else
+                yMajor.Visible = true;
             //infoTotalResidencyHours.Text = gradApp.TotalResidencyHours.ToString(); -- manual entry required
             //infoLast36ResidencyHours.Text = gradApp.Last36ResidencyHours.ToString(); -- manual entry required
             //infoApprovedElectives.Text = gradApp.ApprovedElectives.ToString(); -- manual entry required
             infoHoursOfD.Text = gradApp.HoursOfD.ToString();
             if (gradApp.HoursOfD >15)
                 xDHours.Visible = true;
+            else
+                yDHours.Visible = true;
             //infoSubstitutionCheck.Text = gradApp.SubstitutionCheck.ToString(); -- manual entry required
             //infoCourseSubstitution.Text = gradApp.CourseSubstitution.ToString(); -- manual entry required
         }

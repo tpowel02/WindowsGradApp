@@ -108,7 +108,7 @@ namespace GradAppTracker
                 }
             }
         }
-        public static bool UpdateUser(String firstName, String lastName, String email)
+        public static bool UpdateUser(String firstName, String lastName, String email) // ------------ The where cannot be email if you can update email. This prevents update from happening. - Jarrod Lee
         {
             //For Admin Use - Create a New Faculty User (for application login)
             StringBuilder query = new StringBuilder();
@@ -150,7 +150,7 @@ namespace GradAppTracker
             query.Append("SELECT grad_app.date_submitted AS [Date Submitted], student.student_id AS [Student ID], "
                         + "(student.first_name+' '+ student.last_name) AS [Student Name], "
                         + "(users.first_name+' '+ users.last_name) AS [Advisor Name], "
-                //+ "(faculty.first_name +' ' + faculty.last_name) AS [Dean Name], "
+                      //+ "(faculty.first_name +' ' + faculty.last_name) AS [Dean Name], "
                         + "(major.major_name) AS [Major Name], student.grad_year AS [Graduation Year], student.grad_semester AS [Graduation Semester], "
                         + "grad_app.status AS [Status], "
                         + "grad_app.advisor_approval AS [Advisor Approval], grad_app.dept_chair_approval AS [Dept. Chair Approval], grad_app.dean_approval AS [Dean Approval], grad_app.records_approval AS [Records Approval] ");
@@ -185,7 +185,7 @@ namespace GradAppTracker
             query.Append("SELECT grad_app.date_submitted AS [Date Submitted], student.student_id AS [Student ID], "
                         + "(student.first_name+' '+ student.last_name) AS [Student Name], "
                         + "(users.first_name+' '+ users.last_name) AS [Advisor Name], "
-                //+ "(faculty.first_name +' ' + faculty.last_name) AS [Dean Name], "
+                        //+ "(faculty.first_name +' ' + faculty.last_name) AS [Dean Name], "
                         + "(major.major_name) AS [Major Name], student.grad_year AS [Graduation Year], student.grad_semester AS [Graduation Semester], "
                         + "grad_app.status AS [Status], "
                         + "grad_app.advisor_approval AS [Advisor Approval], grad_app.dept_chair_approval AS [Dept. Chair Approval], grad_app.dean_approval AS [Dean Approval], grad_app.records_approval AS [Records Approval] ");
@@ -454,7 +454,8 @@ namespace GradAppTracker
                         + "(major.concentration_code) AS [Concentration Code], "
                         + "(student.grad_year) AS [Graduation Year], "
                         + "(student.grad_semester) AS [Graduation Semester], "
-                        + "(student.participation) AS [Ceremony Participation] ");
+                        + "(student.participation) AS [Ceremony Participation], "
+                        + "(major.degree_id) AS [Degree ID] ");
             query.Append("FROM [TGA_Project].[dbo].[student] ");
             query.Append("JOIN [TGA_Project].[dbo].[student_major] on [student_major].[db_student_id] = [student].[db_student_id] ");
             query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [student_major].[major_id] ");
