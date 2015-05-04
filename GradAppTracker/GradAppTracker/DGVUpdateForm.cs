@@ -12,6 +12,7 @@ namespace GradAppTracker
 {
     public partial class DGVUpdateForm : Form
     {
+        string emailOriginal = "";
         public DGVUpdateForm()
         {
             InitializeComponent();
@@ -30,6 +31,9 @@ namespace GradAppTracker
             dgvr.Cells[0].Value = split[0].ToString();
             dgvr.Cells[1].Value = split[1].ToString();
             dgvr.Cells[2].Value = split[2].ToString();
+
+            emailOriginal = split[2].ToString();
+
             updateUserDgv.Rows.Add(dgvr); 
         }
 
@@ -56,7 +60,7 @@ namespace GradAppTracker
                 lastName = (string)dgvRow.Cells["LAST_NAME"].Value;
                 email = (string)dgvRow.Cells["EMAIL"].Value;
 
-                result = DB.UpdateUser(firstName,lastName,email);
+                result = DB.UpdateUser(firstName,lastName,email, emailOriginal);
 
                 if (result == true)
                 {

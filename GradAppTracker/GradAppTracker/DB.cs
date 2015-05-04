@@ -108,17 +108,18 @@ namespace GradAppTracker
                 }
             }
         }
-        public static bool UpdateUser(String firstName, String lastName, String email) // ------------ The where cannot be email if you can update email. This prevents update from happening. - Jarrod Lee
+        public static bool UpdateUser(String firstName, String lastName, String email, String emailOriginal) // ------------ The where cannot be email if you can update email. This prevents update from happening. - Jarrod Lee
         {
             //For Admin Use - Create a New Faculty User (for application login)
             StringBuilder query = new StringBuilder();
 
             string resultString = "!";
+            
 
             query.Append("USE [TGA_Project] ");
             query.Append("UPDATE [USERS] ");
             query.Append(String.Format("SET [FIRST_NAME] = '{0}',[LAST_NAME] = '{1}',[EMAIL] = '{2}' ", firstName, lastName, email));
-            query.Append(string.Format("WHERE [EMAIL] = '{0}'",email));
+            query.Append(string.Format("WHERE [EMAIL] = '{0}'",emailOriginal));
             using (SqlConnection conn = GetConnection())
             {
                 using (SqlCommand command = new SqlCommand(query.ToString(), conn))

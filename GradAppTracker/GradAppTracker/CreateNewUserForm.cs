@@ -42,38 +42,36 @@ namespace GradAppTracker
 
             string confirmPasswordString = tbConfirmPassword.Text;
 
-            if (tbPassword.Text == tbConfirmPassword.Text)
+            if (IsUserValid(user) && (tbPassword.Text == tbConfirmPassword.Text))
             {
+                bool result = DB.CreateNewUser(user);
 
-                if (IsUserValid(user))
+                if (result)
                 {
-                    //TODO: Create Specific Error Message from DB (Email taken, etc.)
-
-                    bool result = DB.CreateNewUser(user);
-
-                    if (result)
-                    {
-                        MessageBox.Show("User Created", "Success", MessageBoxButtons.OK);                                        
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error Creating User, please try again.", "Database Error", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("User Created", "Success", MessageBoxButtons.OK);                                        
+                    this.Close();
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Passwords Do Not Match", "Enter Valid Password", MessageBoxButtons.OK);
+                    MessageBox.Show("Error Creating User, please try again.", "Database Error", MessageBoxButtons.OK);
+                    return;
                 }
             }
-            
+            else if (tbPassword.Text != tbConfirmPassword.Text)
+            {
+                MessageBox.Show("Passwords Do Not Match", "Enter Valid Password", MessageBoxButtons.OK);
+            }
         }
-
+           
         private Boolean IsUserValid(User user)
         {
             string errorMessage = "";
 
-            if (user.FirstName.Length > 0 && user.LastName.Length > 0 && user.Password.Length > 0 && user.PositionID > 0)
+            if (user.FirstName.Length > 0 
+                && user.LastName.Length > 0 
+                && user.Password.Length > 0 
+                && user.PositionID > 0)
             {
                 return true;
             }
