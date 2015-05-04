@@ -625,10 +625,11 @@ namespace GradAppTracker
             StringBuilder query = new StringBuilder();
 
             string resultString = "!";
-
+            //query.Append("USE [TGA_Project] ");
             query.Append("UPDATE [TGA_Project].[dbo].[GRAD_APP] ");
             query.Append(String.Format("SET [STATUS]='{0}',[ADVISOR_APPROVAL]='{1}',[DEPT_CHAIR_APPROVAL]='{2}',[DEAN_APPROVAL]='{3}',[RECORDS_APPROVAL]='{4}',[ACTIVE]='{5}' ", status, advisor, dept, dean, records, active));
             query.Append(string.Format("WHERE [STUDENT_ID] = (SELECT [TGA_Project].[dbo].[grad_app].STUDENT_ID FROM [TGA_Project].[dbo].[GRAD_APP] JOIN  [TGA_Project].[dbo].[USERS] ON  [TGA_Project].[dbo].[grad_app].student_id= [TGA_Project].[dbo].[users].user_id WHERE CONCAT( [TGA_Project].[dbo].[users].first_name, ' ',  [TGA_Project].[dbo].[users].last_name) LIKE '{0}')", name));
+
 
             using (SqlConnection conn = GetConnection())
             {

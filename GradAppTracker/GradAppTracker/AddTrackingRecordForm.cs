@@ -41,7 +41,7 @@ namespace GradAppTracker
                 if(result != 0)
                 {
                     MessageBox.Show("New Tracking Record Added!");
-
+                    this.Close();
                 }
                 else
                 {

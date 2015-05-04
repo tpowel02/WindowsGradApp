@@ -354,6 +354,33 @@ namespace GradAppTracker
 
                 }
             }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                try
+                {
+                    dgvRows = dgvPast.SelectedRows;
+                    dgvRow = dgvRows[0];
+
+                    DGVUpdateStatusForm dgvu = new DGVUpdateStatusForm();
+
+                    advisor = (string)dgvRow.Cells["Advisor Approval"].Value;
+                    dept = (string)dgvRow.Cells["Dept. Chair Approval"].Value;
+                    dean = (string)dgvRow.Cells["Dean Approval"].Value;
+                    records = (string)dgvRow.Cells["Records Approval"].Value;
+                    name = (string)dgvRow.Cells["Student Name"].Value;
+
+                    dgvu.Tag = advisor + " " + dept + " " + dean + " " + records + " " + name;
+
+                    dgvu.ShowDialog();
+
+                    Refresh refresh = new Refresh();
+                    refresh.RefreshMain(dgvCurrent);
+                }
+                catch (Exception e1)
+                {
+
+                }
+            }
         }
 
         private void addTrackingRecordbtn_Click(object sender, EventArgs e)
@@ -388,103 +415,205 @@ namespace GradAppTracker
 
             DataTable gt = new DataTable();
             GradApp gradApp = new GradApp();
-
-            try
+            if (tabControl1.SelectedIndex == 0)
             {
-                dgvRows = dgvCurrent.SelectedRows;
-                dgvRow = dgvRows[0];
-
-                studentId = Int32.Parse((string)dgvRow.Cells["Student ID"].Value);
-
-                gradApp.StudentID = studentId;
-
-                gt = DB.GetStudentInfo(studentId);
-                foreach (DataRow row in gt.Rows)
+                try
                 {
-                    if (count == 0)
-                    {
-                        // ------------------------------------------------------------------------ general student info
+                    dgvRows = dgvCurrent.SelectedRows;
+                    dgvRow = dgvRows[0];
 
-                        gradApp.StudentName = row[0].ToString();
-                        gradApp.StudentEmail = row[1].ToString();
-                        gradApp.TotalGPA = Convert.ToDouble(row[2].ToString());
-                        gradApp.EarnedMajorGPA = Convert.ToDouble(row[3].ToString());
-                        gradApp.MajorName = row[4].ToString();
-                        gradApp.MajorID = Convert.ToInt32(row[5].ToString());
-                        gradApp.MajorCatalog = row[6].ToString();
-                        gradApp.Concentration = row[7].ToString();
-                        gradApp.ConcentrationCode = row[8].ToString();
-                        gradApp.GradYear = Convert.ToInt32(row[9].ToString());
-                        gradApp.GradSemester = row[10].ToString();
-                        gradApp.Ceremony = row[11].ToString();
-                        degreeID1 = Convert.ToInt32(row[12].ToString());
-                    }
-                    else if (count == 1)
-                    {
-                        // ------------------------------------------------------------------------ info for student with double major and/or dual degree (there is no student with dual degree)
+                    studentId = Int32.Parse((string)dgvRow.Cells["Student ID"].Value);
 
-                        degreeID2 = Convert.ToInt32(row[12].ToString());
-                        if (degreeID2 == degreeID1)
-                        {
-                            gradApp.DoubleMajorName = row[4].ToString();
-                            gradApp.DoubleMajorID = Convert.ToInt32(row[5].ToString());
-                            gradApp.DoubleMajorCatalog = row[6].ToString();
-                        }
-                        else
-                        {
-                            gradApp.DualDegreeName = row[4].ToString();
-                            gradApp.DualDegreeID = Convert.ToInt32(row[5].ToString());
-                            gradApp.DualDegreeCatalog = row[6].ToString();
-                        }
-                        
-                    }
-                    count++;
-                }
+                    gradApp.StudentID = studentId;
 
-                gt = DB.GetStudentHours(studentId);
-                foreach (DataRow row in gt.Rows)
-                {
-                    courseNum   = row[0].ToString();
-                    creditHours = Convert.ToInt32(row[1]);
-                    finalGrade  = row[2].ToString();
-
-                    if (finalGrade == "D")
-                        dHours += creditHours;
-
-                    if (courseNum[0] == '3' || courseNum[0] == '4')
-                        upperHours += creditHours;
-                    else
-                        lowerHours += creditHours;
-                }
-                gradApp.HoursOfD = dHours;
-                gradApp.UpperLevelHours = upperHours;
-                gradApp.LowerLevelHours = lowerHours;
-                
-                result = DB.CheckForMinor(studentId);
-                if (result == 1)
-                {
-                    gt = DB.GetStudentInfoMinor(studentId);
+                    gt = DB.GetStudentInfo(studentId);
                     foreach (DataRow row in gt.Rows)
                     {
-                        // ------------------------------------------------------------------------ info for student with minor
+                        if (count == 0)
+                        {
+                            // ------------------------------------------------------------------------ general student info
 
-                        gradApp.EarnedMinorGPA = Convert.ToDouble(row[0].ToString());
-                        gradApp.MinorID = Convert.ToInt32(row[1].ToString());
-                        gradApp.MinorName = row[2].ToString();
-                        gradApp.MinorCatalog = row[3].ToString();
+                            gradApp.StudentName = row[0].ToString();
+                            gradApp.StudentEmail = row[1].ToString();
+                            gradApp.TotalGPA = Convert.ToDouble(row[2].ToString());
+                            gradApp.EarnedMajorGPA = Convert.ToDouble(row[3].ToString());
+                            gradApp.MajorName = row[4].ToString();
+                            gradApp.MajorID = Convert.ToInt32(row[5].ToString());
+                            gradApp.MajorCatalog = row[6].ToString();
+                            gradApp.Concentration = row[7].ToString();
+                            gradApp.ConcentrationCode = row[8].ToString();
+                            gradApp.GradYear = Convert.ToInt32(row[9].ToString());
+                            gradApp.GradSemester = row[10].ToString();
+                            gradApp.Ceremony = row[11].ToString();
+                            degreeID1 = Convert.ToInt32(row[12].ToString());
+                        }
+                        else if (count == 1)
+                        {
+                            // ------------------------------------------------------------------------ info for student with double major and/or dual degree (there is no student with dual degree)
+
+                            degreeID2 = Convert.ToInt32(row[12].ToString());
+                            if (degreeID2 == degreeID1)
+                            {
+                                gradApp.DoubleMajorName = row[4].ToString();
+                                gradApp.DoubleMajorID = Convert.ToInt32(row[5].ToString());
+                                gradApp.DoubleMajorCatalog = row[6].ToString();
+                            }
+                            else
+                            {
+                                gradApp.DualDegreeName = row[4].ToString();
+                                gradApp.DualDegreeID = Convert.ToInt32(row[5].ToString());
+                                gradApp.DualDegreeCatalog = row[6].ToString();
+                            }
+
+                        }
+                        count++;
                     }
+
+                    gt = DB.GetStudentHours(studentId);
+                    foreach (DataRow row in gt.Rows)
+                    {
+                        courseNum = row[0].ToString();
+                        creditHours = Convert.ToInt32(row[1]);
+                        finalGrade = row[2].ToString();
+
+                        if (finalGrade == "D")
+                            dHours += creditHours;
+
+                        if (courseNum[0] == '3' || courseNum[0] == '4')
+                            upperHours += creditHours;
+                        else
+                            lowerHours += creditHours;
+                    }
+                    gradApp.HoursOfD = dHours;
+                    gradApp.UpperLevelHours = upperHours;
+                    gradApp.LowerLevelHours = lowerHours;
+
+                    result = DB.CheckForMinor(studentId);
+                    if (result == 1)
+                    {
+                        gt = DB.GetStudentInfoMinor(studentId);
+                        foreach (DataRow row in gt.Rows)
+                        {
+                            // ------------------------------------------------------------------------ info for student with minor
+
+                            gradApp.EarnedMinorGPA = Convert.ToDouble(row[0].ToString());
+                            gradApp.MinorID = Convert.ToInt32(row[1].ToString());
+                            gradApp.MinorName = row[2].ToString();
+                            gradApp.MinorCatalog = row[3].ToString();
+                        }
+                    }
+
+                    ConfirmNewGradAppForm evaluation = new ConfirmNewGradAppForm(gradApp);
+                    evaluation.ShowDialog();
+
+                    Refresh refresh = new Refresh();
+                    refresh.RefreshMain(dgvCurrent);
                 }
+                catch (Exception e1)
+                {
 
-                ConfirmNewGradAppForm  evaluation = new ConfirmNewGradAppForm(gradApp);
-                evaluation.ShowDialog();
-
-                Refresh refresh = new Refresh();
-                refresh.RefreshMain(dgvCurrent);
-            }
-            catch (Exception e1)
+                }
+            } 
+            else if (tabControl1.SelectedIndex == 1)
             {
+                try
+                {
+                    dgvRows = dgvPast.SelectedRows;
+                    dgvRow = dgvRows[0];
 
+                    studentId = Int32.Parse((string)dgvRow.Cells["Student ID"].Value);
+
+                    gradApp.StudentID = studentId;
+
+                    gt = DB.GetStudentInfo(studentId);
+                    foreach (DataRow row in gt.Rows)
+                    {
+                        if (count == 0)
+                        {
+                            // ------------------------------------------------------------------------ general student info
+
+                            gradApp.StudentName = row[0].ToString();
+                            gradApp.StudentEmail = row[1].ToString();
+                            gradApp.TotalGPA = Convert.ToDouble(row[2].ToString());
+                            gradApp.EarnedMajorGPA = Convert.ToDouble(row[3].ToString());
+                            gradApp.MajorName = row[4].ToString();
+                            gradApp.MajorID = Convert.ToInt32(row[5].ToString());
+                            gradApp.MajorCatalog = row[6].ToString();
+                            gradApp.Concentration = row[7].ToString();
+                            gradApp.ConcentrationCode = row[8].ToString();
+                            gradApp.GradYear = Convert.ToInt32(row[9].ToString());
+                            gradApp.GradSemester = row[10].ToString();
+                            gradApp.Ceremony = row[11].ToString();
+                            degreeID1 = Convert.ToInt32(row[12].ToString());
+                        }
+                        else if (count == 1)
+                        {
+                            // ------------------------------------------------------------------------ info for student with double major and/or dual degree (there is no student with dual degree)
+
+                            degreeID2 = Convert.ToInt32(row[12].ToString());
+                            if (degreeID2 == degreeID1)
+                            {
+                                gradApp.DoubleMajorName = row[4].ToString();
+                                gradApp.DoubleMajorID = Convert.ToInt32(row[5].ToString());
+                                gradApp.DoubleMajorCatalog = row[6].ToString();
+                            }
+                            else
+                            {
+                                gradApp.DualDegreeName = row[4].ToString();
+                                gradApp.DualDegreeID = Convert.ToInt32(row[5].ToString());
+                                gradApp.DualDegreeCatalog = row[6].ToString();
+                            }
+
+                        }
+                        count++;
+                    }
+
+                    gt = DB.GetStudentHours(studentId);
+                    foreach (DataRow row in gt.Rows)
+                    {
+                        courseNum = row[0].ToString();
+                        creditHours = Convert.ToInt32(row[1]);
+                        finalGrade = row[2].ToString();
+
+                        if (finalGrade == "D")
+                            dHours += creditHours;
+
+                        if (courseNum[0] == '3' || courseNum[0] == '4')
+                            upperHours += creditHours;
+                        else
+                            lowerHours += creditHours;
+                    }
+                    gradApp.HoursOfD = dHours;
+                    gradApp.UpperLevelHours = upperHours;
+                    gradApp.LowerLevelHours = lowerHours;
+
+                    result = DB.CheckForMinor(studentId);
+                    if (result == 1)
+                    {
+                        gt = DB.GetStudentInfoMinor(studentId);
+                        foreach (DataRow row in gt.Rows)
+                        {
+                            // ------------------------------------------------------------------------ info for student with minor
+
+                            gradApp.EarnedMinorGPA = Convert.ToDouble(row[0].ToString());
+                            gradApp.MinorID = Convert.ToInt32(row[1].ToString());
+                            gradApp.MinorName = row[2].ToString();
+                            gradApp.MinorCatalog = row[3].ToString();
+                        }
+                    }
+
+                    ConfirmNewGradAppForm evaluation = new ConfirmNewGradAppForm(gradApp);
+                    evaluation.ShowDialog();
+
+                    Refresh refresh = new Refresh();
+                    refresh.RefreshMain(dgvCurrent);
+                }
+                catch (Exception e1)
+                {
+
+                }
             }
+            
 
 
 

@@ -464,7 +464,7 @@
             // infoDualDegreeCatalog
             // 
             this.infoDualDegreeCatalog.AutoSize = true;
-            this.infoDualDegreeCatalog.BackColor = System.Drawing.Color.Aqua;
+            this.infoDualDegreeCatalog.BackColor = System.Drawing.SystemColors.Control;
             this.infoDualDegreeCatalog.Location = new System.Drawing.Point(180, 444);
             this.infoDualDegreeCatalog.Name = "infoDualDegreeCatalog";
             this.infoDualDegreeCatalog.Size = new System.Drawing.Size(10, 13);
@@ -474,7 +474,7 @@
             // infoDualDegreeName
             // 
             this.infoDualDegreeName.AutoSize = true;
-            this.infoDualDegreeName.BackColor = System.Drawing.Color.Aqua;
+            this.infoDualDegreeName.BackColor = System.Drawing.SystemColors.Control;
             this.infoDualDegreeName.Location = new System.Drawing.Point(180, 422);
             this.infoDualDegreeName.Name = "infoDualDegreeName";
             this.infoDualDegreeName.Size = new System.Drawing.Size(10, 13);
@@ -484,7 +484,7 @@
             // infoDualDegreeID
             // 
             this.infoDualDegreeID.AutoSize = true;
-            this.infoDualDegreeID.BackColor = System.Drawing.Color.Aqua;
+            this.infoDualDegreeID.BackColor = System.Drawing.SystemColors.Control;
             this.infoDualDegreeID.Location = new System.Drawing.Point(180, 402);
             this.infoDualDegreeID.Name = "infoDualDegreeID";
             this.infoDualDegreeID.Size = new System.Drawing.Size(10, 13);
@@ -1036,6 +1036,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.label4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ConfirmNewGradAppForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

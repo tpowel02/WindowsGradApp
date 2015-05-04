@@ -30,7 +30,7 @@ namespace GradAppTracker
         {
             int result = 1;
 
-            //result = DB.Login(tbEmail.Text, tbPassword.Text);
+            result = DB.Login(tbEmail.Text, tbPassword.Text);
 
             if (result == 0)
             {
