@@ -327,29 +327,32 @@ namespace GradAppTracker
             DataGridView dgv;
             DataGridViewSelectedRowCollection dgvRows;
 
-            try
+            if (tabControl1.SelectedIndex == 0)
             {
-                dgvRows = dgvCurrent.SelectedRows;
-                dgvRow = dgvRows[0];
+                try
+                {
+                    dgvRows = dgvCurrent.SelectedRows;
+                    dgvRow = dgvRows[0];
 
-                DGVUpdateStatusForm dgvu = new DGVUpdateStatusForm();
+                    DGVUpdateStatusForm dgvu = new DGVUpdateStatusForm();
 
-                advisor = (string)dgvRow.Cells["Advisor Approval"].Value;
-                dept = (string)dgvRow.Cells["Dept. Chair Approval"].Value;
-                dean = (string)dgvRow.Cells["Dean Approval"].Value;
-                records = (string)dgvRow.Cells["Records Approval"].Value;
-                name = (string)dgvRow.Cells["Student Name"].Value;
+                    advisor = (string)dgvRow.Cells["Advisor Approval"].Value;
+                    dept = (string)dgvRow.Cells["Dept. Chair Approval"].Value;
+                    dean = (string)dgvRow.Cells["Dean Approval"].Value;
+                    records = (string)dgvRow.Cells["Records Approval"].Value;
+                    name = (string)dgvRow.Cells["Student Name"].Value;
 
-                dgvu.Tag = advisor + " " + dept + " " + dean + " " + records + " " + name;
+                    dgvu.Tag = advisor + " " + dept + " " + dean + " " + records + " " + name;
 
-                dgvu.ShowDialog();
+                    dgvu.ShowDialog();
 
-                Refresh refresh = new Refresh();
-                refresh.RefreshMain(dgvCurrent);
-            }
-            catch (Exception e1)
-            {
+                    Refresh refresh = new Refresh();
+                    refresh.RefreshMain(dgvCurrent);
+                }
+                catch (Exception e1)
+                {
 
+                }
             }
         }
 
