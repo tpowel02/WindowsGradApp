@@ -562,48 +562,16 @@ namespace GradAppTracker
             }
             return table;
         }
-        /*public static int CheckForDual(int tempID)
+        public static DataTable GetStudentHoursDoubleMajor(int tempID, int tempMajorID)
         {
             StringBuilder query = new StringBuilder();
 
-            query.Append("SELECT * ");
-            query.Append("FROM [TGA_Project].[dbo].[STUDENT] ");
-            query.Append(String.Format("WHERE STUDENT_ID = '{0}' AND MINOR_ID IS NOT NULL", tempID));
-
-            DataTable table = new DataTable();
-
-            using (SqlConnection conn = GetConnection())
-            {
-                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
-                {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query.ToString(), conn))
-                    {
-                        adapter.Fill(table);
-                        conn.Close();
-                    }
-                }
-            }
-
-            if (table.Rows.Count == 1)
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        public static DataTable GetStudentInfoDual(int tempID)
-        {
-            StringBuilder query = new StringBuilder();
-
-            query.Append("SELECT (student.gpa_minor) AS [Minor GPA], "
-                        + "(minor.minor_id) AS [Minor ID - not code], "
-                        + "(minor.minor_name) AS [Minor Name], "
-                        + "(minor.catalog_term) AS [Minor Catalog Year] ");
+            query.Append("SELECT(course.credit_hours) AS [Credit Hours] ");
             query.Append("FROM [TGA_Project].[dbo].[student] ");
-            query.Append("JOIN [TGA_Project].[dbo].[minor] on [minor].[minor_id] = [student].[minor_id] ");
-            query.Append(String.Format("WHERE student.student_id = {0} ", tempID)); // should be tempID - 29347 is trent's ID
+            query.Append("JOIN [TGA_Project].[dbo].[enrollment] on [enrollment].[db_student_id] = [student].[db_student_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[course] on [course].[course_id] = [enrollment].[course_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [course].[major_id] ");
+            query.Append(String.Format("WHERE [student].[student_id] = {0} AND [major].[major_id] = {1} ", tempID, tempMajorID));
 
             DataTable table = new DataTable();
 
@@ -619,7 +587,33 @@ namespace GradAppTracker
                 }
             }
             return table;
-        }*/
+        }
+        public static DataTable GetStudentHoursDualDegree(int tempID, int tempDegreeID)
+        {
+            StringBuilder query = new StringBuilder();
+
+            query.Append("SELECT(course.credit_hours) AS [Credit Hours] ");
+            query.Append("FROM [TGA_Project].[dbo].[student] ");
+            query.Append("JOIN [TGA_Project].[dbo].[enrollment] on [enrollment].[db_student_id] = [student].[db_student_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[course] on [course].[course_id] = [enrollment].[course_id] ");
+            query.Append("JOIN [TGA_Project].[dbo].[major] on [major].[major_id] = [course].[major_id] ");
+            query.Append(String.Format("WHERE [student].[student_id] = {0} AND [major].[degree_id] = {1} ", tempID, tempDegreeID));
+
+            DataTable table = new DataTable();
+
+            using (SqlConnection conn = GetConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query.ToString(), conn))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query.ToString(), conn))
+                    {
+                        adapter.Fill(table);
+                        conn.Close();
+                    }
+                }
+            }
+            return table;
+        }
         public static bool UpdateApprovalStatus(string status, string advisor, string dept, string dean, string records, int active, string name)
         {
             StringBuilder query = new StringBuilder();

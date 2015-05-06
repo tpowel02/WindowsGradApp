@@ -453,13 +453,13 @@
             // infoDualDegreeHours
             // 
             this.infoDualDegreeHours.AutoSize = true;
-            this.infoDualDegreeHours.BackColor = System.Drawing.Color.Aqua;
+            this.infoDualDegreeHours.BackColor = System.Drawing.SystemColors.Control;
             this.infoDualDegreeHours.ForeColor = System.Drawing.SystemColors.ControlText;
             this.infoDualDegreeHours.Location = new System.Drawing.Point(180, 464);
             this.infoDualDegreeHours.Name = "infoDualDegreeHours";
-            this.infoDualDegreeHours.Size = new System.Drawing.Size(152, 13);
+            this.infoDualDegreeHours.Size = new System.Drawing.Size(10, 13);
             this.infoDualDegreeHours.TabIndex = 118;
-            this.infoDualDegreeHours.Text = "- not consistent enough to filter";
+            this.infoDualDegreeHours.Text = "-";
             // 
             // infoDualDegreeCatalog
             // 
@@ -494,12 +494,12 @@
             // infoDoubleMajorHours
             // 
             this.infoDoubleMajorHours.AutoSize = true;
-            this.infoDoubleMajorHours.BackColor = System.Drawing.Color.Cyan;
+            this.infoDoubleMajorHours.BackColor = System.Drawing.SystemColors.Control;
             this.infoDoubleMajorHours.Location = new System.Drawing.Point(180, 382);
             this.infoDoubleMajorHours.Name = "infoDoubleMajorHours";
-            this.infoDoubleMajorHours.Size = new System.Drawing.Size(152, 13);
+            this.infoDoubleMajorHours.Size = new System.Drawing.Size(10, 13);
             this.infoDoubleMajorHours.TabIndex = 114;
-            this.infoDoubleMajorHours.Text = "- not consistent enough to filter";
+            this.infoDoubleMajorHours.Text = "-";
             // 
             // infoDoubleMajorCatalog
             // 

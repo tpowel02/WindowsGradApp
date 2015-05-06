@@ -15,6 +15,12 @@ namespace GradAppTracker
         public ConfirmNewGradAppForm(GradApp gradApp)
         {
             InitializeComponent();
+
+            DataTable gt = new DataTable();
+            int creditHours = 0;
+            int doubleMajorHours = 0;
+            int dualDegreeHours = 0;
+
             infoStudentID.Text = gradApp.StudentID.ToString();
             infoStudentName.Text = gradApp.StudentName;
             infoStudentEmail.Text = gradApp.StudentEmail;
@@ -52,7 +58,14 @@ namespace GradAppTracker
                 infoDoubleMajorID.Text = gradApp.DoubleMajorID.ToString();
                 infoDoubleMajorName.Text = gradApp.DoubleMajorName;
                 infoDoubleMajorCatalog.Text = gradApp.DoubleMajorCatalog;
-                infoDoubleMajorHours.Text = gradApp.DoubleMajorHours.ToString();
+                gt = DB.GetStudentHoursDoubleMajor(gradApp.StudentID, 13/*gradApp.DoubleMajorID*/); // --------------------------------------- forcing to be major_id = 13 because test student doesnt have any classes with major_id = 30
+                foreach (DataRow row in gt.Rows)
+                {
+                    creditHours = Convert.ToInt32(row[0]);
+                    doubleMajorHours += creditHours;
+                }
+                infoDoubleMajorHours.Text = doubleMajorHours.ToString();
+                creditHours = 0;
             }
             if (gradApp.DualDegreeID == 0)
             {
@@ -63,7 +76,14 @@ namespace GradAppTracker
                 infoDualDegreeID.Text = gradApp.DualDegreeID.ToString();
                 infoDualDegreeName.Text = gradApp.DualDegreeName;
                 infoDualDegreeCatalog.Text = gradApp.DualDegreeCatalog;
-                infoDualDegreeHours.Text = gradApp.DualDegreeHours.ToString();
+                gt = DB.GetStudentHoursDualDegree(gradApp.StudentID, gradApp.DegreeID);
+                foreach (DataRow row in gt.Rows)
+                {
+                    creditHours = Convert.ToInt32(row[0]);
+                    dualDegreeHours += creditHours;
+                }
+                infoDualDegreeHours.Text = dualDegreeHours.ToString();
+                creditHours = 0;
             }
             infoUpperLevelHours.Text = gradApp.UpperLevelHours.ToString();
             if (gradApp.UpperLevelHours < 45)

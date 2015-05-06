@@ -348,6 +348,7 @@ namespace GradAppTracker
 
                     Refresh refresh = new Refresh();
                     refresh.RefreshMain(dgvCurrent);
+                    refresh.RefreshSecondary(dgvPast);
                 }
                 catch (Exception e1)
                 {
@@ -375,6 +376,7 @@ namespace GradAppTracker
 
                     Refresh refresh = new Refresh();
                     refresh.RefreshMain(dgvCurrent);
+                    refresh.RefreshSecondary(dgvPast);
                 }
                 catch (Exception e1)
                 {
@@ -452,6 +454,7 @@ namespace GradAppTracker
                             // ------------------------------------------------------------------------ info for student with double major and/or dual degree (there is no student with dual degree)
 
                             degreeID2 = Convert.ToInt32(row[12].ToString());
+                            gradApp.DegreeID = degreeID2;
                             if (degreeID2 == degreeID1)
                             {
                                 gradApp.DoubleMajorName = row[4].ToString();

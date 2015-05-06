@@ -54,6 +54,7 @@ namespace GradAppTracker
         private string majorCatalog;
         private string[][] courseSubstitution;
         private DateTime dateTime;
+        private int degreeID;
 
         public int AdvisorID
         {
@@ -141,6 +142,11 @@ namespace GradAppTracker
         {
             get { return gradSemester; }
             set { gradSemester = value; }
+        }
+        public int DegreeID
+        {
+            get { return degreeID; }
+            set { degreeID = value; }
         }
         public int MajorID
         {
